@@ -1,0 +1,8 @@
+*.in
+a.out
+*.idea
+*.dSYM
+*.DS_Store
+*.exe
+*.o
+main
