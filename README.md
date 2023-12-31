@@ -95,7 +95,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.c)|  | Easy |  | [x] | [ ] |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | [C++](./Array/704.%20Binary%20Search/main.c) | [Note](./Array/704.%20Binary%20Search/README.md) | Easy |  | [x] | [ ] |
 
 ## Two-Pointer
 
