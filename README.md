@@ -51,7 +51,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.c)|  | Easy |  | [x] | [ ] |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.cpp)| [Note](./Array/704.%20Binary%20Search/README.md) | Easy |  | [x] | [ ] |
 
 ## Linked List
 
@@ -95,7 +95,8 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | [C++](./Array/704.%20Binary%20Search/main.c) | [Note](./Array/704.%20Binary%20Search/README.md) | Easy |  | [x] | [ ] |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.cpp)| [Note](./Array/704.%20Binary%20Search/README.md) | Easy |  | [x] | [ ] |
+| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [C++](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/main.cpp)|  | Medium |  | [ ] | [ ] |
 
 ## Two-Pointer
 
