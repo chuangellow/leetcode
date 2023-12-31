@@ -6,18 +6,26 @@ The problems are organized into directories based on the main technique or data 
 
 ## Table of Contents
 
+### Data structure
+
 - [Array](#array)
 - [Linked List](#linked-list)
 - [Hash Table](#hash-table)
 - [String](#string)
-- [Two-Pointer](#two-pointer)
-- [Stack and Queue](#stack-and-queue)
+- [Stack](#stack)
+- [Queue](#queue)
 - [Binary Tree](#binary-tree)
+- [Monotonic Queue](#monotonic-queue)
+
+### Algorithm
+
+- [Two-Pointer](#two-pointer)
+- [Sliding window](#sliding-window)
+- [Bit operation](#bit-operation)
+- [Recursion](#recursion)
 - [Greedy](#greedy)
 - [Dynamic Programming](#dynamic-programming)
-- [Monotonic Queue](#monotonic-queue)
-- [Graph](#graph)
-- [Recursion](#recursion)
+- [Graph Algorithm](#graph-algorithm)
 
 # 刷題訓練的四大能力
 
@@ -37,76 +45,94 @@ The problems are organized into directories based on the main technique or data 
 
 **刷題不是流水帳，不是解過一題是一題，重點在磨練這四個能力，不是在背題。**
 
-# Array
+# Data Structure
+
+## Array
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.c)|  | Easy |  | [ ] | [ ] |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.c)|  | Easy |  | [x] | [ ] |
 
-# Linked List
-
-| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
-|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-
-# Hash Table
+## Linked List
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# String
+## Hash Table
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Two-Pointer
+## String
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Sliding Window
+## Stack
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Stack and Queue
+## Queue
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Binary Tree
+## Binary Tree
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Greedy
+## Monotonic Queue
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Dynamic Programming
+
+# 演算法策略
+
+## Binary Search
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [C++](./Array/704.%20Binary%20Search/main.c)|  | Easy |  | [x] | [ ] |
+
+## Two-Pointer
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Monotonic Queue
+## Sliding Window
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Graph
+## Bit Operation
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Recursion
+## Recursion
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-# Bit Operation
+## Graph Algorithm
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+
+## Greedy
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+
+## Dynamic Programming
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+
+
 
 # Reference：
 
