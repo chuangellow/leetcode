@@ -51,8 +51,8 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [Iterative](./Binary%20Search/704.%20Binary%20Search/iterative.cpp) [Recursive](./Binary%20Search/704.%20Binary%20Search/recursive.cpp)| [README](./Binary%20Search/704.%20Binary%20Search/README.md) [Note](./Binary%20Search/704.%20Binary%20Search/Note.pdf)| Easy |  | [x] | [ ] |
-| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [C++](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/main.cpp)| [README](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/README.md) [Note](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/Note.pdf) | Medium | | [x] | [ ] |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [Iterative](./Binary%20Search/704.%20Binary%20Search/iterative.cpp) [Recursive](./Binary%20Search/704.%20Binary%20Search/recursive.cpp)| [README](./Binary%20Search/704.%20Binary%20Search/README.md) [Note](./Binary%20Search/704.%20Binary%20Search/Note.pdf)| Easy | 2023/12/30 | [x] | [ ] |
+| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [C++](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/main.cpp)| [README](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/README.md) [Note](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/Note.pdf) | Medium | 2023/12/31 | [x] | [ ] |
 
 ## Linked List
 
@@ -96,8 +96,9 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [Iterative](./Binary%20Search/704.%20Binary%20Search/iterative.cpp) [Recursive](./Binary%20Search/704.%20Binary%20Search/recursive.cpp)| [README](./Binary%20Search/704.%20Binary%20Search/README.md) [Note](./Binary%20Search/704.%20Binary%20Search/Note.pdf)| Easy |  | [x] | [ ] |
-| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [C++](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/main.cpp)| [README](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/README.md) [Note](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/Note.pdf) | Medium | | [x] | [ ] |
+| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [Iterative](./Binary%20Search/704.%20Binary%20Search/iterative.cpp) [Recursive](./Binary%20Search/704.%20Binary%20Search/recursive.cpp)| [README](./Binary%20Search/704.%20Binary%20Search/README.md) [Note](./Binary%20Search/704.%20Binary%20Search/Note.pdf)| Easy | 2023/12/30 | [x] | [ ] |
+| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [C++](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/main.cpp)| [README](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/README.md) [Note](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/Note.pdf) | Medium | 2023/12/31 | [x] | [ ] |
+| 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)| [C++](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/main.cpp)| [Note](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/Note.pdf) | Medium | 2024/01/01 | [ ] | [ ] |
 
 ## Two-Pointer
 
