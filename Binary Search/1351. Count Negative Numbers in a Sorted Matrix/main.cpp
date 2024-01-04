@@ -9,17 +9,15 @@ public:
         int n = grid.size();
         int m = grid[0].size();
         int count = 0;
-        int rowIdx = n - 1, colIdx = m - 1;
-        while (rowIdx >= 0) {
-            int num = grid.at(rowIdx).at(colIdx);
-            if (num < 0) count++;
-            if (num > 0 || colIdx == 0) {
-                colIdx = m - 1;
-                rowIdx--;
+        int lastNegativeIdx = m - 1;
+        for (int rowIdx = 0; rowIdx < n; rowIdx++) {
+            int negColIdx = lastNegativeIdx;
+            count += (m - (negColIdx + 1));
+            while (negColIdx >= 0 && grid.at(rowIdx).at(negColIdx) < 0) {
+                count++;
+                negColIdx--;
             }
-            else {
-                colIdx--;
-            }
+            lastNegativeIdx = negColIdx;
         }
         return count;
     }
