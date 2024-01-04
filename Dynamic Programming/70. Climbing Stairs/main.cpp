@@ -4,19 +4,13 @@ using namespace std;
 
 class Solution {
 public:
-    void countNumberWays(int current, int *ans, int n) {
-        if (current > n) return;
-        if (current == n) { 
-            *ans = *ans + 1;
-            return;
-        }
-        countNumberWays(current + 1, ans, n);
-        countNumberWays(current + 2, ans, n);
-    }
     int climbStairs(int n) {
-        int ans = 0;
-        countNumberWays(0, &ans, n);
-        return ans;
+        vector<int> dp(n+1, 0);
+        dp[0] = 1; dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
     }
 };
 
