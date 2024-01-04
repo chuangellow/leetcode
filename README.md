@@ -56,7 +56,7 @@ The problems are organized into directories based on the main technique or data 
 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)| [Sort and Binary Search](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/sort-and-binary-search.cpp) [Bit Sum](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/bit-sum.cpp)| [Note](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/Note.pdf) | Medium | 2024/01/01 | [x] | [ ] |
 | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| [C++](./Binary%20Search/162.%20Find%20Peak%20Element/main.cpp) | [Note](./Binary%20Search/162.%20Find%20Peak%20Element/Note.pdf) | Medium | 2024/01/02 | [x] | [ ] |
 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)| [C++](./Binary%20Search/74.%20Search%20a%202D%20Matrix/main.cpp) | [Note](./Binary%20Search/74.%20Search%20a%202D%20Matrix/Note.pdf) | Medium | 2024/01/04 | [x] | [ ] |
-| 744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target)| [C++](./Binary%20Search/744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/main.cpp) | [Note](./Binary%20Search/744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/Note.pdf) | Easy | 2024/01/04 | [ ] | [ ] |
+| 744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target)| [C++](./Binary%20Search/744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/main.cpp) | [Note](./Binary%20Search/744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/Note.pdf) | Easy | 2024/01/04 | [x] | [ ] |
 
 ## Linked List
 
