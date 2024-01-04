@@ -143,8 +143,8 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)| [C++](./Dynamic%20Programming/70.%20Climbing%20Stairs/main.cpp) | [Note](./Dynamic%20Programming/70.%20Climbing%20Stairs/Note.pdf) | Easy | 2024/01/04 | [ ] | [ ] |
-
+| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)| [C++](./Dynamic%20Programming/70.%20Climbing%20Stairs/main.cpp) | | Easy | 2024/01/04 | [x] | [ ] |
+| 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)| [C++](./Dynamic%20Programming/1137.%20N-th%20Tribonacci%20Number/main.cpp) | | Easy | 2024/01/04 | [x] | [ ] |
 
 # Reference：
 
