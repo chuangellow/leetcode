@@ -5,27 +5,18 @@ using namespace std;
 
 class Solution {
 public:
-    void getMaxPoints(int currentPoint, int* maxPoint, vector<int> nums) {
-        int n = nums.size();
-        if (n == 0) {
-            *maxPoint = max(*maxPoint, currentPoint);
-            return;
-        }
-        for (int i = 0; i < n; i++) {
-            vector<int> temp;
-            for (int j = 0; j < n; j++) {
-                if (i != j && abs(nums.at(j) - nums.at(i)) != 1) {
-                    temp.push_back(nums.at(j));
-                }
-            }
-            getMaxPoints(currentPoint + nums.at(i), maxPoint, temp);
-        }
-        return;
-    }
     int deleteAndEarn(vector<int>& nums) {
-        int maxPoint = -1;
-        getMaxPoints(0, &maxPoint, nums);
-        return maxPoint;
+        int n = nums.size();
+        vector<int> table(10001, 0);
+        for (int i = 0; i < n; i++) {
+            table[nums.at(i)]++;
+        }
+        vector<int> dp(10001, 0);
+        dp[1] = table[1]; dp[2] = max(dp[1], 2 * table[2]);
+        for (int i = 3; i <= 10000; i++) {
+            dp[i] = max(dp[i-2] + table[i] * i, dp[i-1]);
+        }
+        return dp[10000];
     }
 };
 
