@@ -12,12 +12,12 @@ public:
             int startNow = intervals.at(i).at(0);
             int endNow = intervals.at(i).at(1);
             int retIdx = -1;
-            int minStart = -1;
+            int minStart = INT32_MAX;
             for (int j = 0; j < n; j++) {
                 if (i == j) continue;
                 int startCompared = intervals.at(j).at(0);
                 int endCompared = intervals.at(j).at(1);
-                if (startCompared >= endNow && startCompared > minStart) {
+                if (startCompared >= endNow && startCompared < minStart) {
                     retIdx = j;
                     minStart = startCompared;
                 }
