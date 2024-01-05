@@ -5,20 +5,15 @@ using namespace std;
 
 class Solution {
 public:
-    void getMaxMoney(int pos, int currentMoney, int* maxMoney, vector<int>& nums, const int n) {
-        if (pos >= n) {
-            *maxMoney = (currentMoney > *maxMoney)? currentMoney: *maxMoney;
-            return;
-        }
-        getMaxMoney(pos+1, currentMoney, maxMoney, nums, n);
-        getMaxMoney(pos+2, currentMoney + nums.at(pos), maxMoney, nums, n);
-        return;
-    }
     int rob(vector<int>& nums) {
         int n = nums.size();
-        int maxMoney = -1;
-        getMaxMoney(0, 0, &maxMoney, nums, n);
-        return maxMoney;
+        if (n == 1) return nums.at(0);
+        vector<int> dp(n);
+        dp[0] = nums.at(0); dp[1] = max(nums.at(0), nums.at(1));
+        for (int i = 2; i < n; i++) {
+            dp[i] = max(dp[i-2] + nums.at(i), dp[i-1]);
+        }
+        return dp[n-1];
     }
 };
 
