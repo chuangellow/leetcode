@@ -51,15 +51,6 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 704 | [Binary Search](https://leetcode.com/problems/binary-search/)| [Iterative](./Binary%20Search/704.%20Binary%20Search/iterative.cpp) [Recursive](./Binary%20Search/704.%20Binary%20Search/recursive.cpp)| [README](./Binary%20Search/704.%20Binary%20Search/README.md) [Note](./Binary%20Search/704.%20Binary%20Search/Note.pdf)| Easy | 2023/12/30 | [x] | [ ] |
-| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)| [C++](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/main.cpp)| [README](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/README.md) [Note](./Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/Note.pdf) | Medium | 2023/12/31 | [x] | [ ] |
-| 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)| [Sort and Binary Search](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/sort-and-binary-search.cpp) [Bit Sum](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/bit-sum.cpp)| [Note](./Binary%20Search/287.%20Find%20the%20Duplicate%20Number/Note.pdf) | Medium | 2024/01/01 | [x] | [ ] |
-| 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| [C++](./Binary%20Search/162.%20Find%20Peak%20Element/main.cpp) | [Note](./Binary%20Search/162.%20Find%20Peak%20Element/Note.pdf) | Medium | 2024/01/02 | [x] | [ ] |
-| 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)| [C++](./Binary%20Search/74.%20Search%20a%202D%20Matrix/main.cpp) | [Note](./Binary%20Search/74.%20Search%20a%202D%20Matrix/Note.pdf) | Medium | 2024/01/04 | [x] | [ ] |
-| 744 | [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target)| [C++](./Binary%20Search/744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/main.cpp) | [Note](./Binary%20Search/744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/Note.pdf) | Easy | 2024/01/04 | [x] | [ ] |
-| 1351 | [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)| [C++](./Binary%20Search/1351.%20Count%20Negative%20Numbers%20in%20a%20Sorted%20Matrix/main.cpp) | [Note](./Binary%20Search/1351.%20Count%20Negative%20Numbers%20in%20a%20Sorted%20Matrix/Note.pdf) | Easy | 2024/01/04 | [x] | [ ] |
-| 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [C++](./Binary%20Search/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/main.cpp) | [Note](./Binary%20Search/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
-| 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| [C++](./Binary%20Search/436.%20Find%20Right%20Interval/main.cpp) | [Note](./Binary%20Search/436.%20Find%20Right%20Interval/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
 
 ## Linked List
 
@@ -149,7 +140,8 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)| [C++](./Dynamic%20Programming/70.%20Climbing%20Stairs/main.cpp) | | Easy | 2024/01/04 | [x] | [ ] |
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)| [C++](./Dynamic%20Programming/1137.%20N-th%20Tribonacci%20Number/main.cpp) | | Easy | 2024/01/05 | [x] | [ ] |
-| 746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)| [C++](./Dynamic%20Programming/746.%20Min%20Cost%20Climbing%20Stairs/main.cpp) | | Easy | 2024/01/05 | [ ] | [ ] |
+| 746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)| [C++](./Dynamic%20Programming/746.%20Min%20Cost%20Climbing%20Stairs/main.cpp) | | Easy | 2024/01/05 | [x] | [ ] |
+| 198 | [House Robber](https://leetcode.com/problems/house-robber/)| [C++](./Dynamic%20Programming/198.%20House%20Robber/main.cpp) | | Medium | 2024/01/05 | [ ] | [ ] |
 
 # Reference：
 
