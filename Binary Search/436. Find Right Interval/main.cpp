@@ -5,24 +5,32 @@ using namespace std;
 
 class Solution {
 public:
+    int binarySearch(int pos, vector<pair<int, int>>& startTimes, vector<int>& endTimes, const int n) {
+        int left = 0, right = n - 1;
+        while (left < right) {
+            int mid = (unsigned int) (left + right) >> 1;
+            if (startTimes.at(mid).first < endTimes.at(pos)) left = mid + 1;
+            else right = mid;
+        }
+        return (startTimes.at(left).first >= endTimes.at(pos))? left: -1;
+    }
     vector<int> findRightInterval(vector<vector<int>>& intervals) {
         int n = intervals.size();
+        vector<pair<int, int>> startTimes(n);
+        for (int i = 0; i < n; i++) {
+            startTimes.at(i).first = intervals.at(i).at(0);
+            startTimes.at(i).second = i;
+        }
+        sort(startTimes.begin(), startTimes.end());
+        vector<int> endTimes(n);
+        for (int i = 0; i < n; i++) {
+            endTimes.at(i) = intervals.at(startTimes.at(i).second).at(1);
+        }
         vector<int> ret(n);
         for (int i = 0; i < n; i++) {
-            int startNow = intervals.at(i).at(0);
-            int endNow = intervals.at(i).at(1);
-            int retIdx = -1;
-            int minStart = INT32_MAX;
-            for (int j = 0; j < n; j++) {
-                if (i == j) continue;
-                int startCompared = intervals.at(j).at(0);
-                int endCompared = intervals.at(j).at(1);
-                if (startCompared >= endNow && startCompared < minStart) {
-                    retIdx = j;
-                    minStart = startCompared;
-                }
-            }
-            ret.at(i) = retIdx;
+            int searchIdx = binarySearch(i, startTimes, endTimes, n);
+            int realIdx = (searchIdx == -1)? -1: startTimes.at(searchIdx).second;
+            ret.at(startTimes.at(i).second) = realIdx;
         }
         return ret;
     }
