@@ -5,21 +5,15 @@ using namespace std;
 
 class Solution {
 public:
-    void findMinCost(int pos, int totalCost, int* minCost, vector<int>& cost, const int n) {
-        if (pos >= n) {
-            *minCost = (totalCost < *minCost)? totalCost: *minCost;
-            return;
-        }
-        findMinCost(pos + 1, totalCost + cost.at(pos), minCost, cost, n);
-        findMinCost(pos + 2, totalCost + cost.at(pos), minCost, cost, n);
-        return;
-    }
     int minCostClimbingStairs(vector<int>& cost) {
         int n = cost.size();
-        int minCost = INT32_MAX;
-        findMinCost(0, 0, &minCost, cost, n);
-        findMinCost(1, 0, &minCost, cost, n);
-        return minCost;
+        if (n == 2) return min(cost.at(0), cost.at(1));
+        vector<int> dp(n+1, 0);
+        dp[0] = 0; dp[1] = cost.at(0); dp[2] = cost.at(1);
+        for (int i = 3; i <= n; i++) {
+            dp[i] = min(dp[i - 1] + cost.at(i - 1), dp[i - 2] + cost.at(i - 1));
+        }
+        return min(dp[n-1], dp[n]);
     }
 };
 
