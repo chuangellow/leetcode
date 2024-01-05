@@ -9,11 +9,14 @@ public:
         int n = nums.size();
         if (n == 1) return nums.at(0);
         vector<int> dp(n);
-        dp[0] = nums.at(0); dp[1] = max(nums.at(0), nums.at(1));
+        int firstNum = nums.at(0), secondNum = max(nums.at(0), nums.at(1));
+        int result = 0;
         for (int i = 2; i < n; i++) {
-            dp[i] = max(dp[i-2] + nums.at(i), dp[i-1]);
+            result = max(firstNum + nums.at(i), secondNum);
+            firstNum = secondNum;
+            secondNum = result;
         }
-        return dp[n-1];
+        return secondNum;
     }
 };
 
