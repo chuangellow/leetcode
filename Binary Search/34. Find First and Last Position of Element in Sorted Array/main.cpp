@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-    int searchFirstIdx(vector<int> nums, int target, int size) {
+    int searchFirstIdx(vector<int>& nums, int target, int size) {
         int left = 0, right = size - 1;
         while (left < right) {
             int mid = (unsigned int) (left + right) >> 1;
@@ -14,7 +14,7 @@ public:
         }
         return (nums.at(right) == target)? right: -1;
     }
-    int searchLastIdx(vector<int> nums, int target, int size) {
+    int searchLastIdx(vector<int>& nums, int target, int size) {
         int left = 0, right = size - 1;
         while (left < right) {
             int mid = (unsigned int) (left + right + 1) >> 1;
