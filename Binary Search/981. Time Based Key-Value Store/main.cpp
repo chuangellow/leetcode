@@ -30,8 +30,7 @@ public:
             return;
         }
         vector<pair<string, int>>* secondLevelTable = table[key];
-        int insertIdx = search(*secondLevelTable, timestamp);
-        secondLevelTable->insert(secondLevelTable->begin() + insertIdx + 1, pair(value, timestamp));
+        secondLevelTable->insert(secondLevelTable->end(), pair(value, timestamp));
         return;
     }
     
