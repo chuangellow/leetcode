@@ -103,6 +103,7 @@ The problems are organized into directories based on the main technique or data 
 | 1351 | [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)| [C++](./Binary%20Search/1351.%20Count%20Negative%20Numbers%20in%20a%20Sorted%20Matrix/main.cpp) | [Note](./Binary%20Search/1351.%20Count%20Negative%20Numbers%20in%20a%20Sorted%20Matrix/Note.pdf) | Easy | 2024/01/04 | [x] | [ ] |
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [C++](./Binary%20Search/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/main.cpp) | [Note](./Binary%20Search/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| [C++](./Binary%20Search/436.%20Find%20Right%20Interval/main.cpp) | [Note](./Binary%20Search/436.%20Find%20Right%20Interval/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
+| 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)| [C++](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/main.cpp) | [Note](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/Note.pdf) | Medium | 2024/01/06 | [ ] | [ ] |
 
 ## Two-Pointer
 
@@ -142,7 +143,7 @@ The problems are organized into directories based on the main technique or data 
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)| [C++](./Dynamic%20Programming/1137.%20N-th%20Tribonacci%20Number/main.cpp) | | Easy | 2024/01/05 | [x] | [ ] |
 | 746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)| [C++](./Dynamic%20Programming/746.%20Min%20Cost%20Climbing%20Stairs/main.cpp) | | Easy | 2024/01/05 | [x] | [ ] |
 | 198 | [House Robber](https://leetcode.com/problems/house-robber/)| [C++](./Dynamic%20Programming/198.%20House%20Robber/main.cpp) | | Medium | 2024/01/05 | [x] | [ ] |
-| 740 | [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)| [C++](./Dynamic%20Programming/740.%20Delete%20and%20Earn/main.cpp) | | Medium | 2024/01/05 | [ ] | [ ] |
+| 740 | [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)| [C++](./Dynamic%20Programming/740.%20Delete%20and%20Earn/main.cpp) | | Medium | 2024/01/06 | [x] | [ ] |
 
 # Reference：
 
