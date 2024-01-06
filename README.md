@@ -109,6 +109,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)| [C++](./Two.%20Pointers/88.%20Merge%20Sorted%20Array/main.cpp) | | Easy | 2024/01/06 | [ ] | [ ] |
 
 ## Sliding Window
 
@@ -145,7 +146,7 @@ The problems are organized into directories based on the main technique or data 
 | 198 | [House Robber](https://leetcode.com/problems/house-robber/)| [C++](./Dynamic%20Programming/198.%20House%20Robber/main.cpp) | | Medium | 2024/01/05 | [x] | [ ] |
 | 740 | [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)| [C++](./Dynamic%20Programming/740.%20Delete%20and%20Earn/main.cpp) | [Note](./Dynamic%20Programming/740.%20Delete%20and%20Earn/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
 | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/)| [C++](./Dynamic%20Programming/62.%20Unique%20Paths/main.cpp) | [Note](./Dynamic%20Programming/62.%20Unique%20Paths/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
-| 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [C++](./Dynamic%20Programming/64.%20Minimum%20Path%20Sum/main.cpp) | [Note](./Dynamic%20Programming/64.%20Minimum%20Path%20Sum/Note.pdf) | Medium | 2024/01/06 | [ ] | [ ] |
+| 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [C++](./Dynamic%20Programming/64.%20Minimum%20Path%20Sum/main.cpp) | | Medium | 2024/01/06 | [x] | [ ] |
 
 # Reference：
 
