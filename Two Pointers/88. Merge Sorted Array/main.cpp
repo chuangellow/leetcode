@@ -6,31 +6,17 @@ using namespace std;
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        int ptr1 = m-1, ptr2 = n-1;
-        int insertPtr = n+m-1;
-        while (ptr1 >= 0 && ptr2 >= 0) {
-            if (nums1.at(ptr1) > nums2.at(ptr2)) {
-                nums1[insertPtr] = nums1[ptr1];
-                ptr1--;
+        int index1 = m - 1, index2 = n - 1, mergeIndex = m + n - 1;
+        while (index1 >= 0 && index2 >= 0) {
+            if (nums1[index1] > nums2[index2]) {
+                nums1[mergeIndex--] = nums1[index1--];
+            } else {
+                nums1[mergeIndex--] = nums2[index2--];
             }
-            else {
-                nums1[insertPtr] = nums2[ptr2];
-                ptr2--;
-            }
-            insertPtr--;
         }
-        while(insertPtr >= 0) {
-            if (ptr1 >= 0) {
-                nums1[insertPtr] = nums1[ptr1];
-                ptr1--;
-            }
-            else if (ptr2 >= 0) {
-                nums1[insertPtr] = nums2[ptr2];
-                ptr2--;
-            }
-            insertPtr--;
+        while (index2 >= 0) {
+            nums1[mergeIndex--] = nums2[index2--];
         }
-        return;
     }
 };
 
