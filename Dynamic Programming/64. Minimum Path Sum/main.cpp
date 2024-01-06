@@ -5,28 +5,26 @@ using namespace std;
 
 class Solution {
 public:
-    void findMinSum(int currentM, int currentN, int sum, int* minSum, vector<vector<int>> grid, const int m, const int n) {
-        if (currentM == m - 1 && currentN == n - 1) {
-            sum += grid.at(m-1).at(n-1);
-            *minSum = min(*minSum, sum);
-            return;
-        }
-        if (currentM != m - 1) {
-            int currentNum = grid.at(currentM).at(currentN);
-            findMinSum(currentM+1, currentN, sum + currentNum, minSum, grid, m, n);
-        }
-        if (currentN != n - 1) {
-            int currentNum = grid.at(currentM).at(currentN);
-            findMinSum(currentM, currentN+1, sum + currentNum, minSum, grid, m, n);
-        }
-        return;
-    }
     int minPathSum(vector<vector<int>>& grid) {
-        int minSum = INT32_MAX;
         int m = grid.size();
         int n = grid[0].size();
-        findMinSum(0, 0, 0, &minSum, grid, m, n);
-        return minSum;
+        vector<vector<int>> dp(m, vector<int>(n));
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += grid.at(0).at(i); 
+            dp.at(0).at(i) = sum;
+        }
+        sum = 0;
+        for (int i = 0; i < m; i++) {
+            sum += grid.at(i).at(0);
+            dp.at(i).at(0) = sum;
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                dp.at(i).at(j) = min(dp.at(i-1).at(j), dp.at(i).at(j-1)) + grid.at(i).at(j);
+            }
+        }
+        return dp.at(m-1).at(n-1);
     }
 };
 
