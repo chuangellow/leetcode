@@ -13,7 +13,6 @@ public:
         for (int i = 0; i < n; i++) {
             sum += grid.at(0).at(i);
             dp.at(i) = sum;
-            cout << dp.at(i) << " ";
         }
         sum = grid.at(0).at(0);
         for (int i = 1; i < m; i++) {
@@ -22,9 +21,7 @@ public:
             for (int j = 1; j < n; j++) {
                 temp = min(dp.at(j), temp) + grid.at(i).at(j);
                 dp.at(j) = temp;
-                cout << temp << " ";
             }
-            cout << endl;
         }
         return dp.at(n-1);
     }
