@@ -5,23 +5,20 @@ using namespace std;
 
 class Solution {
 public:
-    void getNumPaths(int currentM, int currentN, int* numPaths, const int m, const int n) {
-        if (currentM == m - 1 && currentN == n - 1) {
-            *numPaths = *numPaths + 1;
-            return;
-        }
-        if (currentM != m - 1) {
-            getNumPaths(currentM+1, currentN, numPaths, m, n);
-        }
-        if (currentN != n - 1) {
-            getNumPaths(currentM, currentN+1, numPaths, m, n);
-        }
-        return;
-    }
     int uniquePaths(int m, int n) {
-        int numPaths = 0;
-        getNumPaths(0, 0, &numPaths, m, n);
-        return numPaths;
+        vector<vector<int>> dp(m, vector<int>(n, 0));
+        for (int i = 0; i < n; i++) {
+            dp.at(0).at(i) = 1;
+        }
+        for (int i = 0; i < m; i++) {
+            dp.at(i).at(0) = 1;
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                dp.at(i).at(j) = dp.at(i-1).at(j) + dp.at(i).at(j-1);
+            }
+        }
+        return dp.at(m-1).at(n-1);
     }
 };
 
