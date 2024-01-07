@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -7,17 +8,15 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int n = nums.size();
-        vector<pair<int, int>> temp(n);
+        unordered_map<int, int> table;
         for (int i = 0; i < n; i++) {
-            temp.at(i) = pair(nums.at(i), i);
+            table[nums.at(i)] = i;
         }
-        sort(temp.begin(), temp.end());
-        int left = 0, right = n - 1;
-        while (left < right) {
-            int sum = temp.at(left).first + temp.at(right).first;
-            if (sum == target) return vector<int> {temp.at(left).second, temp.at(right).second};
-            else if (sum > target) right--;
-            else left++;
+        for (int i = 0; i < n; i++) {
+            if (table.find(target-nums.at(i)) != table.end()) {
+                if (i == table[target-nums.at(i)]) continue;
+                return vector<int> {i, table[target-nums.at(i)]};
+            }
         }
         return vector<int> {};
     }
