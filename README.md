@@ -112,7 +112,8 @@ The problems are organized into directories based on the main technique or data 
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)| [C++](./Two.%20Pointers/88.%20Merge%20Sorted%20Array/main.cpp) | | Easy | 2024/01/06 | [x] | [ ] |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/)| [C++](./Two.%20Pointers/15.%203Sum/main.cpp) | | Medium | 2024/01/06 | [x] | [ ] |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/)| [C++](./Two.%20Pointers/1.%20Two%20Sum/main.cpp) | | Easy | 2024/01/07 | [x] | [ ] |
-| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)| [C++](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/main.cpp) | | Medium | 2024/01/07 | [ ] | [ ] |
+| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)| [C++](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/main.cpp) | | Medium | 2024/01/07 | [x] | [ ] |
+| 34 | [Next Permutation](https://leetcode.com/problems/next-permutation/)| [C++](./Two.%20Pointers/34.%20Next%20Permutation/main.cpp) | | Medium | 2024/01/07 | [ ]] | [ ] |
 
 ## Sliding Window
 
