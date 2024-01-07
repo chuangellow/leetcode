@@ -1,33 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
 public:
-    void reverse(int start, vector<int>& nums, const int n) {
-        int left = start, right = n-1;
-        while (left < right) {
-            swap(nums.at(left++), nums.at(right--));
-        }
-        return;
-    }
     void nextPermutation(vector<int>& nums) {
         int n = nums.size();
         for (int i = n - 2; i >= 0; i--) {
             if (nums.at(i) < nums.at(i+1)) {
                 int j = n - 1;
-                for (; j > i; j--) {
-                    if (nums.at(j) > nums.at(i)) {
-                        swap(nums.at(i), nums.at(j));
-                        break;
-                    }
-                }
-                reverse(i+1, nums, n);
-                break;
+                while (nums.at(j) <= nums.at(i)) --j;
+                swap(nums.at(i), nums.at(j));
+                reverse(nums.begin() + i + 1, nums.end());
+                return;
             }
-            if (i == 0) reverse(i, nums, n);
         }
+        reverse(nums.begin(), nums.end());
         return;
     }
 };
