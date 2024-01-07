@@ -5,46 +5,30 @@ using namespace std;
 
 class Solution {
 public:
-    void getPermutations(int pos, vector<bool>& mask, vector<int>& perm, vector<vector<int>>& perms, vector<int>& nums, const int n) {
-        if (pos == n) {
-            perms.push_back(perm);
-            return;
-        }
-        for (int i = 0; i < n; i++) {
-            if (mask.at(i)) {
-                perm.push_back(nums.at(i));
-                mask.at(i) = false;
-                getPermutations(pos+1, mask, perm, perms, nums, n);
-                mask.at(i) = true;
-                perm.pop_back();
-            }
+    void reverse(int start, vector<int>& nums, const int n) {
+        int left = start, right = n-1;
+        while (left < right) {
+            swap(nums.at(left++), nums.at(right--));
         }
         return;
     }
     void nextPermutation(vector<int>& nums) {
         int n = nums.size();
-        vector<int> temp(n);
-        for (int i = 0; i < n; i++) {
-            temp.at(i) = nums.at(i);
-        }
-        sort(temp.begin(), temp.end());
-        vector<bool> mask(n, true);
-        vector<int> perm;
-        vector<vector<int>> perms;
-        getPermutations(0, mask, perm, perms, temp, n);
-        int size = perms.size();
-        int idx = -1;
-        for (int i = 0; i < size; i++) {
-            bool flag = true;
-            for (int j = 0; j < n; j++) {
-                if (perms.at(i).at(j) != nums.at(j)) flag = false;
+        for (int i = n - 2; i >= 0; i--) {
+            if (nums.at(i) < nums.at(i+1)) {
+                int j = n - 1;
+                for (; j > i; j--) {
+                    if (nums.at(j) > nums.at(i)) {
+                        swap(nums.at(i), nums.at(j));
+                        break;
+                    }
+                }
+                reverse(i+1, nums, n);
+                break;
             }
-            if (flag) idx = i;
+            if (i == 0) reverse(i, nums, n);
         }
-        int nextIdx = (idx + 1) % n;
-        for (int i = 0; i < n; i++) {
-            nums.at(i) = perms.at(nextIdx).at(i);
-        }
+        return;
     }
 };
 
