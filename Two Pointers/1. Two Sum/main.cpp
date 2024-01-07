@@ -10,13 +10,10 @@ public:
         int n = nums.size();
         unordered_map<int, int> table;
         for (int i = 0; i < n; i++) {
-            table[nums.at(i)] = i;
-        }
-        for (int i = 0; i < n; i++) {
             if (table.find(target-nums.at(i)) != table.end()) {
-                if (i == table[target-nums.at(i)]) continue;
-                return vector<int> {i, table[target-nums.at(i)]};
+                return vector<int> {table[target-nums.at(i)], i};
             }
+            table[nums.at(i)] = i;
         }
         return vector<int> {};
     }
