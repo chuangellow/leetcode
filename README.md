@@ -104,6 +104,7 @@ The problems are organized into directories based on the main technique or data 
 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [C++](./Binary%20Search/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/main.cpp) | [Note](./Binary%20Search/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| [C++](./Binary%20Search/436.%20Find%20Right%20Interval/main.cpp) | [Note](./Binary%20Search/436.%20Find%20Right%20Interval/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)| [C++](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/main.cpp) | [Note](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
+| 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| [C++](./Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/main.cpp) | [Note](./Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/Note.pdf) | Medium | 2024/01/08 | [ ] | [ ] |
 
 ## [Two-Pointers](https://leetcode.com/tag/two-pointers/)
 
@@ -112,8 +113,8 @@ The problems are organized into directories based on the main technique or data 
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)| [C++](./Two.%20Pointers/88.%20Merge%20Sorted%20Array/main.cpp) | | Easy | 2024/01/06 | [x] | [ ] |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/)| [C++](./Two.%20Pointers/15.%203Sum/main.cpp) | | Medium | 2024/01/06 | [x] | [ ] |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/)| [C++](./Two.%20Pointers/1.%20Two%20Sum/main.cpp) | | Easy | 2024/01/07 | [x] | [ ] |
-| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)| [C++](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/main.cpp) | | Medium | 2024/01/07 | [x] | [ ] |
-| 34 | [Next Permutation](https://leetcode.com/problems/next-permutation/)| [C++](./Two.%20Pointers/34.%20Next%20Permutation/main.cpp) | | Medium | 2024/01/07 | [ ]] | [ ] |
+| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)| [C++](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/main.cpp) | [Note](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/Note.pdf) | Medium | 2024/01/07 | [x] | [ ] |
+| 34 | [Next Permutation](https://leetcode.com/problems/next-permutation/)| [C++](./Two.%20Pointers/34.%20Next%20Permutation/main.cpp) | [Note](./Two.%20Pointers/34.%20Next%20Permutation/Note.pdf) | Medium | 2024/01/07 | [x] | [ ] |
 
 ## Sliding Window
 
