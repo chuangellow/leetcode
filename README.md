@@ -105,7 +105,7 @@ The problems are organized into directories based on the main technique or data 
 | 436 | [Find Right Interval](https://leetcode.com/problems/find-right-interval/)| [C++](./Binary%20Search/436.%20Find%20Right%20Interval/main.cpp) | [Note](./Binary%20Search/436.%20Find%20Right%20Interval/Note.pdf) | Medium | 2024/01/05 | [x] | [ ] |
 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)| [C++](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/main.cpp) | [Note](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
 | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| [C++](./Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/main.cpp) | | Medium | 2024/01/11 | [x] | [ ] |
-| 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)| [C++](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/main.cpp) | [Note](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/Note.pdf) | Hard | 2024/01/11 | [x] | [ ] |
+| 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)| [C++](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/main.cpp) | | Hard | 2024/01/11 | [x] | [ ] |
 
 ## [Two-Pointers](https://leetcode.com/tag/two-pointers/)
 
@@ -153,6 +153,7 @@ The problems are organized into directories based on the main technique or data 
 | 740 | [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)| [C++](./Dynamic%20Programming/740.%20Delete%20and%20Earn/main.cpp) | [Note](./Dynamic%20Programming/740.%20Delete%20and%20Earn/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
 | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/)| [C++](./Dynamic%20Programming/62.%20Unique%20Paths/main.cpp) | [Note](./Dynamic%20Programming/62.%20Unique%20Paths/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)| [C++](./Dynamic%20Programming/64.%20Minimum%20Path%20Sum/main.cpp) | | Medium | 2024/01/06 | [x] | [ ] |
+| 63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| [C++](./Dynamic%20Programming/63.%20Unique%20Paths%20II/main.cpp) | | Medium | 2024/01/11 | [ ] | [ ] |
 
 # Reference：
 
