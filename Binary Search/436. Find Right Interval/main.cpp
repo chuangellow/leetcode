@@ -8,7 +8,7 @@ public:
     int binarySearch(int pos, vector<pair<int, int>>& startTimes, vector<int>& endTimes, const int n) {
         int left = 0, right = n - 1;
         while (left < right) {
-            int mid = (unsigned int) (left + right) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (startTimes.at(mid).first < endTimes.at(pos)) left = mid + 1;
             else right = mid;
         }

@@ -8,7 +8,7 @@ public:
     int getRowNegatives(vector<vector<int>>& grid, int rowIdx, int cols) {
         int left = 0, right = cols - 1;
         while (left < right) {
-            int mid = (unsigned int) (left + right) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             int midNum = grid.at(rowIdx).at(mid);
             if (midNum >= 0) left = mid + 1;
             else right = mid;

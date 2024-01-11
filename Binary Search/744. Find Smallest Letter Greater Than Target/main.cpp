@@ -10,7 +10,7 @@ public:
         if (letters.at(0) > target || target > letters.at(n-1)) return letters.at(0);
         int left = 0, right = n - 1;
         while (left < right) {
-            int mid = (unsigned int) (left + right) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (target >= letters.at(mid)) left = mid + 1;
             else right = mid;
         }

@@ -16,7 +16,7 @@ public:
         int n = secondLevelTable.size();
         int left = 0, right = n - 1;
         while (left < right) {
-            int mid = (unsigned int) (left + right + 1) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (secondLevelTable.at(mid).second <= target) left = mid;
             else right = mid - 1;
         }

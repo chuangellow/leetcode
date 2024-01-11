@@ -15,7 +15,7 @@ public:
         int left = l, right = r;
         int rightMostNum = nums.at(n-1);
         while (left < right) {
-            int mid = (unsigned int) (left + right + 1) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (nums.at(mid) > rightMostNum) left = mid;
             else if (nums.at(mid) == rightMostNum) {
                 int leftAns = findPivot(left, mid-1, nums, n);

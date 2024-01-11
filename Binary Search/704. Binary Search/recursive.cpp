@@ -7,7 +7,7 @@ class Solution {
 public:
 	int recursiveSearch(int left, int right, vector<int>& nums, int target) {
 		if (left > right) return -1;
-		int mid = (unsigned int) (left + right) >> 1;
+		int mid = ((unsigned int) left + (unsigned int) right) >> 1;
 		if (nums.at(mid) == target) return mid;
 		else if (nums.at(mid) > target) return recursiveSearch(left, mid-1, nums, target);
 		else return recursiveSearch(mid+1, right, nums, target);

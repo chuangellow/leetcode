@@ -8,7 +8,7 @@ public:
     int searchFirstIdx(vector<int>& nums, int target, int size) {
         int left = 0, right = size - 1;
         while (left < right) {
-            int mid = (unsigned int) (left + right) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (nums.at(mid) < target) left = mid + 1;
             else right = mid;
         }
@@ -17,7 +17,7 @@ public:
     int searchLastIdx(vector<int>& nums, int target, int size) {
         int left = 0, right = size - 1;
         while (left < right) {
-            int mid = (unsigned int) (left + right + 1) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (nums.at(mid) > target) right = mid - 1;
             else left = mid;
         }

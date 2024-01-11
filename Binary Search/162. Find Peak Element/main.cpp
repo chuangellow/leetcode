@@ -10,7 +10,7 @@ public:
 		if (n == 1) return 0;
 		int left = 0, right = n - 1;
 		while (left <= right) {
-			int mid = (unsigned int) (left + right) >> 1;
+			int mid = ((unsigned int) left + (unsigned int) right) >> 1;
 			if (mid - 1 < 0 && nums.at(mid) > nums.at(mid+1)) return mid;
 			if (mid + 1 >= n && nums.at(mid) > nums.at(mid-1)) return mid;
 			if (mid - 1 >= 0 && mid + 1 < n && nums.at(mid) > nums.at(mid-1) && nums.at(mid) > nums.at(mid+1)) return mid;

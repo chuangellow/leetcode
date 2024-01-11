@@ -21,3 +21,4 @@ Therefore, we need to be careful about the following things during the implement
 # Reference
 
 - [binary-search-101](https://leetcode.com/problems/binary-search/solutions/423162/binary-search-101/)
+- [Extra, Extra - Read All About It: Nearly All Binary Searches and Mergesorts are Broken](https://blog.research.google/2006/06/extra-extra-read-all-about-it-nearly.html)

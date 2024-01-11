@@ -12,7 +12,7 @@ public:
         if (matrix.at(0).at(0) == target || matrix.at(n-1).at(m-1) == target)  return true;
         if (target < matrix.at(0).at(0) && target > matrix.at(n-1).at(m-1)) return false;
         while (left <= right) {
-            int mid = (unsigned int) (left + right) >> 1;
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             int rowIdx = mid / m, colIdx = mid % m;
             int midNum = matrix.at(rowIdx).at(colIdx);
             if (midNum == target) return true;

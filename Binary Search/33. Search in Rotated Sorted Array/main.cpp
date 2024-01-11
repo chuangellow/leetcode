@@ -9,7 +9,7 @@ public:
 		int left = 0, right = n - 1;
 		int rightMostNum = nums.at(n - 1);
 		while (left <= right) {
-			int mid = (unsigned int) (left + right) >> 1;
+			int mid = ((unsigned int) left + (unsigned int) right) >> 1;
 			if (nums.at(mid) > rightMostNum) left = mid + 1;
 			else right = mid - 1;
 		}
