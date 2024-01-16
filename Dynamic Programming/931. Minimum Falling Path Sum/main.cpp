@@ -5,23 +5,24 @@ using namespace std;
 
 class Solution {
 public:
-    void findMinPathSum(int x, int y, int currentSum, int* minPathSum, vector<vector<int>>& matrix, const int n) {
-        if (x >= n) {
-            *minPathSum = min(currentSum, *minPathSum);
-            return;
-        }
-        if (y - 1 >= 0) findMinPathSum(x+1, y-1, currentSum + matrix.at(x).at(y), minPathSum, matrix, n);
-        if (y + 1 < n) findMinPathSum(x+1, y+1, currentSum + matrix.at(x).at(y), minPathSum, matrix, n);
-        findMinPathSum(x+1, y, currentSum + matrix.at(x).at(y), minPathSum, matrix, n);
-        return;
-    }
     int minFallingPathSum(vector<vector<int>>& matrix) {
         int n = matrix.size();
-        int minPathSum = INT32_MAX;
-        for (int i = 0; i < n; i++) {
-            findMinPathSum(0, i, 0, &minPathSum, matrix, n);
+        vector<vector<int>> dp(n, vector<int>(n, 0));
+        for (int j = 0; j < n; j++) dp[0][j] = matrix[0][j];
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                int minValue = INT32_MAX;
+                if (j-1 >= 0) minValue = min(dp[i-1][j-1], minValue);
+                if (j+1 < n) minValue = min(dp[i-1][j+1], minValue);
+                minValue = min(dp[i-1][j], minValue);
+                dp[i][j] = minValue + matrix[i][j];
+            }
         }
-        return minPathSum;
+        int minValue = INT32_MAX;
+        for (int j = 0; j < n; j++) {
+            minValue = min(minValue, dp[n-1][j]);
+        }
+        return minValue;
     }
 };
 
