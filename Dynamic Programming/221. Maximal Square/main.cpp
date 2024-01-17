@@ -5,33 +5,39 @@ using namespace std;
 
 class Solution {
 public:
-    bool checkValid(int row, int col, int squareLen, vector<vector<char>>& matrix) {
-        for (int i = 0; i < squareLen; i++) {
-            for (int j = 0; j < squareLen; j++) {
-                if (matrix.at(row+i).at(col+j) == '0') return 0;
-            } 
-        }
-        return 1;
-    }
-    void findMaxSize(int row, int col, int* maxSquareSize, vector<vector<char>>& matrix, const int m, const int n) {
-        int len = 1;
-        while (checkValid(row, col, len, matrix) && row + len < m && col + len < n) {
+    int getMaxPossibleLen(int row, int col, int maxLen, vector<vector<char>>& matrix) {
+        int len = 0;
+        int currentRow = row - len, currentCol = col - len;
+        while (currentRow >= 0 && currentCol >= 0 && len <= maxLen) {
+            if (matrix[currentRow][col] == '0' || matrix[row][currentCol] == '0') return len;
             len++;
+            currentRow--;
+            currentCol--;
         }
-        len = checkValid(row, col, len, matrix)? len: len - 1;
-        *maxSquareSize = max((len)*(len), *maxSquareSize);
-        return;
+        return len;
     }
     int maximalSquare(vector<vector<char>>& matrix) {
         int m = matrix.size();
         int n = matrix[0].size();
-        int maxSquareSize = -1;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                findMaxSize(i, j, &maxSquareSize, matrix, m, n);
+        vector<vector<int>> dp(m, vector<int>(n, 0));
+        for (int i = 0; i < m; i++) dp[i][0] = (matrix[i][0] == '1');
+        for (int j = 0; j < n; j++) dp[0][j] = (matrix[0][j] == '1');
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (matrix[i][j] == '0') dp[i][j] = 0;
+                else {
+                    int maxLen = dp[i-1][j-1];
+                    dp[i][j] = getMaxPossibleLen(i, j, maxLen, matrix);
+                }
             }
         }
-        return maxSquareSize;
+        int maxValue = -1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                maxValue = max(maxValue, dp[i][j]);
+            }
+        }
+        return maxValue * maxValue;
     }
 };
 
