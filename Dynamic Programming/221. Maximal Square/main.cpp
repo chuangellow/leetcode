@@ -8,23 +8,27 @@ public:
     int maximalSquare(vector<vector<char>>& matrix) {
         int m = matrix.size();
         int n = matrix[0].size();
-        vector<vector<int>> dp(m, vector<int>(n, 0));
-        for (int i = 0; i < m; i++) dp[i][0] = (matrix[i][0] == '1');
-        for (int j = 0; j < n; j++) dp[0][j] = (matrix[0][j] == '1');
+        vector<int> dp(n, 0);
+        vector<int> prevRow(n, 0);
+        int maxValue = -1;
+        for (int i = 0; i < n; i++) {
+            prevRow[i] = (matrix[0][i] == '1');
+            maxValue = max(prevRow[i], maxValue);
+        }
         for (int i = 1; i < m; i++) {
+            dp[0] = (matrix[i][0] == '1');
+            maxValue = max(maxValue, dp[0]);
             for (int j = 1; j < n; j++) {
-                if (matrix[i][j] == '0') dp[i][j] = 0;
+                if (matrix[i][j] == '0') dp[j] = 0;
                 else {
-                    int minValue = min(dp[i-1][j], dp[i][j-1]);
-                    minValue = min(minValue, dp[i-1][j-1]);
-                    dp[i][j] = minValue + 1;
+                    int minValue = min(dp[j-1], prevRow[j]);
+                    minValue = min(minValue, prevRow[j-1]);
+                    dp[j] = minValue + 1;
+                    maxValue = max(maxValue, dp[j]);
                 }
             }
-        }
-        int maxValue = -1;
-        for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                maxValue = max(maxValue, dp[i][j]);
+                prevRow[j] = dp[j];
             }
         }
         return maxValue * maxValue;
