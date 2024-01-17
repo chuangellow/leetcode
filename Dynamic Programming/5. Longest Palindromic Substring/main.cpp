@@ -5,34 +5,35 @@ using namespace std;
 
 class Solution {
 public:
-    bool checkPalindrome(int left, int right, string s) {
-        while (left <= right) {
-            if (s.at(left) == s.at(right)) {
-                left++;
-                right--;
-            }
-            else return false;
-        }
-        return true;
-    }
     string longestPalindrome(string s) {
         int len = s.length();
-        int maxLen = -1;
-        string outStr;
-        int start = -1, end = -1;
+        vector<vector<int>> dp(len, vector<int>(len, 0));
         for (int i = 0; i < len; i++) {
-            for (int j = i+1; j < len; j++) {
-                if (checkPalindrome(i, j, s)) {
-                    if (j - i + 1 > maxLen) {
-                        maxLen = j - i + 1;
-                        start = i, end = j;
-                        cout << i << ' ' << j << endl;
-                    }
+            dp[i][i] = 1;
+            if (i+1 < len && s[i] == s[i+1]) dp[i][i+1] = 2;
+        }
+        int width = 2;
+        int left = 0, right = left + width;
+        while (right < len) {
+            while (right < len) {
+                dp[left][right] = (dp[left+1][right-1] != 0 && s[left] == s[right])? dp[left+1][right-1] + 2: 0;
+                left++;
+                right++;
+            }
+            width++;
+            left = 0, right = left + width;
+        }
+        int maxLen = -1;
+        int maxLeft = -1, maxRight = -1;
+        for (int i = 0; i < len; i++) {
+            for (int j = i; j < len; j++) {
+                if (dp[i][j] > maxLen) {
+                    maxLen = dp[i][j];
+                    maxLeft = i, maxRight = j;
                 }
             }
         }
-        if (start == -1 && end == -1) return s.substr(0, 1);
-        return s.substr(start, end-start+1);
+        return s.substr(maxLeft, maxRight-maxLeft+1);
     }
 };
 
