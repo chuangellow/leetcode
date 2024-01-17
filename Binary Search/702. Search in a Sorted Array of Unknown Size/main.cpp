@@ -19,18 +19,12 @@ public:
 
 class Solution {
 public:
-    int findSize(const ArrayReader& reader) {
-        int left = 0, right = 10000;
-        while (left < right) {
-            int mid = ((unsigned int) left + (unsigned int) right + 1) >> 1;
-            int result = reader.get(mid);
-            if (result != INT_MAX) left = mid; 
-            else right = mid - 1;
-        }
-        return left;
-    }
     int search(const ArrayReader& reader, int target) {
-        int left = 0, right = findSize(reader);
+        int left = 0, right = 1;
+        while (reader.get(right) < target) {
+            left = right;
+            right <<= 1;
+        }
         while (left <= right) {
             int mid = ((unsigned int) left + (unsigned int) right) >> 1;
             if (reader.get(mid) == target) return mid;
