@@ -106,6 +106,7 @@ The problems are organized into directories based on the main technique or data 
 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)| [C++](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/main.cpp) | [Note](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
 | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| [C++](./Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/main.cpp) | | Medium | 2024/01/11 | [x] | [ ] |
 | 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)| [C++](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/main.cpp) | | Hard | 2024/01/11 | [x] | [ ] |
+| 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size)| [C++](./Binary%20Search/702.%20Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/main.cpp) | | Medium | 2024/01/17 | [ ] | [ ] |
 
 ## [Two-Pointers](https://leetcode.com/tag/two-pointers/)
 
