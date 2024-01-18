@@ -14,7 +14,7 @@ The problems are organized into directories based on the main technique or data 
 - [String](#string)
 - [Stack](#stack)
 - [Queue](#queue)
-- [Binary Tree](#binary-tree)
+- [Tree](#tree)
 - [Monotonic Queue](#monotonic-queue)
 
 ### Algorithm
@@ -77,10 +77,11 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
-## Binary Tree
+## Tree
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)| [C++](./Tree/208.%20Implement%20Trie%20(Prefix%20Tree)/main.cpp) | | Medium | 2024/01/18 | [ ] | [ ] |
 
 ## Monotonic Queue
 
@@ -159,7 +160,7 @@ The problems are organized into directories based on the main technique or data 
 | 931 | [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/)| [C++](./Dynamic%20Programming/931.%20Minimum%20Falling%20Path%20Sum/main.cpp) | | Medium | 2024/01/16 | [x] | [ ] |
 | 221 | [Maximal Square](https://leetcode.com/problems/maximal-square/)| [C++](./Dynamic%20Programming/221.%20Maximal%20Square/main.cpp) | | Medium | 2024/01/17 | [x] | [ ] |
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)| [C++](./Dynamic%20Programming/5.%20Longest%20Palindromic%20Substring/main.cpp) | [Note](./Dynamic%20Programming/5.%20Longest%20Palindromic%20Substring/Note.pdf) | Medium | 2024/01/17 | [x] | [ ] |
-| 139 | [Word Break](https://leetcode.com/problems/word-break/)| [C++](./Dynamic%20Programming/139.%20Word%20Break/main.cpp) | [Note](./Dynamic%20Programming/139.%20Word%20Break/Note.pdf) | Medium | 2024/01/18 | [ ] | [ ] |
+| 139 | [Word Break](https://leetcode.com/problems/word-break/)| [C++](./Dynamic%20Programming/139.%20Word%20Break/main.cpp) | [Note](./Dynamic%20Programming/139.%20Word%20Break/Note.pdf) | Medium | 2024/01/18 | [x] | [ ] |
 
 # Reference：
 
