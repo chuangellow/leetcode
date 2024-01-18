@@ -106,7 +106,7 @@ The problems are organized into directories based on the main technique or data 
 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)| [C++](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/main.cpp) | [Note](./Binary%20Search/981.%20Time%20Based%20Key-Value%20Store/Note.pdf) | Medium | 2024/01/06 | [x] | [ ] |
 | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| [C++](./Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/main.cpp) | | Medium | 2024/01/11 | [x] | [ ] |
 | 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)| [C++](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/main.cpp) | | Hard | 2024/01/11 | [x] | [ ] |
-| 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size)| [C++](./Binary%20Search/702.%20Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/main.cpp) | | Medium | 2024/01/17 | [ ] | [ ] |
+| 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size)| [C++](./Binary%20Search/702.%20Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/main.cpp) | | Medium | 2024/01/17 | [ x] | [ ] |
 
 ## [Two-Pointers](https://leetcode.com/tag/two-pointers/)
 
@@ -159,6 +159,7 @@ The problems are organized into directories based on the main technique or data 
 | 931 | [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/)| [C++](./Dynamic%20Programming/931.%20Minimum%20Falling%20Path%20Sum/main.cpp) | | Medium | 2024/01/16 | [x] | [ ] |
 | 221 | [Maximal Square](https://leetcode.com/problems/maximal-square/)| [C++](./Dynamic%20Programming/221.%20Maximal%20Square/main.cpp) | | Medium | 2024/01/17 | [x] | [ ] |
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)| [C++](./Dynamic%20Programming/5.%20Longest%20Palindromic%20Substring/main.cpp) | [Note](./Dynamic%20Programming/5.%20Longest%20Palindromic%20Substring/Note.pdf) | Medium | 2024/01/17 | [x] | [ ] |
+| 139 | [Word Break](https://leetcode.com/problems/word-break/)| [C++](./Dynamic%20Programming/139.%20Word%20Break/main.cpp) | | Medium | 2024/01/18 | [ ] | [ ] |
 
 # Reference：
 
