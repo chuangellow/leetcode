@@ -9,18 +9,21 @@ class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
         int strLen = s.length();
-        vector<bool> dp(strLen + 1, false);
-        unordered_set<string> dict(wordDict.begin(), wordDict.end());
-        dp[0] = true;
-        for (int i = 1; i <= strLen; i++) {
-            for (int k = 0; k < i; k++) {
-                if (dp[k] && dict.find(s.substr(k, i-k)) != dict.end()) {
-                    dp[i] = true;
-                    break;
+        int dictSize = wordDict.size();
+        vector<bool> dp(strLen, false);
+        for (int i = 0; i < strLen; i++) {
+            for (int j = 0; j < dictSize; j++) {
+                int wordLen = wordDict[j].length();
+                if (i < wordLen - 1) continue;
+                if (i == wordLen - 1 || dp[i - wordLen]) {
+                    if (s.substr(i - wordLen + 1, wordLen) == wordDict[j]) {
+                        dp[i] = true;
+                        break;
+                    }
                 }
             }
         }
-        return dp[strLen];
+        return dp[strLen - 1];
     }
 };
 
