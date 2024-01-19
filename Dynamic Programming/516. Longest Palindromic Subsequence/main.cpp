@@ -6,46 +6,18 @@ using namespace std;
 
 class Solution {
 public:
-    bool isPalindrome(vector<bool>& mask, string s, int len) {
-        int left = 0, right = len-1;
-        while (!mask[left]) left++;
-        while (!mask[right]) right--;
-        while (left <= right) {
-            if (!mask[left]) left++;
-            if (!mask[right]) right--;
-            if (s[left] == s[right]) {
-                left++;
-                right--;
-            }
-            else {
-                return false;
-            }
-        }
-        return true;
-    }
-    void solve(int pos, int* maxSize, vector<bool>& mask, string s, int len) {
-        if (pos == len) {
-            if (isPalindrome(mask, s, len)) {
-                int currentSize = 0;
-                for (int i = 0; i < len; i++) {
-                    currentSize += (mask[i]);
-                }
-                *maxSize = max(*maxSize, currentSize);
-            }
-            return;
-        }
-        mask[pos] = false;
-        solve(pos+1, maxSize, mask, s, len);
-        mask[pos] = true;
-        solve(pos+1, maxSize, mask, s, len);
-        return;
-    }
     int longestPalindromeSubseq(string s) {
-        int len = s.length();
-        vector<bool> mask(len, true);
-        int maxSize = -1;
-        solve(0, &maxSize, mask, s, len);
-        return maxSize;
+        int strLen = s.length();
+        vector<vector<int>> dp(strLen, vector<int>(strLen, 0));
+        for (int i = 0; i < strLen; i++) dp[i][i] = 1;
+        for (int len = 1; len < strLen; len++) {
+            for (int i = 0; i < strLen - len; i++) {
+                int j = i + len;
+                if (s[i] == s[j]) dp[i][j] = 2 + dp[i+1][j-1];
+                else dp[i][j] = max(dp[i+1][j], dp[i][j-1]);
+            }
+        }
+        return dp[0][strLen-1];
     }
 };
 
