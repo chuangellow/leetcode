@@ -10,21 +10,26 @@ public:
     int minDistance(string word1, string word2) {
         int word1Len = word1.length();
         int word2Len = word2.length();
-        vector<vector<int>> dp(word1Len+1, vector<int>(word2Len+1, 0));
+        if (word1Len == 0) return word2Len;
+        vector<int> prevRow(word2Len+1, 0);
+        vector<int> currentRow(word2Len+1, 0);
 
-        for (int i = 0; i <= word1Len; i++) dp[i][0] = i;
-        for (int i = 0; i <= word2Len; i++) dp[0][i] = i;
+        for (int i = 0; i <= word2Len; i++) prevRow[i] = i;
 
         for (int i = 1; i <= word1Len; i++) {
+            currentRow[0] = i;
             for (int j = 1; j <= word2Len; j++) {
                 if (word1[i-1] == word2[j-1]) {
-                    dp[i][j] = dp[i-1][j-1];
+                    currentRow[j] = prevRow[j-1];
                 } else {
-                    dp[i][j] = min({dp[i-1][j-1], dp[i-1][j], dp[i][j-1]}) + 1;
+                    currentRow[j] = min({prevRow[j-1], prevRow[j], currentRow[j-1]}) + 1;
                 }
             }
+            for (int j = 0; j <= word2Len; j++) {
+                prevRow[j] = currentRow[j];
+            }
         }
-        return dp[word1Len][word2Len];
+        return currentRow[word2Len]; 
     }
 };
 
