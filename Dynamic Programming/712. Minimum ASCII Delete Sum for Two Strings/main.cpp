@@ -6,29 +6,21 @@ using namespace std;
 
 class Solution {
 public:
-    void getMinDeleteSum(int deleteSum, int* minDeleteSum, string s1, string s2) {
+    int minimumDeleteSum(string s1, string s2) {
         int len1 = s1.length();
         int len2 = s2.length();
-        if ((len1 == len2 && len1 == 0) || (len1 == len2 && s1 == s2)) {
-            *minDeleteSum = min(*minDeleteSum, deleteSum);
-            return;
+        vector<vector<int>> dp(len1+1, vector<int>(len2+1, 0));
+        for (int i = 1; i <= len1; i++) dp[i][0] = dp[i-1][0] + int(s1[i-1]);
+        for (int j = 1; j <= len2; j++) dp[0][j] = dp[0][j-1] + int(s2[j-1]);
+        if (len1 == 0) return dp[0][len2];
+        if (len2 == 0) return dp[len1][0];
+        for (int i = 1; i <= len1; i++) {
+            for (int j = 1; j <= len2; j++) {
+                if (s1[i-1] == s2[j-1]) dp[i][j] = dp[i-1][j-1];
+                else dp[i][j] = min(dp[i-1][j] + int(s1[i-1]), dp[i][j-1] + int(s2[j-1]));
+            }
         }
-        for (int pos = 0; pos < len1; pos++) {
-            string newS1 = s1;
-            newS1.erase(pos, 1);
-            getMinDeleteSum(deleteSum+int(s1.at(pos)), minDeleteSum, newS1, s2);
-        }
-        for (int pos = 0; pos < len2; pos++) {
-            string newS2 = s2;
-            newS2.erase(pos, 1);
-            getMinDeleteSum(deleteSum+int(s2.at(pos)), minDeleteSum, s1, newS2);
-        }
-        return;
-    }
-    int minimumDeleteSum(string s1, string s2) {
-        int minDeleteSum = INT32_MAX;
-        getMinDeleteSum(0, &minDeleteSum, s1, s2);
-        return minDeleteSum;
+        return dp[len1][len2];
     }
 };
 
