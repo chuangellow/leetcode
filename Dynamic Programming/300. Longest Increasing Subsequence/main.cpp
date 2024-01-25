@@ -7,18 +7,26 @@ class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
-        if (n == 1) return 1;
-        vector<int> dp(n, 1);
-        int finalMaxValue = 1;
-        for (int i = 0; i < n; i++) {
-            int maxValue = 0;
-            for (int j = 0; j < i; j++) {
-                if (nums[i] > nums[j]) maxValue = max(maxValue, dp[j]);
+        int maxLen = 1;
+        vector<int> subSequence = {nums[0]};
+        int len = 1;
+        for (int i = 1; i < n; i++) {
+            if (nums[i] > subSequence[len-1]) {
+                subSequence.push_back(nums[i]);
+                len++;
             }
-            dp[i] = maxValue + 1;
-            finalMaxValue = max(finalMaxValue, dp[i]);
+            else {
+                int pos = -1;
+                for (int j = 0; j < len; j++) {
+                    if (subSequence[j] >= nums[i]) {
+                        pos = j;
+                        break;
+                    }
+                }
+                subSequence[pos] = nums[i];
+            }
         }
-        return finalMaxValue;
+        return len;
     }
 };
 
