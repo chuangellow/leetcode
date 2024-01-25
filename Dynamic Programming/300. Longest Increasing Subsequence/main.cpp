@@ -5,6 +5,15 @@ using namespace std;
 
 class Solution {
 public:
+    int binarySearch(vector<int>& subSequence, int len, int target) {
+        int left = 0, right = len-1;
+        while (left < right) {
+            int mid = ((unsigned int) left + (unsigned int) right) >> 1;
+            if (subSequence[mid] < target) left = mid + 1;
+            else right = mid;
+        }
+        return left;
+    }
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
         int maxLen = 1;
@@ -16,13 +25,7 @@ public:
                 len++;
             }
             else {
-                int pos = -1;
-                for (int j = 0; j < len; j++) {
-                    if (subSequence[j] >= nums[i]) {
-                        pos = j;
-                        break;
-                    }
-                }
+                int pos = binarySearch(subSequence, len, nums[i]);
                 subSequence[pos] = nums[i];
             }
         }
