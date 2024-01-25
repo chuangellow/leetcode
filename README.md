@@ -165,7 +165,8 @@ The problems are organized into directories based on the main technique or data 
 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/)| [C++](./Dynamic%20Programming/72.%20Edit%20Distance/main.cpp) | | Medium | 2024/01/22 | [x] | [ ] |
 | 712 | [Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)| [C++](./Dynamic%20Programming/712.%20Minimum%20ASCII%20Delete%20Sum%20for%20Two%20Strings/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)| [C++](./Dynamic%20Programming/300.%20Longest%20Increasing%20Subsequence/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
-| 673 | [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)| [C++](./Dynamic%20Programming/673.%20Number%20of%20Longest%20Increasing%20Subsequence/main.cpp) | | Medium | 2024/01/25 | [ ] | [ ] |
+| 673 | [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)| [C++](./Dynamic%20Programming/673.%20Number%20of%20Longest%20Increasing%20Subsequence/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
+| 646 | [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)| [C++](./Dynamic%20Programming/646.%20Maximum%20Length%20of%20Pair%20Chain/main.cpp) | | Medium | 2024/01/25 | [] | [ ] |
 
 # Reference：
 
