@@ -10,6 +10,29 @@ public:
         int idx;
         int color; // 0: white, 1: gray, 2: black
     } vertex;
+    void DFSVisit(int sourceIdx, vector<vertex>& vertices, vector<vector<int>>& isConnected, int n) {
+        vertices[sourceIdx].color = 1;
+        for (int i = 0; i < n; i++) {
+            if (i == sourceIdx) continue;
+            if (isConnected[sourceIdx][i]) {
+                if (vertices[i].color == 0) {
+                    DFSVisit(i, vertices, isConnected, n);
+                }
+            }
+        }
+        vertices[sourceIdx].color = 2;
+        return;
+    }
+    int DFS(vector<vertex>& vertices, vector<vector<int>>& isConnected, int n) {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (vertices[i].color == 0) {
+                DFSVisit(i, vertices, isConnected, n);
+                count++;
+            }
+        }
+        return count;
+    }
     void BFS(int sourceIdx, vector<vertex>& vertices, vector<vector<int>>& isConnected, int n) {
         vertices[sourceIdx].color = 1;
         vertex source = vertices[sourceIdx];
@@ -44,13 +67,7 @@ public:
             vertex v = {i, 0};
             vertices.push_back(v);
         }
-        int count = 0;
-        int idx = findNonVisited(vertices, n);
-        while ((idx = findNonVisited(vertices, n)) != -1) {
-            BFS(idx, vertices, isConnected, n);
-            count++;
-        }
-        return count;
+        return DFS(vertices, isConnected, n);
     }
 };
 
