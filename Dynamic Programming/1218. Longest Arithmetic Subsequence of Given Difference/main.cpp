@@ -8,14 +8,14 @@ class Solution {
 public:
     int longestSubsequence(vector<int>& arr, int difference) {
         int n = arr.size();
-        vector<int> dp(n, 1);
         unordered_map<int, int> hashTable;
         hashTable[arr[0]] = 1;
         int finalMaxValue = 1;
+        int temp;
         for (int i = 1; i < n; i++) {
-            dp[i] = hashTable.count(arr[i] - difference) ? hashTable[arr[i] - difference] + 1 : 1;
-            hashTable[arr[i]] = max(hashTable[arr[i]], dp[i]);
-            finalMaxValue = max(finalMaxValue, dp[i]);
+            temp = hashTable.count(arr[i] - difference) ? hashTable[arr[i] - difference] + 1 : 1;
+            hashTable[arr[i]] = max(hashTable[arr[i]], temp);
+            finalMaxValue = max(finalMaxValue, temp);
         }
         return finalMaxValue;
     }
