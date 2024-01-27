@@ -74,7 +74,10 @@ public:
         }
     }
     Graph(int numNodes, vector<vector<int>>& edges) {
-        lists.resize(numNodes);
+        for (int i = 0; i < numNodes; i++) {
+            shared_ptr<LinkedList> list = make_shared<LinkedList>();
+            lists.push_back(list);
+        }
         for (auto edge: edges) {
             lists[edge[0]]->insertToTail(edge[1]);
         }
