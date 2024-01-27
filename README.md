@@ -15,8 +15,9 @@ The problems are organized into directories based on the main technique or data 
 - [String](#string)
 - [Stack](#stack)
 - [Queue](#queue)
-- [Tree](#tree)
+- [Trie](#trie)
 - [Monotonic Queue](#monotonic-queue)
+- [Disjoint Set](#disjoint-set)
 
 ### Algorithm
 
@@ -87,6 +88,11 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+
+## Trie
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)| [C++](./Tree/208.%20Implement%20Trie%20(Prefix%20Tree)/main.cpp) | | Medium | 2024/01/18 | [x] | [ ] |
 
 ## Monotonic Queue
@@ -94,6 +100,9 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
+## Disjoint Set
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
 # 演算法策略
 
