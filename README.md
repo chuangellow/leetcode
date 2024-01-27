@@ -102,8 +102,8 @@ The problems are organized into directories based on the main technique or data 
 
 ## Disjoint Set
 
-- Linked-list implementation: [main.cpp](./Disjoint%20Set/Linked%20List%20Implementation/main.cpp)
-- Disjoint-sets Forest implementation: [main.cpp](./Disjoint%20Set/Disjoint%20Sets%20Forest%20Implementation/main.cpp)
+- Linked-list implementation: [main.cpp](./Disjoint%20Set/Implementations/Linked%20List%20Implementation/main.cpp)
+- Disjoint-sets Forest implementation: [main.cpp](./Disjoint%20Set/Implementations/Disjoint%20Sets%20Forest%20Implementation/main.cpp)
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
@@ -155,6 +155,8 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
 ## Graph Algorithm
+
+- Adjacency List Implementation: [main.cpp](./Graph/Implementations/Adjacency%20List/main.cpp)
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
