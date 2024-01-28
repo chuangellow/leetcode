@@ -108,6 +108,7 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 547 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)| [C++](./Graph/547.%20Number%20of%20Provinces/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
+| 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 
 # 演算法策略
 
@@ -162,6 +163,7 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 547 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)| [C++](./Graph/547.%20Number%20of%20Provinces/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 | 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
+| 802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)| [C++](./Graph/802.%20Find%20Eventual%20Safe%20States/main.cpp) | | Medium | 2024/01/28 | [ ] | [ ] |
 
 ## Greedy
 
