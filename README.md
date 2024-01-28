@@ -159,7 +159,7 @@ The problems are organized into directories based on the main technique or data 
 
 - Adjacency List Implementation: [main.cpp](./Graph/Implementations/Adjacency%20List/main.cpp)
 - BFS Implementation [main.cpp](./Graph/Implementations/BFS/main.cpp)
-- DFS Implementation [main.cpp](./Graph/Implementations/DFS/main.cpp)
+- DFS Implementation [dfs-with-adjacency-matrix.cpp](./Graph/Implementations/DFS/dfs-with-adjacency-matrix.cpp)
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
