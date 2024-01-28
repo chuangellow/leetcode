@@ -158,6 +158,7 @@ The problems are organized into directories based on the main technique or data 
 ## Graph Algorithm
 
 - Adjacency List Implementation: [main.cpp](./Graph/Implementations/Adjacency%20List/main.cpp)
+- BFS Implementation [main.cpp](./Graph/Implementations/BFS/main.cpp)
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
