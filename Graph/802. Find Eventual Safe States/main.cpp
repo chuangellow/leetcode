@@ -7,24 +7,24 @@ using namespace std;
 class Solution {
 public:
     vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
-        return vector<int> {};
+        
     }
 };
 
 int main(void) {
     int numNodes;
     cin >> numNodes;
-    vector<vector<int>> graph;
+    vector<vector<int>> graph(numNodes);
     for (int i = 0; i < numNodes; i++) {
         int numEdges;
         cin >> numEdges;
+        vector<int> edges = {};
         for (int j = 0; j < numEdges; j++) {
             int idx;
             cin >> idx;
-            vector<int> edge = {i, idx};
-            cout << i << " " << idx << endl;
-            graph.push_back(edge);
+            edges.push_back(idx);
         }
+        graph[i] = edges;
     }
     Solution sol;
     vector<int> ans = sol.eventualSafeNodes(graph);
