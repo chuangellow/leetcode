@@ -4,6 +4,7 @@
 #include <queue>
 
 enum {WHITE, GRAY, BLACK};
+enum {NO, TREE, BACK, FORWARD, CROSS};
 
 using namespace std;
 
@@ -13,7 +14,7 @@ public:
     int discoveryTime;
     int finishingTime;
     shared_ptr<Vertex> predecesor;
-    Vertex(): color(WHITE), discoveryTime(0), finishingTime(0), predecesor(nullptr) {}
+    Vertex(): color(WHITE), discoveryTime(INT32_MAX), finishingTime(INT32_MAX), predecesor(nullptr) {}
 };
 
 class Graph {
@@ -23,6 +24,21 @@ public:
     vector<vector<int>> adjacencyMatrix;
     Graph(vector<shared_ptr<Vertex>> vertices, vector<vector<int>>& adjacencyMatrix)
         : numNodes(vertices.size()), vertices(vertices), adjacencyMatrix(adjacencyMatrix) {}
+    void showTimeStamp() {
+        for (int i = 0; i < numNodes; i++) {
+            cout << vertices[i]->discoveryTime << " " << vertices[i]->finishingTime << endl;
+        }
+        return;
+    }
+    void showEdges() {
+        for (int i = 0; i < numNodes; i++) {
+            for (int j = 0; j < numNodes; j++) {
+                cout << adjacencyMatrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+        return;
+    }
 };
 
 void DFSVisit(int sourceIdx, int* timeStamp, shared_ptr<Graph> graph) {
@@ -31,11 +47,26 @@ void DFSVisit(int sourceIdx, int* timeStamp, shared_ptr<Graph> graph) {
     vertices[sourceIdx]->color = GRAY;
     vertices[sourceIdx]->discoveryTime = *timeStamp;
     for (int j = 0; j < graph->numNodes; j++) {
-        if (sourceIdx == j) continue;
-        if (graph->adjacencyMatrix[sourceIdx][j] != 0) {
+        if (sourceIdx == j) {
+            if (graph->adjacencyMatrix[sourceIdx][j] != NO) graph->adjacencyMatrix[sourceIdx][j] = BACK;
+            continue;
+        }
+        if (graph->adjacencyMatrix[sourceIdx][j] != NO) {
             if (vertices[j]->color == WHITE) {
+                graph->adjacencyMatrix[sourceIdx][j] = TREE;
                 vertices[j]->predecesor = vertices[sourceIdx];
                 DFSVisit(j, timeStamp, graph);
+            }
+            else if (vertices[j]->color == GRAY) {
+                graph->adjacencyMatrix[sourceIdx][j] = BACK;
+            }
+            else if (vertices[j]->color == BLACK) {
+                if (vertices[j]->discoveryTime > vertices[sourceIdx]->discoveryTime) {
+                    graph->adjacencyMatrix[sourceIdx][j] = FORWARD;
+                }
+                else {
+                    graph->adjacencyMatrix[sourceIdx][j] = CROSS;
+                }
             }
         }
     }
@@ -70,7 +101,8 @@ int main(void) {
     }
     shared_ptr<Graph> graph = make_shared<Graph>(vertices, adjacencyMatrix);
     DFS(graph);
-    for (int i = 0; i < graph->numNodes; i++) {
-        cout << graph->vertices[i]->discoveryTime << " " << graph->vertices[i]->finishingTime << endl;
-    }
+    cout << "Time Stamp: " << endl;
+    graph->showTimeStamp();
+    cout << "Edges: " << endl;
+    graph->showEdges();
 }
