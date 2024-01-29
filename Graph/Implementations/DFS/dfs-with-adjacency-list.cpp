@@ -18,63 +18,99 @@ public:
     Vertex(int index): index(index), color(WHITE), discoveryTime(INT32_MAX), finishingTime(INT32_MAX), predecesor(nullptr) {}
 };
 
+class EdgeNode {
+public:
+    int index;
+    shared_ptr<EdgeNode> next;
+    EdgeNode(int index): index(index), next(nullptr) {}
+};
+
+class LinkedList {
+public:
+    shared_ptr<EdgeNode> head;
+    shared_ptr<EdgeNode> tail;
+    int len;
+    LinkedList(): tail(nullptr), len(0) {
+        shared_ptr<EdgeNode> pseudoHead = make_shared<EdgeNode>(-1);
+        this->head = pseudoHead;
+    }
+    LinkedList(shared_ptr<EdgeNode> node): tail(node), len(1) {
+        shared_ptr<EdgeNode> pseudoHead = make_shared<EdgeNode>(-1);
+        this->head = pseudoHead;
+    }
+    void insertToTail(int index) {
+        if (head == nullptr || tail == nullptr) {
+            shared_ptr<EdgeNode> newVertex = make_shared<EdgeNode>(index);
+            shared_ptr<EdgeNode> pseudoHead = make_shared<EdgeNode>(-1);
+            pseudoHead->next = newVertex;
+            head = pseudoHead;
+            tail = newVertex;
+            len = 1;
+            return;
+        }
+        shared_ptr<EdgeNode> newVertex = make_shared<EdgeNode>(index);
+        tail->next = newVertex;
+        tail = newVertex;
+        len += 1;
+        return;
+    }
+    void traverse() {
+        if (head == nullptr || tail == nullptr) return;
+        shared_ptr<EdgeNode> currentVertex = head->next;
+        while (currentVertex != nullptr) {
+            cout << currentVertex->index << " ";
+            currentVertex = currentVertex->next;
+        }
+        cout << endl;
+        return;
+    }
+};
+
 class Graph {
 public:
     int numNodes;
     vector<shared_ptr<Vertex>> vertices;
-    vector<vector<int>> adjacencyMatrix;
-    Graph(vector<shared_ptr<Vertex>> vertices, vector<vector<int>>& adjacencyMatrix)
-        : numNodes(vertices.size()), vertices(vertices), adjacencyMatrix(adjacencyMatrix) {}
+    vector<shared_ptr<LinkedList>> adjacencyList;
+    Graph(vector<vector<int>>& adjacencyMatrix): numNodes(adjacencyMatrix.size()) {
+        for (int i = 0; i < numNodes; i++) {
+            shared_ptr<LinkedList> list = make_shared<LinkedList>();
+            for (int j = 0; j < numNodes; j++) {
+                if (adjacencyMatrix[i][j]) {
+                    list->insertToTail(j);
+                }
+            }
+            adjacencyList.push_back(list);
+        }
+        for (int i = 0; i < numNodes; i++) {
+            shared_ptr<Vertex> vertex = make_shared<Vertex>(i);
+            vertices.push_back(vertex);
+        }
+    }
     void showTimeStamp() {
         for (int i = 0; i < numNodes; i++) {
             cout << vertices[i]->discoveryTime << " " << vertices[i]->finishingTime << endl;
         }
-        return;
-    }
-    void showEdges() {
-        for (int i = 0; i < numNodes; i++) {
-            for (int j = 0; j < numNodes; j++) {
-                cout << adjacencyMatrix[i][j] << " ";
-            }
-            cout << endl;
-        }
-        return;
+        cout << endl;
     }
 };
 
 void DFSVisit(int sourceIdx, int* timeStamp, shared_ptr<Graph> graph) {
     *timeStamp = *timeStamp + 1;
-    vector<shared_ptr<Vertex>> vertices = graph->vertices;
-    vertices[sourceIdx]->color = GRAY;
-    vertices[sourceIdx]->discoveryTime = *timeStamp;
-    for (int j = 0; j < graph->numNodes; j++) {
-        if (sourceIdx == j) {
-            if (graph->adjacencyMatrix[sourceIdx][j] != NO) graph->adjacencyMatrix[sourceIdx][j] = BACK;
-            continue;
+    shared_ptr<Vertex> sourceVertex = graph->vertices[sourceIdx];
+    sourceVertex->discoveryTime = *timeStamp;
+    sourceVertex->color = GRAY;
+    shared_ptr<EdgeNode> neighborEdgeNode = graph->adjacencyList[sourceIdx]->head->next; 
+    while (neighborEdgeNode != nullptr) {
+        shared_ptr<Vertex> neighborVertex = graph->vertices[neighborEdgeNode->index];
+        if (neighborVertex->color == WHITE) {
+            neighborVertex->predecesor = sourceVertex;
+            DFSVisit(neighborEdgeNode->index, timeStamp, graph);
         }
-        if (graph->adjacencyMatrix[sourceIdx][j] != NO) {
-            if (vertices[j]->color == WHITE) {
-                graph->adjacencyMatrix[sourceIdx][j] = TREE;
-                vertices[j]->predecesor = vertices[sourceIdx];
-                DFSVisit(j, timeStamp, graph);
-            }
-            else if (vertices[j]->color == GRAY) {
-                graph->adjacencyMatrix[sourceIdx][j] = BACK;
-            }
-            else if (vertices[j]->color == BLACK) {
-                if (vertices[j]->discoveryTime > vertices[sourceIdx]->discoveryTime) {
-                    graph->adjacencyMatrix[sourceIdx][j] = FORWARD;
-                }
-                else {
-                    graph->adjacencyMatrix[sourceIdx][j] = CROSS;
-                }
-            }
-        }
+        neighborEdgeNode = neighborEdgeNode->next;
     }
-    vertices[sourceIdx]->color = BLACK;
     *timeStamp = *timeStamp + 1;
-    vertices[sourceIdx]->finishingTime = *timeStamp;
-    return;
+    sourceVertex->finishingTime = *timeStamp;
+    sourceVertex->color = BLACK;
 }
 
 void DFS(shared_ptr<Graph> graph) {
@@ -84,6 +120,7 @@ void DFS(shared_ptr<Graph> graph) {
             DFSVisit(i, &timeStamp, graph);
         }
     }
+    return;
 }
 
 int main(void) {
@@ -95,15 +132,7 @@ int main(void) {
             cin >> adjacencyMatrix[i][j];
         }
     }
-    vector<shared_ptr<Vertex>> vertices;
-    for (int i = 0; i < numNodes; i++) {
-        shared_ptr<Vertex> vertex = make_shared<Vertex>(i);
-        vertices.push_back(vertex);
-    }
-    shared_ptr<Graph> graph = make_shared<Graph>(vertices, adjacencyMatrix);
+    shared_ptr<Graph> graph = make_shared<Graph>(adjacencyMatrix);
     DFS(graph);
-    cout << "Time Stamp: " << endl;
     graph->showTimeStamp();
-    cout << "Edges: " << endl;
-    graph->showEdges();
 }
