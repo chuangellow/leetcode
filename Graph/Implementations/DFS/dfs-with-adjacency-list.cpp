@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <unordered_map>
 #include <vector>
 #include <memory>
 #include <queue>
@@ -22,7 +24,8 @@ class EdgeNode {
 public:
     int index;
     shared_ptr<EdgeNode> next;
-    EdgeNode(int index): index(index), next(nullptr) {}
+    int edgeClass;
+    EdgeNode(int index): index(index), next(nullptr), edgeClass(TREE) {}
 };
 
 class LinkedList {
@@ -92,6 +95,16 @@ public:
         }
         cout << endl;
     }
+    void showEdges() {
+        unordered_map<int, string> edgeClassMap = {{NO, "NO"}, {TREE, "TREE"}, {BACK, "BACK"}, {FORWARD, "FORWARD"}, {CROSS, "CROSS"}};
+        for (int i = 0; i < numNodes; i++) {
+            shared_ptr<EdgeNode> edge = adjacencyList[i]->head->next;
+            while (edge != nullptr) {
+                cout << "(" << i << "," << edge->index << "): " << edgeClassMap[edge->edgeClass] << endl;
+                edge = edge->next;
+            }
+        }
+    }
 };
 
 void DFSVisit(int sourceIdx, int* timeStamp, shared_ptr<Graph> graph) {
@@ -101,10 +114,22 @@ void DFSVisit(int sourceIdx, int* timeStamp, shared_ptr<Graph> graph) {
     sourceVertex->color = GRAY;
     shared_ptr<EdgeNode> neighborEdgeNode = graph->adjacencyList[sourceIdx]->head->next; 
     while (neighborEdgeNode != nullptr) {
+        if (neighborEdgeNode->index == sourceIdx) {
+            neighborEdgeNode->edgeClass = BACK;
+            neighborEdgeNode = neighborEdgeNode->next;
+            continue;
+        }
         shared_ptr<Vertex> neighborVertex = graph->vertices[neighborEdgeNode->index];
         if (neighborVertex->color == WHITE) {
             neighborVertex->predecesor = sourceVertex;
+            neighborEdgeNode->edgeClass = TREE;
             DFSVisit(neighborEdgeNode->index, timeStamp, graph);
+        }
+        else if (neighborVertex->color == GRAY) {
+            neighborEdgeNode->edgeClass = BACK;
+        }
+        else {
+            neighborEdgeNode->edgeClass = (neighborVertex->discoveryTime > sourceVertex->discoveryTime)? FORWARD: CROSS;
         }
         neighborEdgeNode = neighborEdgeNode->next;
     }
@@ -135,4 +160,5 @@ int main(void) {
     shared_ptr<Graph> graph = make_shared<Graph>(adjacencyMatrix);
     DFS(graph);
     graph->showTimeStamp();
+    graph->showEdges();
 }
