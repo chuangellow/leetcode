@@ -34,6 +34,51 @@ void LinkedList::insertToTail(int data) {
     return;
 }
 
+void LinkedList::insertAfterIdx(int data, int index) {
+    std::shared_ptr<ListNode> newNode = std::make_shared<ListNode>(data);
+    if (index >= len) {
+        std::cerr << "Index out of range!!!" << std::endl;
+        return;
+    }
+    else if (index == len - 1) {
+        insertToTail(data);
+        return;
+    }
+    int currentIndex = 0;
+    std::shared_ptr<ListNode> currentNode = pseudoHead->next;
+    while (currentNode != nullptr && currentIndex != index) {
+        currentNode = currentNode->next;
+        currentIndex++;
+    }
+    newNode->next = currentNode->next;
+    currentNode->next = newNode;
+    len++;
+    return;
+}
+
+void LinkedList::removeHead() {
+    if (pseudoHead->next == nullptr) {
+        std::cerr << "Linked List is empty!!!" << std::endl;
+        return;
+    }
+    pseudoHead->next = pseudoHead->next->next;
+    len--;
+    return;
+}
+
+void LinkedList::removeTail() {
+    if (pseudoHead->next == nullptr) {
+        std::cerr << "Linked List is empty!!!" << std::endl;
+        return;
+    }
+    std::shared_ptr<ListNode> currentNode = pseudoHead;
+    while (currentNode->next != nullptr && currentNode->next != tail) currentNode = currentNode->next;
+    currentNode->next = tail->next;
+    tail = currentNode;
+    len--;
+    return;
+}
+
 void LinkedList::traverse() {
     std::shared_ptr<ListNode> currentNode = pseudoHead->next;
     while (currentNode != nullptr) {
