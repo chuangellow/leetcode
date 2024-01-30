@@ -18,4 +18,5 @@ public:
     LinkedList();
     void insertToHead(int data);
     void insertToTail(int data);
+    void traverse();
 };
