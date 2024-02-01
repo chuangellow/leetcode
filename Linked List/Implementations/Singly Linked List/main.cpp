@@ -44,7 +44,10 @@ void parseInput(std::shared_ptr<LinkedList> list, int numCommands) {
         std::cin >> data >> index;
         list->insertBeforeIdx(data, index);
     };
-
+    commandMap["reverse"] = [&]() {
+        list->reverse();
+    };
+    
     for (int i = 0; i < numCommands; i++) {
         std::string command;
         std::cin >> command;

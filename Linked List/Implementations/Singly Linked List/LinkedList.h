@@ -24,4 +24,5 @@ public:
     void removeTail();
     int getData(int index);
     void traverse();
+    void reverse();
 };

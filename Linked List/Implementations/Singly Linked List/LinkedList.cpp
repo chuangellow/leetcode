@@ -104,10 +104,11 @@ void LinkedList::removeTail() {
 int LinkedList::getData(int index) {
     if (len == 0) {
         std::cerr << "Linked List is empty!!!" << std::endl;
+        return -1;
     }
     else if (index >= len) {
         std::cerr << "Index out of range!!!" << std::endl;
-        return;
+        return -1;
     }
     int currentIndex = 0;
     std::shared_ptr<ListNode> currentNode = pseudoHead->next;
@@ -126,4 +127,23 @@ void LinkedList::traverse() {
         currentNode = currentNode->next;
     }
     std::cout << std::endl;
+}
+
+void LinkedList::reverse() {
+    if (len == 0) {
+        std::cerr << "Linked List is empty!!!" << std::endl;
+        return;
+    }
+    else if (len == 1) return;
+    std::shared_ptr<ListNode> prevNode = pseudoHead->next;
+    std::shared_ptr<ListNode> currentNode = pseudoHead->next->next;
+    prevNode->next = nullptr;
+    tail = pseudoHead->next;
+    while (currentNode != nullptr) {
+        std::shared_ptr<ListNode> nextNode = currentNode->next;
+        currentNode->next = prevNode;
+        prevNode = currentNode;
+        currentNode = nextNode;
+    }
+    pseudoHead->next = prevNode;
 }
