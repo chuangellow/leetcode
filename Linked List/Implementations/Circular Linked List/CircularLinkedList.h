@@ -22,7 +22,6 @@ public:
     void insertBeforeIdx(int data, int index);
     void removeHead();
     void removeTail();
-    int getData(int index);
     void traverse();
     void reverse();
 };
