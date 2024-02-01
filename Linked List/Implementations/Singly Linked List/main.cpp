@@ -25,6 +25,12 @@ void parseInput(std::shared_ptr<LinkedList> list, int numCommands) {
     commandMap["removeTail"] = [&]() {
         list->removeTail();
     };
+    commandMap["getData"] = [&]() {
+        int index;
+        std::cin >> index;
+        int data = list->getData(index);
+        std::cout << data << std::endl;
+    };
     commandMap["traverse"] = [&]() {
         list->traverse();
     };
