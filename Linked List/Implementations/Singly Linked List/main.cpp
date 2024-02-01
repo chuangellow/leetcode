@@ -33,6 +33,11 @@ void parseInput(std::shared_ptr<LinkedList> list, int numCommands) {
         std::cin >> data >> index;
         list->insertAfterIdx(data, index);
     };
+    commandMap["insertBeforeIdx"] = [&]() {
+        int data, index;
+        std::cin >> data >> index;
+        list->insertBeforeIdx(data, index);
+    };
 
     for (int i = 0; i < numCommands; i++) {
         std::string command;

@@ -58,6 +58,24 @@ void LinkedList::insertAfterIdx(int data, int index) {
 
 void LinkedList::insertBeforeIdx(int data, int index) {
     std::shared_ptr<ListNode> newNode = std::make_shared<ListNode>(data);
+    if (index >= len) {
+        std::cerr << "Index out of range!!!" << std::endl;
+        return;
+    }
+    else if (index == 0) {
+        insertToHead(data);
+        return;
+    }
+    int currentIndex = 0;
+    std::shared_ptr<ListNode> currentNode = pseudoHead;
+    while (currentNode != nullptr && currentIndex != index) {
+        currentNode = currentNode->next;
+        currentIndex++;
+    }
+    newNode->next = currentNode->next;
+    currentNode->next = newNode;
+    len++;
+    return;
 }
 
 void LinkedList::removeHead() {
@@ -85,6 +103,7 @@ void LinkedList::removeTail() {
 
 void LinkedList::traverse() {
     std::shared_ptr<ListNode> currentNode = pseudoHead->next;
+    std::cout << "Len: " << len << std::endl;
     while (currentNode != nullptr) {
         std::cout << currentNode->data << " ";
         currentNode = currentNode->next;
