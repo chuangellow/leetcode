@@ -56,7 +56,9 @@ The problems are organized into directories based on the main technique or data 
 
 ## Linked List
 
-- Singly Linked-List Implementation: [C++](./Linked%20List/Implementations/Singly%20Linked%20List)
+- Singly Linked List Implementation: [C++](./Linked%20List/Implementations/Singly%20Linked%20List)
+- Circular Linked List Implementation: [C++](./Linked%20List/Implementations/Circular%20Linked%20List/)
+- Double Linked List Implementation: [C++](./Linked%20List/Implementations/Double%20Linked%20List/)
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
