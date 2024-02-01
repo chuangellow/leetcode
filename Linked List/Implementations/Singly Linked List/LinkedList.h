@@ -19,6 +19,7 @@ public:
     void insertToHead(int data);
     void insertToTail(int data);
     void insertAfterIdx(int data, int index);
+    void insertBeforeIdx(int data, int index);
     void removeHead();
     void removeTail();
     void traverse();

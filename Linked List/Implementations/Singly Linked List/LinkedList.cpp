@@ -56,6 +56,10 @@ void LinkedList::insertAfterIdx(int data, int index) {
     return;
 }
 
+void LinkedList::insertBeforeIdx(int data, int index) {
+    std::shared_ptr<ListNode> newNode = std::make_shared<ListNode>(data);
+}
+
 void LinkedList::removeHead() {
     if (pseudoHead->next == nullptr) {
         std::cerr << "Linked List is empty!!!" << std::endl;
