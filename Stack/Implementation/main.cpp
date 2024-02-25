@@ -19,15 +19,20 @@ void parseInput(int numCommands) {
     };
 
     commandMap["pop"] = [&]() {
-        int poppedData = stack->pop();
-        std::cout << "Pop: " << poppedData << std::endl;
+        if (stack->isEmpty()) {
+            std::cout << "The stack is empty!!!" << std::endl;
+        }
+        else {
+            int poppedData = stack->pop();
+            std::cout << "Pop: " << poppedData << std::endl;
+        }
     };
 
     commandMap["peek"] = [&]() {
         std::cout << "Peek: " << stack->peek() << std::endl;
     };
 
-    commandMap["PrintStack"] = [&]() {
+    commandMap["printStack"] = [&]() {
         stack->printStack();
     };
 
