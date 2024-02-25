@@ -26,5 +26,4 @@ public:
     void removeTail();
     void traverseFromHead();
     void traverseFromTail();
-    void reverse();
 };

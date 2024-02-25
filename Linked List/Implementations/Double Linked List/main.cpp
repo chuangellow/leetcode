@@ -6,8 +6,9 @@
 #include <functional>
 #include "DoubleLinkedList.h"
 
-void parseInput(std::shared_ptr<DoubleLinkedList> list, int numCommands) {
+void parseInput(int numCommands) {
     std::unordered_map<std::string, std::function<void()>> commandMap;
+    std::shared_ptr<DoubleLinkedList> list = std::make_shared<DoubleLinkedList>();
 
     commandMap["insertToHead"] = [&]() {
         int data;
@@ -41,9 +42,6 @@ void parseInput(std::shared_ptr<DoubleLinkedList> list, int numCommands) {
         std::cin >> data >> index;
         list->insertBeforeIdxFromHead(data, index);
     };
-    commandMap["reverse"] = [&]() {
-        list->reverse();
-    };
     
     for (int i = 0; i < numCommands; i++) {
         std::string command;
@@ -59,8 +57,7 @@ void parseInput(std::shared_ptr<DoubleLinkedList> list, int numCommands) {
 }
 
 int main(void) {
-    std::shared_ptr<DoubleLinkedList> list = std::make_shared<DoubleLinkedList>();
     int numCommands;
     std::cin >> numCommands;
-    parseInput(list, numCommands);
+    parseInput(numCommands);
 }
