@@ -80,13 +80,17 @@ The problems are organized into directories based on the main technique or data 
 
 ## Stack
 
-| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+- Stack Implementation: [C++](./Stack/Implementation/Stack.cpp)
+
+|| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
 ## Queue
 
-| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
-|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+- Queue Implementation by Singly Linked-list: [C++](./Queue/Implementation/Queue.cpp)
+
+|| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+||---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
 ## Tree
 
