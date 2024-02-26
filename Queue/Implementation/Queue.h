@@ -16,7 +16,7 @@ public:
     void enqueue(int data);
     int dequeue();
     int getFront();
-    void showQueue();
+    void printQueue();
     int getLen();
     bool isEmpty();
 };

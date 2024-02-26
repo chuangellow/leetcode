@@ -15,17 +15,27 @@ void parseInput(int numCommands) {
     };
 
     commandMap["dequeue"] = [&]() {
-        int data = queue->dequeue();
-        std::cout << "dequeue data: " << data << std::endl;
+        if (queue->isEmpty()) {
+            std::cout << "Queue is empty!!!" << std::endl;
+        }
+        else {
+            int data = queue->dequeue();
+            std::cout << "dequeue data: " << data << std::endl;
+        }
     };
 
     commandMap["getFront"] = [&]() {
-        int data = queue->getFront();
-        std::cout << "front data: " << data << std::endl;
+        if (queue->isEmpty()) {
+            std::cout << "Queue is empty!!!" << std::endl;
+        }
+        else {
+            int data = queue->getFront();
+            std::cout << "front data: " << data << std::endl;
+        }
     };
 
-    commandMap["showQueue"] = [&]() {
-        queue->showQueue();
+    commandMap["printQueue"] = [&]() {
+        queue->printQueue();
     };
 
     for (int i = 0; i < numCommands; i++) {
