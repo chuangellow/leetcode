@@ -51,6 +51,8 @@ The problems are organized into directories based on the main technique or data 
 
 ## Array
 
+- Dynamic Array (Vector) Implementation: [C++](./Array/Implementations/Dynamic%20Array/main.cpp)
+
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
