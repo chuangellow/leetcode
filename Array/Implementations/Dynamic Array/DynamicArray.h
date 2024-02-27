@@ -7,10 +7,11 @@
 class DynamicArray {
 private:
     size_t* arr;
-    int arrSize;
-    ll currentMaxSize;
-    void resize();
+    ll arrSize;
+    int resize();
 public:
     DynamicArray();
     ~DynamicArray();
+    ll size() { return arrSize; };
+    size_t& operator[](int index);
 };
