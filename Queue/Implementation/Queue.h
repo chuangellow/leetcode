@@ -10,6 +10,7 @@ struct QueueNode {
 class Queue {
 private:
     std::shared_ptr<QueueNode> pseudoHead;
+    std::shared_ptr<QueueNode> tail;
     int len;
 public:
     Queue();

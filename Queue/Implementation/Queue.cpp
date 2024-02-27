@@ -13,6 +13,7 @@ Queue::Queue():
     len(0) {
         std::shared_ptr<QueueNode> newNode = std::make_shared<QueueNode>();
         pseudoHead = newNode;
+        tail = newNode;
 }
 
 void Queue::enqueue(int data) {
@@ -20,12 +21,18 @@ void Queue::enqueue(int data) {
     newNode->next = pseudoHead->next;
     pseudoHead->next = newNode;
     len++;
+    if (len == 1) tail = newNode;
     return;
 }
 
 int Queue::dequeue() {
-    int data = pseudoHead->next->data;
-    pseudoHead->next = pseudoHead->next->next;
+    int data = tail->data;
+    std::shared_ptr<QueueNode> currentNode = pseudoHead;
+    while (currentNode->next != tail) {
+        currentNode = currentNode->next;
+    }
+    tail = currentNode;
+    currentNode->next = nullptr;
     len--;
     return data;
 }
@@ -35,7 +42,7 @@ int Queue::getLen() {
 }
 
 int Queue::getFront() {
-    return pseudoHead->next->data;
+    return tail->data;
 }
 
 bool Queue::isEmpty() {
