@@ -64,6 +64,31 @@ void traverse(LinkedList* list) {
     printf("\n");
 }
 
+int getLen(struct ListNode* head) {
+    int len = 0;
+    for (struct ListNode* currentNode = head; currentNode != NULL; currentNode = currentNode->next) len++;
+    return len;
+}
+
+struct ListNode* deleteMiddle(struct ListNode* head) {
+    if (head == NULL) return head;
+    int len = getLen(head);
+    if (len == 1) return NULL;
+    if (len == 2) {
+        head->next = NULL;
+        return head;
+    }
+    int mid = len >> 1;
+    int currentIdx = 0;
+    struct ListNode* currentNode = head;
+    while (currentIdx != mid - 1) {
+        currentNode = currentNode->next;
+        currentIdx++;
+    }
+    currentNode->next = currentNode->next->next;
+    return head;
+}
+
 int main(void) {
     int n;
     scanf("%d", &n);
