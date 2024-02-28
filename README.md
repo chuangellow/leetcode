@@ -64,6 +64,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 2095 | [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)| [C](./Linked%20List/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List/main.c) | | Medium | 2024/02/28 | [ ] | [ ] |
 
 ## Hash Table
 
