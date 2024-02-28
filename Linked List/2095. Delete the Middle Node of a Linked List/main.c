@@ -64,28 +64,22 @@ void traverse(LinkedList* list) {
     printf("\n");
 }
 
-int getLen(struct ListNode* head) {
-    int len = 0;
-    for (struct ListNode* currentNode = head; currentNode != NULL; currentNode = currentNode->next) len++;
-    return len;
-}
-
 struct ListNode* deleteMiddle(struct ListNode* head) {
     if (head == NULL) return head;
-    int len = getLen(head);
-    if (len == 1) return NULL;
-    if (len == 2) {
-        head->next = NULL;
+    struct ListNode* slowNode = head;
+    struct ListNode* fastNode = head->next;
+    if (fastNode == NULL) {
+        return NULL;
+    }
+    if (fastNode->next == NULL) {
+        slowNode->next = NULL;
         return head;
     }
-    int mid = len >> 1;
-    int currentIdx = 0;
-    struct ListNode* currentNode = head;
-    while (currentIdx != mid - 1) {
-        currentNode = currentNode->next;
-        currentIdx++;
+    while (fastNode->next != NULL && fastNode->next->next != NULL) {
+        slowNode = slowNode->next;
+        fastNode = fastNode->next->next;
     }
-    currentNode->next = currentNode->next->next;
+    slowNode->next = slowNode->next->next;
     return head;
 }
 
@@ -100,6 +94,9 @@ int main(void) {
     for (int i = 0; i < n; i++) {
         insertToTail(list, nums[i]);
     }
+    traverse(list);
+    list->head = deleteMiddle(list->head);
+    list->len--;
     traverse(list);
     free(nums);
     freeList(list);
