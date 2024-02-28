@@ -64,7 +64,8 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 2095 | [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)| [C](./Linked%20List/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List/main.c) | | Medium | 2024/02/28 | [ ] | [ ] |
+| 2095 | [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)| [C](./Linked%20List/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List/main.c) | | Medium | 2024/02/28 | [x] | [ ] |
+| 82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/)| [C](./Linked%20List/82.%20Remove%20Duplicates%20from%20Sorted%20List%20II/main.c) | | Medium | 2024/02/28 | [x] | [ ] |
 
 ## Hash Table
 
