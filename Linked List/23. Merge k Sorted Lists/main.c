@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "LinkedList.h"
 
 struct ListNode** createLists(int **nums, int *size, int listsSize) {
@@ -34,9 +35,31 @@ void traverseLists(struct ListNode** lists, int listsSize) {
     return;
 }
 
+bool insertMin(struct ListNode* dest, struct ListNode** lists, int listsSize) {
+    int minVal = INT32_MAX;
+    int minIdx = -1;
+    for (int i = 0; i < listsSize; i++) {
+        struct ListNode* node = lists[i];
+        if (node == NULL) continue;
+        if (node != NULL && node->val < minVal) {
+            minVal = node->val;
+            minIdx = i;
+        }
+    }
+    if (minIdx == -1) return false;
+    dest->next = lists[minIdx];
+    lists[minIdx] = lists[minIdx]->next;
+    dest = dest->next;
+    return true;
+}
+
 struct ListNode* mergeKLists(struct ListNode** lists, int listsSize) {
+    if (listsSize == 0 || lists == NULL) return NULL;
     struct ListNode* newList = (struct ListNode*) malloc(sizeof(struct ListNode));
-    return newList;
+    newList->next = NULL;
+    struct ListNode* currentNode = newList;
+    while (insertMin(currentNode, lists, listsSize)) { currentNode = currentNode->next; }
+    return newList->next;
 }
 
 int main(void) {
