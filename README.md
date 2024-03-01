@@ -101,6 +101,9 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
+## Heap
+- Min Heap Implementation: [C](./Heap/Implementations/Min-Heap/MinHeap.h)
+
 ## Trie
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
