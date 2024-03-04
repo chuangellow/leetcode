@@ -107,6 +107,10 @@ The problems are organized into directories based on the main technique or data 
 
 - Min Heap Implementation: [C](./Heap/Implementations/Min-Heap/MinHeap.h)
 
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/)| [C++](./Heap/703.%20Kth%20Largest%20Element%20in%20a%20Stream/main.cpp) | | Easy | 2024/03/04 | [ ] | [ ] |
+
 ## Trie
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
@@ -195,7 +199,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 948 | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/description/)| [C++](./Dynamic%20Programming/948.%20Bag%20of%20Tokens/main.cpp) | | Medium | 2024/03/04 | [ ] | [ ] |
+| 948 | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/description/)| [C++](./Dynamic%20Programming/948.%20Bag%20of%20Tokens/main.cpp) | | Medium | 2024/03/04 | [x] | [ ] |
 
 ## Dynamic Programming
 
