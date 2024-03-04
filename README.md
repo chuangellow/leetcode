@@ -15,12 +15,14 @@ The problems are organized into directories based on the main technique or data 
 - [String](#string)
 - [Stack](#stack)
 - [Queue](#queue)
+- [Heap](#heap)
 - [Trie](#trie)
 - [Monotonic Queue](#monotonic-queue)
 - [Disjoint Set](#disjoint-set)
 
 ### Algorithm
 
+- [Sorting](#sorting)
 - [Two-Pointers](#two-pointers)
 - [Sliding window](#sliding-window)
 - [Bit operation](#bit-operation)
@@ -102,6 +104,7 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 
 ## Heap
+
 - Min Heap Implementation: [C](./Heap/Implementations/Min-Heap/MinHeap.h)
 
 ## Trie
@@ -126,6 +129,12 @@ The problems are organized into directories based on the main technique or data 
 | 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 
 # 演算法策略
+
+## Sorting
+
+- Insertion Sort Implementation: [InsertionSort.c](./Sorting/Implementations/Array/InsertionSort.c)
+- Selection Sort Implementation: [SelectionSort.c](./Sorting/Implementations/Array/SelectionSort.c)
+- Bubbble Sort Implementation: [BubbleSort.c](./Sorting/Implementations/Array/BubbleSort.c)
 
 ## Binary Search
 
@@ -186,6 +195,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 948 | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/description/)| [C++](./Dynamic%20Programming/948.%20Bag%20of%20Tokens/main.cpp) | | Medium | 2024/03/04 | [ ] | [ ] |
 
 ## Dynamic Programming
 
