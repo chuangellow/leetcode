@@ -90,6 +90,8 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | [C++](./Stack/225.%20Implement%20Stack%20using%20Queues/main.cpp) | | Easy | 2024/03/12 | [x] | [ ] |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [C++](./Stack/20.%20Valid%20Parentheses/main.cpp) | | Easy | 2024/03/12 | [ ] | [ ] |
 
 ## Queue
 
@@ -97,7 +99,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)| [C++](./Queue/232.%20Implement%20Queue%20using%20Stacks/main.cpp) | | Easy | 2024/03/12 | [ ] | [ ] |
+| 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)| [C++](./Queue/232.%20Implement%20Queue%20using%20Stacks/main.cpp) | | Easy | 2024/03/12 | [x] | [ ] |
 
 ## Tree
 
