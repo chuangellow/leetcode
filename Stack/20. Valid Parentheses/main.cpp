@@ -1,42 +1,8 @@
 #include <iostream>
+#include <stack>
 #include <string>
 
 using namespace std;
-
-struct MyListNode {
-    char c;
-    std::shared_ptr<MyListNode> next;
-    MyListNode(char c): c(c), next(nullptr) {}
-};
-
-class MyStack {
-private:
-    std::shared_ptr<MyListNode> head;
-    int len;
-public:
-    MyStack(): len(0) {
-        head = std::make_shared<MyListNode>(-1);
-    }
-    bool empty() {
-        return (len <= 0);
-    }
-    void push(char c) {
-        std::shared_ptr<MyListNode> newNode = std::make_shared<MyListNode>(c);
-        newNode->next = head;
-        head = newNode;
-        len++;
-    }
-    char top() {
-        return head->c;
-    }
-    char pop() {
-        if (empty()) return -1;
-        char c = head->c;
-        head = head->next;
-        len--;
-        return c;
-    }
-};
 
 class Solution {
 public:
@@ -48,20 +14,22 @@ public:
     }
     bool isValid(string s) {
         char brackets[6] = {'(', '{', '[', ')', '}', ']'};
-        std::shared_ptr<MyStack> stack = std::make_shared<MyStack>();
+        std::stack<char> mystack;
         int len = s.length();
         for (int i = 0; i < len; i++) {
             int ret = checkBrackets(s.at(i), brackets);
             if (ret == -1) continue;
             if (ret < 3) {
-                stack->push(s.at(i));
+                mystack.push(s.at(i));
             }
             else {
-                char c = stack->pop();
+                if (mystack.empty()) return false;
+                char c = mystack.top();
+                mystack.pop();
                 if (c != brackets[ret-3]) return false;
             }
         }
-        return (stack->empty());
+        return (mystack.empty());
     }
 };
 
