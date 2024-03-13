@@ -1,50 +1,26 @@
 #include <iostream>
+#include <sstream>
 #include <stack>
 #include <string>
-#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
     string simplifyPath(string path) {
-        string outputStr;
-        string delim = "/";
-        size_t pos;
-        string token;
-        stack<string> myStack;
-        while ((pos = path.find(delim)) != string::npos) {
-            token = path.substr(0, pos);
-            path.erase(0, pos+delim.length());
-            if (token.compare("") == 0) continue;
-            if (token.compare(".") == 0) continue;
-            if (token.compare("..") == 0) {
-                if (!myStack.empty()) myStack.pop();
-                continue;
-            }
-            myStack.push(token);
+        vector<string> components;
+        stringstream ss(path);
+        string item;
+        while (getline(ss, item, '/')) {
+            if (item == "" || item == ".") continue;
+            if (item == ".." && !components.empty()) components.pop_back();
+            else if (item != "..") components.push_back(item);
         }
-        token = path.substr(0, string::npos);
-        if (token.compare(".") != 0 && token.compare("") != 0) {
-            if (token.compare("..") == 0) {
-                if (!myStack.empty()) myStack.pop();
-            }
-            else {
-                myStack.push(token);
-            }
+        string result = "";
+        for (const string& component: components) {
+            result += "/" + component;
         }
-        stack<string> outStack;
-        while (!myStack.empty()) {
-            outStack.push(myStack.top());
-            myStack.pop();
-        }
-        while (!outStack.empty()) {
-            outputStr.push_back('/');
-            outputStr.append(outStack.top());
-            outStack.pop();
-        }
-        if (outputStr.empty()) outputStr.push_back('/');
-        return outputStr;
+        return result.empty() ? "/": result;
     }
 };
 
