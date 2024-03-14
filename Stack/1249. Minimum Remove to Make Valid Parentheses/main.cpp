@@ -8,55 +8,38 @@ using namespace std;
 class Solution {
 public:
     string minRemoveToMakeValid(string s) {
-        string::size_type size = s.length();
+        int size = s.length();
         string outStr;
-        stack<char> myStack;
-        vector<int> invalidLeft;
-        vector<int> invalidRight;
-        for (int i = 0; i < size; i++) {
-            switch (s.at(i)) {
-                case ')':
-                    if (myStack.empty()) invalidRight.push_back(i);
-                    else myStack.pop();
-                    break;
-                case '(':
-                    myStack.push('(');
-                    break;
-                default:
-                    break;
-            }
-        }
-        while (!myStack.empty()) myStack.pop();
+        stack<int> leftStack;
+        stack<int> rightStack;
         for (int i = size-1; i >= 0; i--) {
-            switch (s.at(i)) {
-                case '(':
-                    if (myStack.empty()) invalidLeft.push_back(i);
-                    else myStack.pop();
-                    break;
-                case ')':
-                    myStack.push(')');
-                    break;
-                default:
-                    break;
-            }
-        }
-        int lsize = invalidLeft.size(), rsize = invalidRight.size();
-        int lCount = lsize-1, rCount = 0;
-        for (int i = 0; i < size; i++) {
             switch (s[i]) {
                 case ')':
-                    if (rCount < rsize && i == invalidRight[rCount]) {
-                        rCount++;
-                        continue;
-                    }
-                    outStr.push_back(')');
+                    rightStack.push(i);
                     break;
                 case '(':
-                    if (lCount >= 0 && i == invalidLeft[lCount]) {
-                        lCount--;
+                    if (rightStack.empty()) leftStack.push(i);
+                    else rightStack.pop();
+                    break;
+                default:
+                    break;
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            switch (s[i]) {
+                case '(':
+                    if (!leftStack.empty() && i == leftStack.top()) {
+                        leftStack.pop();
                         continue;
                     }
-                    outStr.push_back('(');
+                    outStr.push_back(s[i]);
+                    break;
+                case ')':
+                    if (!rightStack.empty() && i == rightStack.top()) {
+                        rightStack.pop();
+                        continue;
+                    }
+                    outStr.push_back(s[i]);
                     break;
                 default:
                     outStr.push_back(s[i]);
