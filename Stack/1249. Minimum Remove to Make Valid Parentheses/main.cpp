@@ -10,36 +10,41 @@ public:
     string minRemoveToMakeValid(string s) {
         int size = s.length();
         string outStr;
-        stack<int> leftStack;
-        stack<int> rightStack;
-        for (int i = size-1; i >= 0; i--) {
+        int count = 0;
+        vector<int> rightIdx;
+        vector<int> leftIdx;
+        for (int i = 0; i < size; i++) {
             switch (s[i]) {
-                case ')':
-                    rightStack.push(i);
-                    break;
                 case '(':
-                    if (rightStack.empty()) leftStack.push(i);
-                    else rightStack.pop();
+                    leftIdx.push_back(i);
+                    count++;
+                    break;
+                case ')':
+                    if (count != 0) {
+                        rightIdx.push_back(i);
+                        count--;
+                    }
                     break;
                 default:
                     break;
             }
         }
+        for (int i = 0; i < count; i++) leftIdx.pop_back();
+        int left = 0, right = 0;
+        int leftSize = leftIdx.size(), rightSize = rightIdx.size();
         for (int i = 0; i < size; i++) {
             switch (s[i]) {
                 case '(':
-                    if (!leftStack.empty() && i == leftStack.top()) {
-                        leftStack.pop();
-                        continue;
+                    if (left < leftSize && i == leftIdx[left]) {
+                        outStr.push_back(s[i]);
+                        left++;
                     }
-                    outStr.push_back(s[i]);
                     break;
                 case ')':
-                    if (!rightStack.empty() && i == rightStack.top()) {
-                        rightStack.pop();
-                        continue;
+                    if (right < rightSize && i == rightIdx[right]) {
+                        outStr.push_back(s[i]);
+                        right++;
                     }
-                    outStr.push_back(s[i]);
                     break;
                 default:
                     outStr.push_back(s[i]);
