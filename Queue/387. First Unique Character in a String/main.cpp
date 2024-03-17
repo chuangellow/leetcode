@@ -1,19 +1,18 @@
 #include <iostream>
 #include <string>
-#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, int> hashTable;
         int size = s.size();
+        int letters[26] = {0};
         for (int i = 0; i < size; i++) {
-            hashTable[s[i]]++;
+            letters[s[i]-'a']++;
         }
         for (int i = 0; i < size; i++) {
-            if (hashTable[s[i]] == 1) return i;
+            if (letters[s[i]-'a'] == 1) return i;
         }
         return -1;
     }
