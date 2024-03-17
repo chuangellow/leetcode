@@ -104,7 +104,8 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)| [C++](./Queue/232.%20Implement%20Queue%20using%20Stacks/main.cpp) | | Easy | 2024/03/12 | [x] | [ ] |
-| 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [ ] | [ ] |
+| 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [x] | [ ] |
+| 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)| [C++](./Queue/387.%20First%20Unique%20Character%20in%20a%20String/main.cpp) | | Easy | 2024/03/18 | [ ] | [ ] |
 
 
 ## Tree
@@ -166,6 +167,7 @@ The problems are organized into directories based on the main technique or data 
 | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| [C++](./Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/main.cpp) | | Medium | 2024/01/11 | [x] | [ ] |
 | 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)| [C++](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/main.cpp) | | Hard | 2024/01/11 | [x] | [ ] |
 | 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size)| [C++](./Binary%20Search/702.%20Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/main.cpp) | | Medium | 2024/01/17 | [ x] | [ ] |
+| 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [x] | [ ] |
 
 ## [Two-Pointers](https://leetcode.com/tag/two-pointers/)
 
