@@ -95,7 +95,7 @@ The problems are organized into directories based on the main technique or data 
 | 71 | [Simplify Path](https://leetcode.com/problems/simplify-path/) | [C++](./Stack/71.%20Simplify%20Path/main.cpp) | | Medium | 2024/03/13 | [x] | [ ] |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [C++](./Stack/1249.%20Minimum%20Remove%20to%20Make%20Valid%20Parentheses/main.cpp) | | Medium | 2024/03/13 | [x] | [ ] |
 | 227 | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [C++](./Stack/227.%20Basic%20Calculator%20II/main.cpp) | | Medium | 2024/03/14 | [x] | [ ] |
-| 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator) | [C++](./Stack/224.%20Basic%20Calculator/main.cpp) | | Hard | 2024/03/14 | [x] | [ ] |
+| 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator) | [C++](./Stack/224.%20Basic%20Calculator/main.cpp) | | Hard | 2024/03/14 | [ ] | [ ] |
 
 ## Queue
 
@@ -104,6 +104,8 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)| [C++](./Queue/232.%20Implement%20Queue%20using%20Stacks/main.cpp) | | Easy | 2024/03/12 | [x] | [ ] |
+| 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [ ] | [ ] |
+
 
 ## Tree
 
