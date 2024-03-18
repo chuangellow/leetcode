@@ -105,7 +105,8 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)| [C++](./Queue/232.%20Implement%20Queue%20using%20Stacks/main.cpp) | | Easy | 2024/03/12 | [x] | [ ] |
 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [x] | [ ] |
-| 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)| [C++](./Queue/387.%20First%20Unique%20Character%20in%20a%20String/main.cpp) | | Easy | 2024/03/18 | [ ] | [ ] |
+| 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)| [C++](./Queue/387.%20First%20Unique%20Character%20in%20a%20String/main.cpp) | | Easy | 2024/03/18 | [x] | [ ] |
+| 353 | [Design Snake Game](https://leetcode.com/problems/design-snake-game/description/)| [C++](./Queue/353.%20Design%20Snake%20Game/main.cpp) | | Medium | 2024/03/18 | [ ] | [ ] |
 
 
 ## Tree
