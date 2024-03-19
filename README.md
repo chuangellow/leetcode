@@ -106,7 +106,8 @@ The problems are organized into directories based on the main technique or data 
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)| [C++](./Queue/232.%20Implement%20Queue%20using%20Stacks/main.cpp) | | Easy | 2024/03/12 | [x] | [ ] |
 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [x] | [ ] |
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)| [C++](./Queue/387.%20First%20Unique%20Character%20in%20a%20String/main.cpp) | | Easy | 2024/03/18 | [x] | [ ] |
-| 353 | [Design Snake Game](https://leetcode.com/problems/design-snake-game/description/)| [C++](./Queue/353.%20Design%20Snake%20Game/main.cpp) | | Medium | 2024/03/18 | [ ] | [ ] |
+| 353 | [Design Snake Game](https://leetcode.com/problems/design-snake-game/description/)| [C++](./Queue/353.%20Design%20Snake%20Game/main.cpp) | | Medium | 2024/03/18 | [x] | [ ] |
+| 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/description/)| [C++](./Queue/239.%20Sliding%20Window%20Maximum/main.cpp) | | Hard | 2024/03/19 | [ ] | [ ] |
 
 
 ## Tree
@@ -205,6 +206,7 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 547 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)| [C++](./Graph/547.%20Number%20of%20Provinces/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 | 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
+| 490 | [The Maze](https://leetcode.com/problems/the-maze/description/)| [C++](./Graph/490.%20The%20Maze/main.cpp) | | Medium | 2024/03/19 | [x] | [ ] |
 | 802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)| [C++](./Graph/802.%20Find%20Eventual%20Safe%20States/main.cpp) | | Medium | 2024/01/28 | [ ] | [ ] |
 
 ## Greedy
