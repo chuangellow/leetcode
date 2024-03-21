@@ -16,6 +16,7 @@ The problems are organized into directories based on the main technique or data 
 - [Stack](#stack)
 - [Queue](#queue)
 - [Heap](#heap)
+- [Binary Tree](#binary-tree)
 - [Trie](#trie)
 - [Monotonic Queue](#monotonic-queue)
 - [Disjoint Set](#disjoint-set)
@@ -109,6 +110,11 @@ The problems are organized into directories based on the main technique or data 
 | 353 | [Design Snake Game](https://leetcode.com/problems/design-snake-game/description/)| [C++](./Queue/353.%20Design%20Snake%20Game/main.cpp) | | Medium | 2024/03/18 | [x] | [ ] |
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/description/)| [C++](./Queue/239.%20Sliding%20Window%20Maximum/main.cpp) | | Hard | 2024/03/19 | [ ] | [ ] |
 
+## Binary Tree
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/) | [C++](./Binary%20Tree/94.%20Binary%20Tree%20Inorder%20Traversal/main.cpp) | | Easy | 2024/03/21 | [ ] | [ ] |
 
 ## Tree
 
