@@ -37,7 +37,18 @@ TreeNode* buildTree(const vector<string>& nodeValues) {
 
 class Solution {
 public:
+    bool checkSame(TreeNode* node1, TreeNode* node2) {
+        if (node1 == nullptr && node2 == nullptr) return true;
+        if (node1 == nullptr || node2 == nullptr) return false;
+        if (node1->val != node2->val) return false;
+        return checkSame(node1->left, node2->right) && checkSame(node1->right, node2->left);
+    }
     bool isSymmetric(TreeNode* root) {
+        if (root == nullptr) return true;
+        if (root->left == nullptr && root->right == nullptr) return true;
+        if (root->left == nullptr || root->right == nullptr) return false;
+        if (root->left->val != root->right->val) return false;
+        return checkSame(root->left->right, root->right->left) && checkSame(root->left->left, root->right->right);
     }
 };
 
