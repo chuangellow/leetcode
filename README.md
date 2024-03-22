@@ -115,7 +115,8 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/) | [C++](./Binary%20Tree/94.%20Binary%20Tree%20Inorder%20Traversal/main.cpp) | | Easy | 2024/03/21 | [x] | [ ] |
-| 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree) | [C++](./Binary%20Tree/98.%20Validate%20Binary%20Search%20Tree/main.cpp) | | Medium | 2024/03/21 | [ ] | [ ] |
+| 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree) | [C++](./Binary%20Tree/98.%20Validate%20Binary%20Search%20Tree/main.cpp) | | Medium | 2024/03/21 | [x] | [ ] |
+| 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/) | [C++](./Binary%20Tree/101.%20Symmetric%20Tree/main.cpp) | | Easy | 2024/03/22 | [ ] | [ ] |
 
 ## Tree
 
