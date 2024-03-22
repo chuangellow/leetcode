@@ -16,18 +16,22 @@ struct TreeNode {
 
 class Solution {
 public:
-    bool traverseAndCheck(TreeNode* node, vector<int>& vals) {
+    bool traverseAndCheck(TreeNode* node, int *val, bool *found) {
         if (node == nullptr) return true;
         bool flag = true;
-        flag &= traverseAndCheck(node->left, vals);
-        if (!vals.empty() && node->val <= vals.back()) return false;
-        vals.push_back(node->val);
-        flag &= traverseAndCheck(node->right, vals);
+        flag &= traverseAndCheck(node->left, val, found);
+        if (*found && node->val <= *val) {
+            return false;
+        }
+        *val = node->val;
+        *found = true;
+        flag &= traverseAndCheck(node->right, val, found);
         return flag;
     }
     bool isValidBST(TreeNode* root) {
-        vector<int> vals;
-        return traverseAndCheck(root, vals);
+        int val = INT_MIN;
+        bool found = false;
+        return traverseAndCheck(root, &val, &found);
     }
 };
 
