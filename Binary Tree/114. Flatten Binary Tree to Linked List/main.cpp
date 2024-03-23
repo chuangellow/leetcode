@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <vector>
 #include <string>
+#include <stack>
 
 using namespace std;
 
@@ -37,6 +38,8 @@ TreeNode* buildTree(const vector<string>& nodeValues) {
 }
 
 class Solution {
+private:
+    stack<TreeNode*> nodes;
 public:
     void showTree(TreeNode* node) {
         if (!node) {
@@ -48,7 +51,23 @@ public:
         showTree(node->right);
     }
     void flatten(TreeNode* root) {
-        
+        if (root == nullptr) return;
+        if (root->left == nullptr && root->right == nullptr && !(nodes.empty())) {
+            root->right = nodes.top();
+            nodes.pop();
+            flatten(root->right);
+            return;
+        }
+        if (root->right != nullptr) {
+            nodes.push(root->right);
+        }
+        root->right = root->left;
+        root->left = nullptr;
+        if (root->right == nullptr && !(nodes.empty())) {
+            root->right = nodes.top();
+            nodes.pop();
+        }
+        flatten(root->right);
     }
     void freeNode(TreeNode* root) {
         if (root == nullptr) return;
