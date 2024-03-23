@@ -27,7 +27,16 @@ public:
         showTree(node->right);
     }
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        
+        int size = nums.size();
+        return recursiveBuild(0, size-1, nums);
+    }
+    TreeNode* recursiveBuild(int left, int right, vector<int>& nums) {
+        if (left > right) return nullptr;
+        int mid = (left + right) >> 2;
+        TreeNode* root = new TreeNode(nums[mid]);
+        root->left = recursiveBuild(left, mid-1, nums);
+        root->right = recursiveBuild(mid+1, right, nums);
+        return root;
     }
     void freeNode(TreeNode* root) {
         if (root == nullptr) return;
