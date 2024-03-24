@@ -112,6 +112,8 @@ The problems are organized into directories based on the main technique or data 
 
 ## Binary Tree
 
+- Morris Traversal: [C++](./Binary%20Tree/Implementations/Morris%20Traversal/main.cpp)
+
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/) | [C++](./Binary%20Tree/94.%20Binary%20Tree%20Inorder%20Traversal/main.cpp) | | Easy | 2024/03/21 | [x] | [ ] |
