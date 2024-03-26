@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 #include <vector>
 
 using namespace std;
@@ -14,15 +15,23 @@ struct TreeNode {
 
 class Solution {
 public:
-    void traverse(TreeNode *currentNode, vector<int>& ans) {
-        if (currentNode == nullptr) return;
-        traverse(currentNode->left, ans);
-        ans.push_back(currentNode->val);
-        traverse(currentNode->right, ans);
-    }
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> ans;
-        traverse(root, ans);
+        stack<pair<TreeNode*, bool>> myStack;
+        myStack.push({root, false});
+        while (!myStack.empty()) {
+            TreeNode* currentNode = myStack.top().first;
+            bool print = myStack.top().second;
+            myStack.pop();
+            if (!currentNode) continue;
+            if (print) {
+                ans.push_back(currentNode->val);
+                continue;
+            }
+            myStack.push({currentNode->right, false});
+            myStack.push({currentNode, true});
+            myStack.push({currentNode->left, false});
+        }
         return ans;
     }
 };
