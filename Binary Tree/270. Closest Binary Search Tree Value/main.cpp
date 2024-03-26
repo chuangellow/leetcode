@@ -37,20 +37,18 @@ TreeNode* buildTree(const vector<string>& nodeValues) {
 
 class Solution {
 public:
-    void traverse(TreeNode* root, const double target, double *diff, int *closest) {
-        if (!root) return;
-        double currentDiff = ((root->val - target) > 0)? (root->val - target): target - root->val; 
-        if (currentDiff < *diff || ((currentDiff == *diff) && root->val < *closest)) {
-            *diff = currentDiff;
-            *closest = root->val;
-        }
-        if (target > root->val) traverse(root->right, target, diff, closest);
-        else if (target < root->val) traverse(root->left, target, diff, closest);
-    }
     int closestValue(TreeNode* root, double target) {
-        double diff = MAXFLOAT;
-        int closest = -1;
-        traverse(root, target, &diff, &closest);
+        TreeNode* currentNode = root;
+        int closest = root->val;
+        while (currentNode != nullptr) {
+            if ((fabs(currentNode->val - target) < fabs(closest - target)) ||
+                ((fabs(currentNode->val - target) == fabs(closest - target)) && currentNode->val < closest)) {
+                target = closest;
+            }
+            if (target == currentNode->val) return currentNode->val;
+            else if (target > currentNode->val) currentNode = currentNode->right;
+            else if (target < currentNode->val) currentNode = currentNode->left;
+        }
         return closest;
     }
 };
