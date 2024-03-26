@@ -22,7 +22,27 @@ public:
         cout << root->val << " ";
         inorderTraverse(root->right);
     }
+    vector<TreeNode*> genTree(int left, int right) {
+        if (left > right) return {nullptr};
+        vector<TreeNode*> roots;
+        for (int i = left; i <= right; i++) {
+            vector<TreeNode*> leftRoots = genTree(left, i-1);
+            vector<TreeNode*> rightRoots = genTree(i+1, right);
+            for (TreeNode* leftRoot: leftRoots) {
+                for (TreeNode* rightRoot: rightRoots) {
+                    TreeNode* root = new TreeNode(i);
+                    root->left = leftRoot;
+                    root->right = rightRoot;
+                    roots.push_back(root);
+                }
+            }
+        }
+        return roots;
+    }
     vector<TreeNode*> generateTrees(int n) {
+        vector<TreeNode*> roots;
+        roots = genTree(1, n);
+        return roots;
     }
 };
 
