@@ -127,7 +127,8 @@ The problems are organized into directories based on the main technique or data 
 | 114 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | [C++](./Binary%20Tree/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List/main.cpp) | | Medium | 2024/03/23 | [x] | [ ] |
 | 145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal) | [C++](./Binary%20Tree/145.%20Binary%20Tree%20Postorder%20Traversal/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
 | 270 | [Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/description/) | [C++](./Binary%20Tree/270.%20Closest%20Binary%20Search%20Tree%20Value/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
-| 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/description/) | [C++](./Binary%20Tree/95.%20Unique%20Binary%20Search%20Trees%20II/main.cpp) | | Medium | 2024/03/26 | [ ] | [ ] |
+| 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/description/) | [C++](./Binary%20Tree/95.%20Unique%20Binary%20Search%20Trees%20II/main.cpp) | | Medium | 2024/03/26 | [x] | [ ] |
+| 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/description/) | [C++](./Binary%20Tree/110.%20Balanced%20Binary%20Tree/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
 
 ## Tree
 
