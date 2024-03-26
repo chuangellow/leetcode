@@ -37,17 +37,17 @@ TreeNode* buildTree(const vector<string>& nodeValues) {
 
 class Solution {
 public:
-    pair<int, bool> getDepth(TreeNode* root) {
-        if (!root) return {0, true};
-        pair<int, bool> left = getDepth(root->left);
-        if (!left.second) return {0, false};
-        pair<int, bool> right = getDepth(root->right);
-        if (!right.second) return {0, false};
-        if (abs(left.first - right.first) > 1) return {0, false};
-        return {max(left.first, right.first) + 1, true};
+    int getDepth(TreeNode* root) {
+        if (!root) return 0;
+        int left = getDepth(root->left);
+        if (left == -1) return -1;
+        int right = getDepth(root->right);
+        if (right == -1) return -1;
+        if (abs(left - right) > 1) return -1;
+        return max(left, right) + 1;
     }
     bool isBalanced(TreeNode* root) {
-        return getDepth(root).second;
+        return (getDepth(root) != -1);
     }
 };
 
