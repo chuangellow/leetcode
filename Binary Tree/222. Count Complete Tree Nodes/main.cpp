@@ -37,9 +37,48 @@ TreeNode* buildTree(const vector<string>& nodeValues) {
 
 class Solution {
 public:
+    bool findK(TreeNode* root, int k) {
+        if (k == 1) return (root != nullptr);
+        vector<int> paths;
+        while (k > 1) {
+            paths.push_back(k);
+            k /= 2;
+        }
+        TreeNode* currentNode = root;
+        int currentIdx = 1;
+        while (currentNode != nullptr && !paths.empty()) {
+            int parentIdx = paths.back();
+            paths.pop_back();
+            if (currentIdx * 2 == parentIdx) {
+                currentIdx *= 2;
+                currentNode = currentNode->left;
+            }
+            else if ((currentIdx * 2 + 1) == parentIdx) {
+                currentIdx = currentIdx * 2 + 1;
+                currentNode = currentNode->right;
+            }
+        }
+        return (currentNode != nullptr);
+    }
+    int maxNodes(TreeNode* root) {
+        int depth = 0;
+        TreeNode* currentNode = root;
+        while (currentNode != nullptr) {
+            depth++;
+            currentNode = currentNode->left;
+        }
+        return (2 << depth) - 1;
+    }
     int countNodes(TreeNode* root) {
         if (!root) return 0;
-        return countNodes(root->left) + countNodes(root->right) + 1;
+        int left = 1, right = maxNodes(root);
+        while (left < right) {
+            int mid = (left + right + 1) >> 1;
+            bool exist = findK(root, mid);
+            if (!exist) right = mid - 1;
+            else left = mid;
+        }
+        return left;
     }
 };
 
