@@ -129,7 +129,8 @@ The problems are organized into directories based on the main technique or data 
 | 270 | [Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/description/) | [C++](./Binary%20Tree/270.%20Closest%20Binary%20Search%20Tree%20Value/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
 | 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/description/) | [C++](./Binary%20Tree/95.%20Unique%20Binary%20Search%20Trees%20II/main.cpp) | | Medium | 2024/03/26 | [x] | [ ] |
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/description/) | [C++](./Binary%20Tree/110.%20Balanced%20Binary%20Tree/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
-| 222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/description/) | [C++](./Binary%20Tree/110.%20Balanced%20Binary%20Tree/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
+| 222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/description/) | [C++](./Binary%20Tree/222.%20Count%20Complete%20Tree%20Nodes/main.cpp) | | Medium | 2024/03/26 | [x] | [ ] |
+| 99 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/description/) | [C++](./Binary%20Tree/99.%20Recover%20Binary%20Search%20Tree/main.cpp) | | Medium | 2024/03/27 | [x] | [ ] |
 
 ## Tree
 
