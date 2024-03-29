@@ -14,9 +14,14 @@ struct TreeNode {
 };
 
 class Solution {
+private:
+    bool findFirst;
+    TreeNode *first;
+    TreeNode *second;
+    TreeNode *prev;
 public:
-    vector<TreeNode*> inorderTraversal(TreeNode* root) {
-        vector<TreeNode*> ans;
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> ans;
         stack<pair<TreeNode*, bool>> myStack;
         myStack.push({root, false});
         while (!myStack.empty()) {
@@ -25,7 +30,7 @@ public:
             myStack.pop();
             if (!currentNode) continue;
             if (print) {
-                ans.push_back(currentNode);
+                ans.push_back(currentNode->val);
                 continue;
             }
             myStack.push({currentNode->right, false});
@@ -34,28 +39,31 @@ public:
         }
         return ans;
     }
-    void swapNode(TreeNode *first, TreeNode *second) {
+    void inorderTravese(TreeNode* root) {
+        if (root == nullptr) return;
+        inorderTravese(root->left);
+        if (prev && root->val < prev->val && !findFirst) {
+            first = prev;
+            second = root;
+            findFirst = true;
+        }
+        else if (prev && root->val < prev->val) {
+            second = root;
+        }
+        prev = root;
+        inorderTravese(root->right);
+        return;
+    }
+    void swap(TreeNode* first, TreeNode* second) {
         int temp = first->val;
         first->val = second->val;
         second->val = temp;
     }
     void recoverTree(TreeNode* root) {
-        vector<TreeNode*> inorder = inorderTraversal(root);
-        int first, size = inorder.size();
-        for (int i = 0; i < size - 1; i++) {
-            if (inorder[i]->val > inorder[i+1]->val) {
-                first = i;
-                break;
-            }
-        }
-        int second, min = INT32_MAX;
-        for (int i = first+1; i < size; i++) {
-            if (inorder[i]->val < min) {
-                min = inorder[i]->val;
-                second = i;
-            }
-        }
-        swapNode(inorder[first], inorder[second]);
+        findFirst = false;
+        first = second = prev = nullptr;
+        inorderTravese(root);
+        swap(first, second);
     }
 };
 
@@ -90,7 +98,7 @@ int main(void) {
     TreeNode* root = buildTree(nodeValues);
     Solution sol;
     sol.recoverTree(root);
-    vector<TreeNode*> ans = sol.inorderTraversal(root);
-    for (int i = 0; i < ans.size(); i++) cout << ans[i]->val << " ";
+    vector<int> ans = sol.inorderTraversal(root);
+    for (int i = 0; i < ans.size(); i++) cout << ans[i] << " ";
     cout << endl;
 }
