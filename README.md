@@ -70,6 +70,7 @@ The problems are organized into directories based on the main technique or data 
 | 2095 | [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)| [C](./Linked%20List/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List/main.c) | | Medium | 2024/02/28 | [x] | [ ] |
 | 82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/)| [C](./Linked%20List/82.%20Remove%20Duplicates%20from%20Sorted%20List%20II/main.c) | | Medium | 2024/02/28 | [x] | [ ] |
 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)| [C](./Linked%20List/25.%20Reverse%20Nodes%20in%20k-Group/main.c) | | Hard | 2024/02/29 | [x] | [ ] |
+| 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/description/)| [C++](./Linked%20List/) | | Medium | 2024/04/03 | [x] | [ ] |
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)| [C](./Linked%20List/23.%20Merge%20k%20Sorted%20Lists/main.c) | | Hard | 2024/03/01 | [ ] | [ ] |
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
