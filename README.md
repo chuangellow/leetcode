@@ -176,6 +176,10 @@ The problems are organized into directories based on the main technique or data 
 - Selection Sort Implementation: [SelectionSort.c](./Sorting/Implementations/Array/SelectionSort.c)
 - Bubbble Sort Implementation: [BubbleSort.c](./Sorting/Implementations/Array/BubbleSort.c)
 
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/description/)| [C++](./Sorting/75.%20Sort%20Colors/main.cpp) | | Medium | 2024/06/12 | [ ] | [ ] |
+
 ## Binary Search
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
