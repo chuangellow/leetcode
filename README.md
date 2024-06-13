@@ -271,6 +271,7 @@ The problems are organized into directories based on the main technique or data 
 | 673 | [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)| [C++](./Dynamic%20Programming/673.%20Number%20of%20Longest%20Increasing%20Subsequence/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
 | 646 | [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)| [C++](./Dynamic%20Programming/646.%20Maximum%20Length%20of%20Pair%20Chain/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
 | 1218 | [Longest Arithmetic Subsequence of Given Difference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)| [C++](./Dynamic%20Programming/1218.%20Longest%20Arithmetic%20Subsequence%20of%20Given%20Difference/main.cpp) | | Medium | 2024/01/26 | [x] | [ ] |
+| 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)| [C++](./Dynamic%20Programming/416.%20Partition%20Equal%20Subset%20Sum/main.cpp) | | Medium | 2024/06/13 | [ ] | [ ] |
 
 # Reference：
 
