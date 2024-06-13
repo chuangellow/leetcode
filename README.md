@@ -169,7 +169,8 @@ The problems are organized into directories based on the main technique or data 
 | 547 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)| [C++](./Graph/547.%20Number%20of%20Provinces/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 | 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)| [C++](./Graph/695.%20Max%20Area%20of%20Island/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)| [C++](./Graph/286.%20Walls%20and%20Gates/main.cpp) | | Medium | 2024/06/13 | [ ] | [ ] |
+| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)| [C++](./Graph/286.%20Walls%20and%20Gates/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
+| 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)| [C++](./Graph/994.%20Rotting%20Oranges/main.cpp) | | Medium | 2024/06/13 | [ ] | [ ] |
 
 # 演算法策略
 
