@@ -6,18 +6,19 @@ using namespace std;
 
 class Solution {
 public:
+    void solve(int pos, vector<int>& nums, int sumA, int sumB, bool *ans) {
+        if (pos == nums.size()) {
+            if (sumA == sumB) *ans = true;
+            return;
+        }
+        solve(pos+1, nums, sumA+nums[pos], sumB, ans);
+        solve(pos+1, nums, sumA, sumB+nums[pos], ans);
+        return;
+    }
     bool canPartition(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        vector<int> cummulativeSum(n, 0);
-        cummulativeSum[0] = nums[0];
-        for (int i = 1; i < n; i++) {
-            cummulativeSum[i] = nums[i] + cummulativeSum[i-1];
-        }
-        for (int i = 0; i < n; i++) {
-            if (cummulativeSum[n-1] - cummulativeSum[i] == cummulativeSum[i]) return true;
-        }
-        return false;
+        bool ans = false;
+        solve(0, nums, 0, 0, &ans);
+        return ans;
     }
 };
 
