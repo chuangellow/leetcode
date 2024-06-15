@@ -6,31 +6,17 @@ using namespace std;
 class Solution {
 public:
     int maxBoxesInWarehouse(vector<int>& boxes, vector<int>& warehouse) {
-        sort(boxes.begin(), boxes.end());
-        vector<int> minArr(warehouse.size(), 0);
-        minArr[0] = warehouse[0];
-        for (int i = 1; i < warehouse.size(); i++) {
-            minArr[i] = min(minArr[i-1], warehouse[i]);
-        }
-        int lastHouse = -1;
-        for (int i = warehouse.size()-1; i >= 0; i--) {
-            if (minArr[i] >= boxes[0]) {
-                lastHouse = i;
-                break;
+        sort(boxes.begin(), boxes.end(), std::greater<>());
+        int count = 0;
+        int boxIdx = 0;
+        for (int i = 0; i < warehouse.size(); i++) {
+            if (boxIdx >= boxes.size()) break;
+            while (boxIdx < boxes.size() && boxes[boxIdx] > warehouse[i]) {
+                boxIdx += 1;
             }
-        }
-        if (lastHouse == -1) return 0;
-        int count = 1;
-        lastHouse -= 1;
-        for (int i = 1; i < boxes.size(); i++) {
-            cout << count << " " << lastHouse << endl;
-            if (lastHouse < 0) break;
-            while (lastHouse >= 0 && minArr[lastHouse] < boxes[i]) {
-                lastHouse -= 1;
-            }
-            if (lastHouse >= 0) {
-                lastHouse -= 1;
+            if (boxIdx < boxes.size()) {
                 count += 1;
+                boxIdx += 1;
             }
         }
         return count;
