@@ -248,6 +248,7 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 948 | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/description/)| [C++](./Dynamic%20Programming/948.%20Bag%20of%20Tokens/main.cpp) | | Medium | 2024/03/04 | [x] | [ ] |
 | 1564 | [Put Boxes Into the Warehouse I](https://leetcode.com/problems/put-boxes-into-the-warehouse-i/description/)| [C++](./Greedy/1564.%20Put%20Boxes%20Into%20the%20Warehouse%20I/main.cpp) | | Medium | 2024/06/15 | [x] | [ ] |
+| 1580 | [Put Boxes Into the Warehouse II](https://leetcode.com/problems/put-boxes-into-the-warehouse-ii/description/)| [C++](./Greedy/1564.%20Put%20Boxes%20Into%20the%20Warehouse%20II/main.cpp) | | Medium | 2024/06/15 | [ ] | [ ] |
 
 ## Dynamic Programming
 
