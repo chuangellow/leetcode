@@ -168,9 +168,6 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 547 | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)| [C++](./Graph/547.%20Number%20of%20Provinces/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 | 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
-| 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)| [C++](./Graph/695.%20Max%20Area%20of%20Island/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
-| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)| [C++](./Graph/286.%20Walls%20and%20Gates/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
-| 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)| [C++](./Graph/994.%20Rotting%20Oranges/main.cpp) | | Medium | 2024/06/13 | [ ] | [ ] |
 
 # 演算法策略
 
@@ -240,12 +237,17 @@ The problems are organized into directories based on the main technique or data 
 | 261 | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)| [C++](./Graph/261.%20Graph%20Valid%20Tree/main.cpp) | | Medium | 2024/01/27 | [x] | [ ] |
 | 490 | [The Maze](https://leetcode.com/problems/the-maze/description/)| [C++](./Graph/490.%20The%20Maze/main.cpp) | | Medium | 2024/03/19 | [x] | [ ] |
 | 802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)| [C++](./Graph/802.%20Find%20Eventual%20Safe%20States/main.cpp) | | Medium | 2024/01/28 | [ ] | [ ] |
+| 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)| [C++](./Graph/695.%20Max%20Area%20of%20Island/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
+| 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)| [C++](./Graph/286.%20Walls%20and%20Gates/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
+| 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)| [C++](./Graph/994.%20Rotting%20Oranges/main.cpp) | | Medium | 2024/06/13 | [x]  | [ ] |
+| 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/description/)| [C++](./Graph/207.%20Course%20Schedule/main.cpp) | | Medium | 2024/06/14 | [ ]  | [ ] |
 
 ## Greedy
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 948 | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/description/)| [C++](./Dynamic%20Programming/948.%20Bag%20of%20Tokens/main.cpp) | | Medium | 2024/03/04 | [x] | [ ] |
+| 1564 | [Put Boxes Into the Warehouse I](https://leetcode.com/problems/put-boxes-into-the-warehouse-i/description/)| [C++](./Greedy/1564.%20Put%20Boxes%20Into%20the%20Warehouse%20I/main.cpp) | | Medium | 2024/06/15 | [ ] | [ ] |
 
 ## Dynamic Programming
 
@@ -271,7 +273,7 @@ The problems are organized into directories based on the main technique or data 
 | 673 | [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)| [C++](./Dynamic%20Programming/673.%20Number%20of%20Longest%20Increasing%20Subsequence/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
 | 646 | [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)| [C++](./Dynamic%20Programming/646.%20Maximum%20Length%20of%20Pair%20Chain/main.cpp) | | Medium | 2024/01/25 | [x] | [ ] |
 | 1218 | [Longest Arithmetic Subsequence of Given Difference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)| [C++](./Dynamic%20Programming/1218.%20Longest%20Arithmetic%20Subsequence%20of%20Given%20Difference/main.cpp) | | Medium | 2024/01/26 | [x] | [ ] |
-| 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)| [C++](./Dynamic%20Programming/416.%20Partition%20Equal%20Subset%20Sum/main.cpp) | | Medium | 2024/06/13 | [ ] | [ ] |
+| 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)| [C++](./Dynamic%20Programming/416.%20Partition%20Equal%20Subset%20Sum/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
 
 # Reference：
 
