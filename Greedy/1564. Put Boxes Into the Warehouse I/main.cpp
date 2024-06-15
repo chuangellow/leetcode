@@ -7,18 +7,29 @@ class Solution {
 public:
     int maxBoxesInWarehouse(vector<int>& boxes, vector<int>& warehouse) {
         sort(boxes.begin(), boxes.end());
-        int count = 0;
-        vector<bool> empty(warehouse.size(), true);
-        for (int i = 0; i < boxes.size(); i++) {
-            int insertIdx = -1;
-            for (int j = 0; j < warehouse.size(); j++) {
-                if (warehouse[j] < boxes[i]) break;
-                if (empty[j] && boxes[i] <= warehouse[j]) {
-                    insertIdx = j;
-                }
+        vector<int> minArr(warehouse.size(), 0);
+        minArr[0] = warehouse[0];
+        for (int i = 1; i < warehouse.size(); i++) {
+            minArr[i] = min(minArr[i-1], warehouse[i]);
+        }
+        int lastHouse = -1;
+        for (int i = warehouse.size()-1; i >= 0; i--) {
+            if (minArr[i] >= boxes[0]) {
+                lastHouse = i;
+                break;
             }
-            if (insertIdx != -1) {
-                empty[insertIdx] = false;
+        }
+        if (lastHouse == -1) return 0;
+        int count = 1;
+        lastHouse -= 1;
+        for (int i = 1; i < boxes.size(); i++) {
+            cout << count << " " << lastHouse << endl;
+            if (lastHouse < 0) break;
+            while (lastHouse >= 0 && minArr[lastHouse] < boxes[i]) {
+                lastHouse -= 1;
+            }
+            if (lastHouse >= 0) {
+                lastHouse -= 1;
                 count += 1;
             }
         }
