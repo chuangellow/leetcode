@@ -60,6 +60,12 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)| [C](./Array/217.%20Contains%20Duplicate/main.cpp) | | Easy | 2024/06/12 | [x] | [ ] |
 
+## Hash Table
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)| [C++](./Hash%20Table/49.%20Group%20Anagrams/main.cpp) | | Medium | 2024/06/17 | [ ] | [ ] |
+
 ## Linked List
 
 - Singly Linked List Implementation: [C++](./Linked%20List/Implementations/Singly%20Linked%20List)
@@ -199,7 +205,7 @@ The problems are organized into directories based on the main technique or data 
 | 154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)| [C++](./Binary%20Search/154.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II/main.cpp) | | Hard | 2024/01/11 | [x] | [ ] |
 | 702 | [Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size)| [C++](./Binary%20Search/702.%20Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/main.cpp) | | Medium | 2024/01/17 | [ x] | [ ] |
 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/description/)| [C++](./Queue/362.%20Design%20Hit%20Counter/main.cpp) | | Medium | 2024/03/17 | [x] | [ ] |
-| 633 | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/description/)| [C++](./Binary%20Search/633.%20Sum%20of%20Square%20Numbers/main.cpp) | | Medium | 2024/06/17 | [ ] | [ ] |
+| 633 | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/description/)| [C++](./Binary%20Search/633.%20Sum%20of%20Square%20Numbers/main.cpp) | | Medium | 2024/06/17 | [x] | [ ] |
 
 ## [Two-Pointers](https://leetcode.com/tag/two-pointers/)
 
