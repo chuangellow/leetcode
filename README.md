@@ -64,7 +64,8 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
-| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)| [C++](./Hash%20Table/49.%20Group%20Anagrams/main.cpp) | | Medium | 2024/06/17 | [ ] | [ ] |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)| [C++](./Hash%20Table/49.%20Group%20Anagrams/main.cpp) | | Medium | 2024/06/17 | [x] | [ ] |
+| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)| [C++](./Hash%20Table/347.%20Top%20K%20Frequent%20Elements/main.cpp) | | Medium | 2024/06/17 | [ ] | [ ] |
 
 ## Linked List
 
