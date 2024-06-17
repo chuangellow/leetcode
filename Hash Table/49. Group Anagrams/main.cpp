@@ -6,45 +6,29 @@ using namespace std;
 
 class Solution {
 public:
-    bool checkAnagrams(string s1, string s2) {
-        int count[26] = {0};
-        for (auto c: s1) {
-            count[c - 'a']++;
-        }
-        for (auto c: s2) {
-            count[c - 'a']--;
-        }
-        for (int i = 0; i < 26; i++) {
-            if (count[i] != 0) return false;
-        }
-        return true;
-    }
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        int maxLen = 0;
-        for (int i = 0; i < strs.size(); i++) {
-            if (strs[i].size() > maxLen) {
-                maxLen = strs[i].size();
-            }
-        }
-        vector<vector<string>> buckets(maxLen+1);
-        for (int i = 0; i < strs.size(); i++) {
-            buckets[strs[i].size()].push_back(strs[i]);
-        }
+        vector<pair<string, int>> dupStrs;
         vector<vector<string>> out;
-        for (int k = 0; k <= maxLen; k++) {
-            if (buckets[k].size() == 0) continue;
-            vector<bool> selected(buckets[k].size(), false);
-            for (int i = 0; i < buckets[k].size(); i++) {
-                if (selected[i]) continue;
-                vector<string> s = {buckets[k][i]};
-                for (int j = i + 1; j < buckets[k].size(); j++) {
-                    if (!selected[j] && checkAnagrams(buckets[k][i], buckets[k][j])) {
-                        selected[j] = true;
-                        s.push_back(buckets[k][j]);
-                    }
+        for (int i = 0; i < strs.size(); i++) {
+            string newStr = strs[i];
+            sort(newStr.begin(), newStr.end());
+            dupStrs.push_back({newStr, i});
+        }
+        sort(dupStrs.begin(), dupStrs.end());
+        int i = 0;
+        while (i < dupStrs.size()) {
+            vector<string> s = {strs[dupStrs[i].second]};
+            int j;
+            for (j = i + 1; j < dupStrs.size(); j++) {
+                if (dupStrs[i].first == (dupStrs[j].first)) {
+                    s.push_back(strs[dupStrs[j].second]);
                 }
-                out.push_back(s);
+                else {
+                    break;
+                }
             }
+            i = j;
+            out.push_back(s);
         }
         return out;
     }
