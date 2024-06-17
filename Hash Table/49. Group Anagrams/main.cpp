@@ -20,18 +20,31 @@ public:
         return true;
     }
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        vector<bool> selected(strs.size(), false);
-        vector<vector<string>> out;
+        int maxLen = 0;
         for (int i = 0; i < strs.size(); i++) {
-            if (selected[i]) continue;
-            vector<string> s = {strs[i]};
-            for (int j = i + 1; j < strs.size(); j++) {
-                if (!selected[j] && checkAnagrams(strs[i], strs[j])) {
-                    selected[j] = true;
-                    s.push_back(strs[j]);
-                }
+            if (strs[i].size() > maxLen) {
+                maxLen = strs[i].size();
             }
-            out.push_back(s);
+        }
+        vector<vector<string>> buckets(maxLen+1);
+        for (int i = 0; i < strs.size(); i++) {
+            buckets[strs[i].size()].push_back(strs[i]);
+        }
+        vector<vector<string>> out;
+        for (int k = 0; k <= maxLen; k++) {
+            if (buckets[k].size() == 0) continue;
+            vector<bool> selected(buckets[k].size(), false);
+            for (int i = 0; i < buckets[k].size(); i++) {
+                if (selected[i]) continue;
+                vector<string> s = {buckets[k][i]};
+                for (int j = i + 1; j < buckets[k].size(); j++) {
+                    if (!selected[j] && checkAnagrams(buckets[k][i], buckets[k][j])) {
+                        selected[j] = true;
+                        s.push_back(buckets[k][j]);
+                    }
+                }
+                out.push_back(s);
+            }
         }
         return out;
     }
