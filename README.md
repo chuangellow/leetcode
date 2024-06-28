@@ -94,6 +94,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 2743 | [Count Substrings Without Repeating Character](https://leetcode.com/problems/count-substrings-without-repeating-character/description/) | [C++](./String/2743.%20Count%20Substrings%20Without%20Repeating%20Character/main.cpp) | | Medium | 2024/06/28 | [x] | [ ] |
 
 ## Stack
 
