@@ -248,7 +248,7 @@ The problems are organized into directories based on the main technique or data 
 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)| [C++](./Graph/695.%20Max%20Area%20of%20Island/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
 | 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)| [C++](./Graph/286.%20Walls%20and%20Gates/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
 | 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)| [C++](./Graph/994.%20Rotting%20Oranges/main.cpp) | | Medium | 2024/06/13 | [x]  | [ ] |
-| 2285 | [Maximum Total Importance of Roads](https://leetcode.com/problems/maximum-total-importance-of-roads/description/)| [C++](./Graph/2285.%20Maximum%20Total%20Importance%20of%20Roads/main.cpp) | | Medium | 2024/06/28 | [ ]  | [ ] |
+| 2285 | [Maximum Total Importance of Roads](https://leetcode.com/problems/maximum-total-importance-of-roads/description/)| [C++](./Graph/2285.%20Maximum%20Total%20Importance%20of%20Roads/main.cpp) | | Medium | 2024/06/28 | [x]  | [ ] |
 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/description/)| [C++](./Graph/207.%20Course%20Schedule/main.cpp) | | Medium | 2024/06/14 | [ ]  | [ ] |
 
 ## Greedy
