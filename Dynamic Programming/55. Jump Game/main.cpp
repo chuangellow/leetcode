@@ -9,12 +9,11 @@ public:
         int n = nums.size();
         vector<bool> jumpToGoal(n, false);
         jumpToGoal[n-1] = true;
+        int lastGoodIdx = n-1;
         for (int i = n-2; i >= 0; i--) {
-            for (int j = nums[i]; j >= 1; j++) {
-                if (i + j < n && jumpToGoal[i + j]) {
-                    jumpToGoal[i] = true;
-                    break;
-                }
+            if (lastGoodIdx <= i + nums[i]) {
+                jumpToGoal[i] = true;
+                lastGoodIdx = i;
             }
         }
         return jumpToGoal[0];
