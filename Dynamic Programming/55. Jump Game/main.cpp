@@ -7,19 +7,17 @@ class Solution {
 public:
     bool canJump(vector<int>& nums) {
         int n = nums.size();
-        vector<bool> visited(n, false);
-        visited[0] = true;
-        for (int i = 0; i < n; i++) {
-            if (visited[n-1]) return true;
-            if (visited[i]) {
-                for (int j = 1; j <= nums[i]; j++) {
-                    if (i + j < n) {
-                        visited[i+j] = true;
-                    }
+        vector<bool> jumpToGoal(n, false);
+        jumpToGoal[n-1] = true;
+        for (int i = n-2; i >= 0; i--) {
+            for (int j = nums[i]; j >= 1; j++) {
+                if (i + j < n && jumpToGoal[i + j]) {
+                    jumpToGoal[i] = true;
+                    break;
                 }
             }
         }
-        return visited[n-1];
+        return jumpToGoal[0];
     }
 };
 
