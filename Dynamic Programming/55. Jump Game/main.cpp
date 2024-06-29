@@ -10,6 +10,7 @@ public:
         vector<bool> visited(n, false);
         visited[0] = true;
         for (int i = 0; i < n; i++) {
+            if (visited[n-1]) return true;
             if (visited[i]) {
                 for (int j = 1; j <= nums[i]; j++) {
                     if (i + j < n) {
