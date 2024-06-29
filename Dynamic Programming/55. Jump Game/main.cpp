@@ -5,21 +5,20 @@ using namespace std;
 
 class Solution {
 public:
-    void jump(int pos, int n, vector<int>& nums, bool *ans) {
-        if (pos >= n) return;
-        if (pos == n-1) {
-            *ans = true;
-            return;
-        }
-        for (int i = 1; i <= nums[pos]; i++) {
-            jump(pos + i, n, nums, ans);
-        }
-        return;
-    }
     bool canJump(vector<int>& nums) {
-        bool ans = false;
-        jump(0, nums.size(), nums, &ans);
-        return ans;
+        int n = nums.size();
+        vector<bool> visited(n, false);
+        visited[0] = true;
+        for (int i = 0; i < n; i++) {
+            if (visited[i]) {
+                for (int j = 1; j <= nums[i]; j++) {
+                    if (i + j < n) {
+                        visited[i+j] = true;
+                    }
+                }
+            }
+        }
+        return visited[n-1];
     }
 };
 
