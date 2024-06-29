@@ -7,15 +7,24 @@ class Solution {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
         int n = gas.size();
-        for (int i = 0; i < n; i++) {
-            int totalGas = gas[i] - cost[i], pos = (i + 1) % n;
-            while (pos != i) {
-                if (totalGas < 0) break;
-                totalGas += gas[pos];
-                totalGas -= cost[pos];
-                pos = (pos + 1) % n;
+        int idx = 0;
+        while (true) {
+            if (gas[idx] < cost[idx]) {
+                if ((idx + 1) % n > idx) idx = (idx + 1) % n;
+                else return -1;
+                continue;
             }
-            if (pos == i && totalGas >= 0) return pos;
+            int moveIdx = (idx + 1) % n;
+            int currentGas = gas[idx] - cost[idx];
+            while (moveIdx != idx) {
+                if (currentGas < 0) break;
+                currentGas += gas[moveIdx];
+                currentGas -= cost[moveIdx];
+                moveIdx = (moveIdx + 1) % n;
+            }
+            if (moveIdx == idx && currentGas >= 0) return idx;
+            if (moveIdx <= idx) break;
+            idx = moveIdx;
         }
         return -1;
     }
