@@ -8,34 +8,38 @@ using namespace std;
 
 class RandomizedSet {
 private:
-    unordered_map<int, int> idxToValSet;
-    unordered_map<int, int> valToIdxSet;
-    int id;
+    unordered_map<int, int> valToIdxMap;
+    vector<int> nums;
+    int n;
 public:
     RandomizedSet() {
-        id = 0;
+        n = 0;
+    }
+
+    void swap(int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
     
     bool insert(int val) {
-        if (valToIdxSet.count(val) == 0) {
-            idxToValSet[id] = val;
-            valToIdxSet[val] = id;
-            id += 1;
+        if (valToIdxMap.count(val) == 0) {
+            valToIdxMap[val] = n;
+            nums.push_back(val);
+            n += 1;
             return true;
         }
         return false;
     }
     
     bool remove(int val) {
-        if (valToIdxSet.count(val) != 0) {
-            int idx = valToIdxSet[val];
-            idxToValSet.erase(idx);
-            valToIdxSet.erase(val);
-            for (int i = idx + 1; i < id; i++) {
-                int nextVal = idxToValSet[i];
-                idxToValSet[i-1] = nextVal;
-                valToIdxSet[nextVal] = i-1;
-            }
+        if (valToIdxMap.count(val) != 0) {
+            int idx = valToIdxMap[val];
+            valToIdxMap[nums[n-1]] = idx;
+            valToIdxMap.erase(val);
+            swap(idx, n-1);
+            nums.pop_back();
+            n -= 1;
             return true;
         }
         return false;
@@ -44,9 +48,9 @@ public:
     int getRandom() {
         random_device                  rand_dev;
         mt19937                        generator(rand_dev());
-        uniform_int_distribution<int>  distr(0, id-1);
+        uniform_int_distribution<int>  distr(0, n-1);
         int randIdx = distr(generator);
-        return idxToValSet[randIdx];
+        return nums[randIdx];
     }
 };
 
