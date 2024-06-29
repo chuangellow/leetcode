@@ -7,18 +7,22 @@ using namespace std;
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int ans = 0;
+        int candidate = nums[0];
+        int vote = 1;
         int n = nums.size();
-        for (int i = 0; i < 32; i++) {
-            int count = 0;
-            for (auto num: nums) {
-                if (((1 << i) & num) != 0) {
-                    count++;
-                }
+        for (int i = 1; i < n; i++) {
+            vote += (nums[i] == candidate)? 1: -1;
+            if (vote == 0) {
+                candidate = nums[i];
+                vote = 1;
             }
-            if (count > (n / 2)) ans |= (1 << i);
         }
-        return ans;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] == candidate) count++;
+            if (count > (n / 2)) return candidate;
+        }
+        return -1;
     }
 };
 
