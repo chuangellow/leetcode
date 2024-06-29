@@ -7,14 +7,18 @@ using namespace std;
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
+        int ans = 0;
         int n = nums.size();
-        unordered_map<int, int> map;
-        for (int i = 0; i < n; i++) {
-            if (map.count(nums[i]) == 0) map[nums[i]] = 1;
-            else map[nums[i]] += 1;
-            if (map[nums[i]] > n / 2) return nums[i];
+        for (int i = 0; i < 32; i++) {
+            int count = 0;
+            for (auto num: nums) {
+                if (((1 << i) & num) != 0) {
+                    count++;
+                }
+            }
+            if (count > (n / 2)) ans |= (1 << i);
         }
-        return -1;
+        return ans;
     }
 };
 
