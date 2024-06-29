@@ -6,16 +6,12 @@ using namespace std;
 class Solution {
 public:
     int hIndex(vector<int>& citations) {
-        int maxVal = citations[0];
         int n = citations.size();
-        for (int i = 1; i < n; i++) {
-            maxVal = max(maxVal, citations[i]);
-        }
-        vector<int> table(maxVal+1, 0);
+        vector<int> table(n+1, 0);
         for (auto citation: citations) {
-            table[citation] += 1;
+            table[min(citation, n)] += 1;
         }
-        int count = 0, i = maxVal;
+        int count = 0, i = n;
         for (; i >= 0; i--) {
             count += table[i];
             if (count >= i) break;
