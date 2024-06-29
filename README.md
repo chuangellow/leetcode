@@ -66,7 +66,8 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)| [C++](./Hash%20Table/49.%20Group%20Anagrams/main.cpp) | | Medium | 2024/06/17 | [x] | [ ] |
 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)| [C++](./Hash%20Table/347.%20Top%20K%20Frequent%20Elements/main.cpp) | | Medium | 2024/06/17 | [x] | [ ] |
-| 169 | [Majority Element](https://leetcode.com/problems/majority-element/description/)| [C++](./Hash%20Table/169.%20Majority%20Element/main.cpp) | | Easy | 2024/06/28 | [ ] | [ ] |
+| 169 | [Majority Element](https://leetcode.com/problems/majority-element/description/)| [C++](./Hash%20Table/169.%20Majority%20Element/main.cpp) | | Easy | 2024/06/28 | [x] | [ ] |
+| 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/)| [C++](./Hash%20Table/380.%20Insert%20Delete%20GetRandom%20O(1)/main.cpp) | | Medium | 2024/06/28 | [ ] | [ ] |
 
 ## Linked List
 
