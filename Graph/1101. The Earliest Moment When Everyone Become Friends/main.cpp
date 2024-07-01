@@ -15,7 +15,8 @@ class DisjointSet {
 public:
     Node **nodes;
     int numNodes;
-    DisjointSet(int n) : numNodes(n) {
+    int numGroups;
+    DisjointSet(int n) : numNodes(n), numGroups(n) {
         nodes = new Node*[numNodes];
         for (int i = 0; i < numNodes; i++) {
             nodes[i] = new Node(i);
@@ -39,14 +40,11 @@ public:
         }
     }
     void unionSets(Node *x, Node *y) {
-        link(findSet(x), findSet(y));
-    }
-    bool checkConnected() {
-        Node *representive = findSet(nodes[0]);
-        for (int i = 1; i < numNodes; i++) {
-            if (findSet(nodes[i]) != representive) return false;
+        Node *xP = findSet(x), *yP = findSet(y);
+        if (xP != yP) {
+            numGroups -= 1;
         }
-        return true;
+        link(findSet(x), findSet(y));
     }
 };
 
@@ -59,7 +57,7 @@ public:
         for (int i = 0; i < m; i++) {
             int time = logs[i][0];
             sets->unionSets(sets->nodes[logs[i][1]], sets->nodes[logs[i][2]]);
-            if (sets->checkConnected()) return time;
+            if (sets->numGroups == 1) return time;
         }
         return -1;
     }
