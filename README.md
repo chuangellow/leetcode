@@ -232,6 +232,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 1550 | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/description/)| [C++](./Bit%20Operation/1550.%20Three%20Consecutive%20Odds/main.cpp) | | Easy | 2024/07/01 | [ ] | [ ] |
 
 ## Recursion
 
