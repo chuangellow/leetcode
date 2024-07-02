@@ -102,6 +102,7 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 2743 | [Count Substrings Without Repeating Character](https://leetcode.com/problems/count-substrings-without-repeating-character/description/) | [C++](./String/2743.%20Count%20Substrings%20Without%20Repeating%20Character/main.cpp) | | Medium | 2024/06/28 | [x] | [ ] |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/description/) | [C++](./String/13.%20Roman%20to%20Integer/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
+| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/) | [C++](./String/12.%20Integer%20to%20Roman/main.cpp) | | Medium | 2024/07/02 | [ ] | [ ] |
 
 ## Stack
 
