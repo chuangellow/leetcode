@@ -7,18 +7,16 @@ class Solution {
 public:
     int candy(vector<int>& ratings) {
         int n = ratings.size();
-        vector<pair<int, int>> sortedRatings(n);
-        vector<int> candies(n, 1);
-        for (int i = 0; i < n; i++) sortedRatings[i] = {ratings[i], i};
-        sort(sortedRatings.begin(), sortedRatings.end());
-        for (int i = 0; i < n; i++) {
-            int idx = sortedRatings[i].second;
-            if (idx > 0 && ratings[idx] > ratings[idx-1] && candies[idx] <= candies[idx-1]) candies[idx] = candies[idx-1] + 1;
-            if (idx < n - 1 && ratings[idx] > ratings[idx+1] && candies[idx] <= candies[idx+1]) candies[idx] = candies[idx+1] + 1;
-        }
         int numCandies = 0;
-        for (int i = 0; i < n; i++) {
-            numCandies += candies[i];
+        vector<int> candies(n, 1);
+        for (int i = 1; i < n; i++) {
+            if (ratings[i] > ratings[i-1] && candies[i] <= candies[i-1]) candies[i] = candies[i-1] + 1;
+        }
+        for (int i = n - 2; i >= 0; i--) {
+            if (ratings[i] > ratings[i+1] && candies[i] <= candies[i+1]) candies[i] = candies[i+1] + 1;
+        }
+        for (int candy: candies) {
+            numCandies += candy;
         }
         return numCandies;
     }
