@@ -9,25 +9,35 @@ public:
         int n = height.size();
         vector<int> trapWater(n, 0);
         for (int i = 0; i < n; i++) trapWater[i] = height[i];
-        for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
-                if (height[i] <= height[j]) {
-                    for (int k = i+1; k < j; k++) {
-                        trapWater[k] = max(trapWater[k], min(height[i], height[j]));
-                    }
+        int left = 0;
+        while (true) {
+            int right = -1;
+            for (int i = left + 1; i < n; i++) {
+                if (trapWater[i] >= trapWater[left]) {
+                    right = i;
                     break;
                 }
             }
+            if (right == -1) break;
+            for (int i = left + 1; i < right; i++) {
+                trapWater[i] = max(trapWater[i], min(trapWater[left], trapWater[right]));
+            }
+            left = right;
         }
-        for (int i = n-1; i >= 0; i--) {
-            for (int j = i-1; j >= 0; j--) {
-                if (height[i] <= height[j]) {
-                    for (int k = i-1; k > j; k--) {
-                        trapWater[k] = max(trapWater[k], min(height[i], height[j]));
-                    }
+        int right = n-1;
+        while (true) {
+            int left = -1;
+            for (int i = right - 1; i >= 0; i--) {
+                if (trapWater[i] >= trapWater[right]) {
+                    left = i;
                     break;
                 }
             }
+            if (left == -1) break;
+            for (int i = right - 1; i > left; i--) {
+                trapWater[i] = max(trapWater[i], min(trapWater[left], trapWater[right]));
+            }
+            right = left;
         }
         int totalWater = 0;
         for (int i = 0; i < n; i++) {
