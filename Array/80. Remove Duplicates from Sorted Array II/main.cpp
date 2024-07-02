@@ -7,27 +7,16 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         int n = nums.size();
-        int left = 1, right = 1;
-        int lastElement = nums[0], count = 1;
-        while (right < n) {
-            if (nums[right] == lastElement) {
-                count += 1;
+        int slow = 1, count = 1;
+        for (int fast = 1; fast < n; fast++) {
+            if (nums[fast] == nums[fast-1]) count += 1;
+            else count = 1;
+            if (count <= 2) {
+                nums[slow] = nums[fast];
+                slow++;
             }
-            else {
-                lastElement = nums[right];
-                count = 1;
-            }
-            if (count >= 3) {
-                while (right < n && nums[right] == lastElement) right++;
-                if (right == n) break;
-                lastElement = nums[right];
-                count = 1;
-            }
-            nums[left] = nums[right];
-            left++;
-            right++;
         }
-        return left;
+        return ;
     }
 };
 
