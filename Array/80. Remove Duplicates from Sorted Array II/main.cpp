@@ -16,7 +16,7 @@ public:
                 slow++;
             }
         }
-        return ;
+        return slow;
     }
 };
 
