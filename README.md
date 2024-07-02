@@ -104,6 +104,7 @@ The problems are organized into directories based on the main technique or data 
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/description/) | [C++](./String/13.%20Roman%20to%20Integer/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/) | [C++](./String/12.%20Integer%20to%20Roman/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/) | [C++](./String/58.%20Length%20of%20Last%20Word/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | [C++](./String/14.%20Longest%20Common%20Prefix/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
 
 ## Stack
 
