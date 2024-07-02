@@ -62,7 +62,7 @@ The problems are organized into directories based on the main technique or data 
 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)| [C++](./Array/238.%20Product%20of%20Array%20Except%20Self/main.cpp) | | Medium | 2024/06/29 | [x]  | [ ] |
 | 350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)| [C++](./Array/350.%20Intersection%20of%20Two%20Arrays%20II/main.cpp) | | Easy | 2024/07/02 | [x]  | [ ] |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)| [C++](./Array/42.%20Trapping%20Rain%20Water/main.cpp) | | Hard | 2024/07/02 | [x]  | [ ] |
-| 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/)| [C++](./Array/80.%20Remove%20Duplicates%20from%20Sorted%20Array%20II/main.cpp) | | Medium | 2024/07/02 | [ ]  | [ ] |
+| 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/)| [C++](./Array/80.%20Remove%20Duplicates%20from%20Sorted%20Array%20II/main.cpp) | | Medium | 2024/07/02 | [x]  | [ ] |
 
 ## Hash Table
 
@@ -296,6 +296,7 @@ The problems are organized into directories based on the main technique or data 
 | 1218 | [Longest Arithmetic Subsequence of Given Difference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)| [C++](./Dynamic%20Programming/1218.%20Longest%20Arithmetic%20Subsequence%20of%20Given%20Difference/main.cpp) | | Medium | 2024/01/26 | [x] | [ ] |
 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)| [C++](./Dynamic%20Programming/416.%20Partition%20Equal%20Subset%20Sum/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/description/)| [C++](./Dynamic%20Programming/55.%20Jump%20Game/main.cpp) | | Medium | 2024/06/29 | [x] | [ ] |
+| 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/description/)| [C++](./Dynamic%20Programming/45.%20Jump%20Game%20II/main.cpp) | | Medium | 2024/07/02 | [ ] | [ ] |
 
 # Reference：
 
