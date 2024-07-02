@@ -9,15 +9,11 @@ public:
     string longestCommonPrefix(vector<string>& strs) {
         int ptr = 0, n = strs.size();
         string result = "";
-        vector<int> lens(n);
-        for (int i = 0; i < n; i++) {
-            lens[i] = strs[i].length();
-        }
         while (true) {
-            if (ptr > lens[0] - 1) return result;
+            if (ptr > (int) strs[0].size() - 1) return result;
             char c = strs[0][ptr];
             for (int i = 1; i < n; i++) {
-                if (ptr > lens[i] - 1) return result;
+                if (ptr > (int) strs[i].size() - 1) return result;
                 if (strs[i][ptr] != c) return result;
             }
             ptr++;
