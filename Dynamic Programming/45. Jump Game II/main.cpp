@@ -7,17 +7,22 @@ class Solution {
 public:
     int jump(vector<int>& nums) {
         int n = nums.size();
-        vector<int> jumps(n, 0);
-        for (int i = 0; i < n; i++) {
-            for (int j = nums[i]; j >= 1; j--) {
-                if (i + j >= n) continue;
-                if (jumps[i+j] == 0) {
-                    jumps[i+j] = jumps[i] + 1; 
+        int numJumps = 0;
+        int current = 0;
+        while (current != n-1) {
+            int maxVal = -1;
+            int next = -1;
+            for (int i = nums[current]; i >= 1; i--) {
+                if (i + current == n-1) return numJumps + 1;
+                if (i + current < n && (nums[i + current] + i) > maxVal) {
+                    maxVal = (nums[i + current] + i);
+                    next = i + current;
                 }
-                else jumps[i+j] = min(jumps[i+j], jumps[i] + 1);
             }
+            numJumps += 1;
+            current = next;
         }
-        return jumps[n-1];
+        return numJumps;
     }
 };
 
