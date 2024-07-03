@@ -9,33 +9,23 @@ public:
     string convert(string s, int numRows) {
         int len = s.length();
         if (numRows == 1) return s;
-        vector<vector<char>> temp(numRows, vector<char>(len, '\0'));
-        int i = 0, j = 0, count = 0;
-        int limit = numRows-1;
-        while (count < len) {
-            if (i + j < limit) {
-                temp[i][j] = s[count];
-                i++;
-                count++;
+        string result;
+        int nextBlockDist = 2 * (numRows - 1);
+        for (int i = 0; i < numRows; i++) {
+            if (i == 0 || i == numRows-1) {
+                int pos = i;
+                while (pos < len) {
+                    result.push_back(s[pos]);
+                    pos += nextBlockDist;
+                }
             }
             else {
-                temp[i][j] = s[count];
-                if (i != 0) {
-                    i--;
-                    j++;
-                }
-                else {
-                    limit += (numRows-1);
-                    i++;
-                }
-                count++;
-            }
-        }
-        string result;
-        for (int i = 0; i < numRows; i++) {
-            for (int j = 0; j < len; j++) {
-                if (temp[i][j] != '\0') {
-                    result.push_back(temp[i][j]);
+                int pos = i;
+                while (pos < len) {
+                    result.push_back(s[pos]);
+                    int nextCharDist = (numRows - 1 - i) * 2;
+                    if (pos + nextCharDist < len) result.push_back(s[pos + nextCharDist]);
+                    pos += nextBlockDist;
                 }
             }
         }
