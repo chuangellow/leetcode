@@ -107,7 +107,8 @@ The problems are organized into directories based on the main technique or data 
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/) | [C++](./String/58.%20Length%20of%20Last%20Word/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | [C++](./String/14.%20Longest%20Common%20Prefix/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/description/) | [C++](./String/151.%20Reverse%20Words%20in%20a%20String/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
-| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/) | [C++](./String/6.%20Zigzag%20Conversion/main.cpp) | | Medium | 2024/07/03 | [ ] | [ ] |
+| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/) | [C++](./String/6.%20Zigzag%20Conversion/main.cpp) | | Medium | 2024/07/03 | [x] | [ ] |
+| 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | [C++](./String/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String/main.cpp) | | Easy | 2024/07/03 | [ ] | [ ] |
 
 ## Stack
 
