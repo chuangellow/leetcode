@@ -5,27 +5,21 @@ using namespace std;
 
 class Solution {
 public:
-    int search(int left, int right, int target, vector<int>& numbers) {
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (numbers[mid] == target) return mid;
-            else if (numbers[mid] > target) right = mid - 1;
-            else left = mid + 1;
-        }
-        return -1;
-    }
     vector<int> twoSum(vector<int>& numbers, int target) {
         int n = numbers.size();
-        vector<int> result;
-        for (int i = 0; i < n-1; i++) {
-            int idx = search(i+1, n-1, target-numbers[i], numbers);
-            if (idx != -1) {
-                result.push_back(i+1);
-                result.push_back(idx+1);
-                return result;
+        int left = 0, right = n - 1;
+        while (left < right) {
+            if (numbers[left] + numbers[right] == target) {
+                return {left+1, right+1};
+            }
+            else if (numbers[left] + numbers[right] > target) {
+                right--;
+            }
+            else {
+                left++;
             }
         }
-        return result;
+        return {};
     }
 };
 
