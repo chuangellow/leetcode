@@ -63,6 +63,7 @@ The problems are organized into directories based on the main technique or data 
 | 350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)| [C++](./Array/350.%20Intersection%20of%20Two%20Arrays%20II/main.cpp) | | Easy | 2024/07/02 | [x]  | [ ] |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)| [C++](./Array/42.%20Trapping%20Rain%20Water/main.cpp) | | Hard | 2024/07/02 | [x]  | [ ] |
 | 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/)| [C++](./Array/80.%20Remove%20Duplicates%20from%20Sorted%20Array%20II/main.cpp) | | Medium | 2024/07/02 | [x]  | [ ] |
+| 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/description/)| [C++](./Array/73.%20Set%20Matrix%20Zeroes/main.cpp) | | Medium | 2024/07/03 | [x]  | [ ] |
 
 ## Hash Table
 
@@ -106,6 +107,7 @@ The problems are organized into directories based on the main technique or data 
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/) | [C++](./String/58.%20Length%20of%20Last%20Word/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | [C++](./String/14.%20Longest%20Common%20Prefix/main.cpp) | | Easy | 2024/07/02 | [x] | [ ] |
 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/description/) | [C++](./String/151.%20Reverse%20Words%20in%20a%20String/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
+| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/) | [C++](./String/6.%20Zigzag%20Conversion/main.cpp) | | Medium | 2024/07/03 | [ ] | [ ] |
 
 ## Stack
 
