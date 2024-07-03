@@ -274,6 +274,7 @@ The problems are organized into directories based on the main technique or data 
 | 134 | [Gas Station](https://leetcode.com/problems/gas-station/description/)| [C++](./Greedy/134.%20Gas%20Station/main.cpp) | | Medium | 2024/06/29 | [ ] | [ ] |
 | 1580 | [Put Boxes Into the Warehouse II](https://leetcode.com/problems/put-boxes-into-the-warehouse-ii/description/)| [C++](./Greedy/1564.%20Put%20Boxes%20Into%20the%20Warehouse%20II/main.cpp) | | Medium | 2024/06/15 | [x] | [ ] |
 | 135 | [Candy](https://leetcode.com/problems/candy/description/)| [C++](./Greedy/135.%20Candy/main.cpp) | | Hard | 2024/07/02 | [x] | [ ] |
+| 1509 | [Minimum Difference Between Largest and Smallest Value in Three Moves](https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/)| [C++](./Greedy/1509.%20Minimum%20Difference%20Between%20Largest%20and%20Smallest%20Value%20in%20Three%20Moves/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
 
 ## Dynamic Programming
 
