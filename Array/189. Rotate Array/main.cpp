@@ -7,11 +7,24 @@ class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
         int n = nums.size();
-        vector<int> temp(n);
-        for (int i = 0; i < n; i++) {
-            temp[(i + k) % n] = nums[i];
+        k = (k % n);
+        if (k == 0) return;
+        int count = 0;
+        for (int start = 0; start < k; start++) {
+            int idx = (start + k) % n, prev = nums[start];
+            while (idx != start && count < n) {
+                int temp = nums[idx];
+                nums[idx] = prev;
+                prev = temp;
+                count++;
+                idx = (idx + k) % n;
+            }
+            if (count >= n) return;
+            int temp = nums[idx];
+            nums[idx] = prev;
+            prev = temp;
+            count++;
         }
-        for (int i = 0; i < n; i++) nums[i] = temp[i];
         return;
     }
 };
