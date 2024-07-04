@@ -27,16 +27,15 @@ public:
         cout << endl;
     }
     ListNode* mergeNodes(ListNode* head) {
-        ListNode *newHead = new ListNode(0);
-        ListNode *newCurrent = newHead;
+        ListNode *prevNode = nullptr;
         ListNode *currentNode = head;
         ListNode *nextNode = head->next;
         int sum = 0;
         while (nextNode != nullptr) {
             if (nextNode->val == 0) {
-                ListNode *newNode = new ListNode(sum);
-                insertAfterNode(newCurrent, sum);
-                newCurrent = newCurrent->next;
+                currentNode->val = sum;
+                currentNode->next = nextNode;
+                prevNode = currentNode;
                 currentNode = nextNode;
                 nextNode = currentNode->next;
                 sum = 0;
@@ -46,7 +45,8 @@ public:
                 nextNode = nextNode->next;
             }
         }
-        return newHead->next;
+        prevNode->next = nullptr;
+        return head;
    }
 };
 
