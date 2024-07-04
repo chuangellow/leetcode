@@ -64,6 +64,7 @@ The problems are organized into directories based on the main technique or data 
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)| [C++](./Array/42.%20Trapping%20Rain%20Water/main.cpp) | | Hard | 2024/07/02 | [x]  | [ ] |
 | 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/)| [C++](./Array/80.%20Remove%20Duplicates%20from%20Sorted%20Array%20II/main.cpp) | | Medium | 2024/07/02 | [x]  | [ ] |
 | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/description/)| [C++](./Array/73.%20Set%20Matrix%20Zeroes/main.cpp) | | Medium | 2024/07/03 | [x]  | [ ] |
+| 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/) | [C++](./Array/56.%20Merge%20Intervals/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
 
 ## Hash Table
 
