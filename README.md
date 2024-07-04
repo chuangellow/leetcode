@@ -66,6 +66,7 @@ The problems are organized into directories based on the main technique or data 
 | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/description/)| [C++](./Array/73.%20Set%20Matrix%20Zeroes/main.cpp) | | Medium | 2024/07/03 | [x]  | [ ] |
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/) | [C++](./Array/56.%20Merge%20Intervals/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/description/) | [C++](./Array/57.%20Insert%20Interval/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
+| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/description/) | [C++](./Array/189.%20Rotate%20Array/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
 
 ## Hash Table
 
