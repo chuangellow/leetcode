@@ -242,6 +242,7 @@ The problems are organized into directories based on the main technique or data 
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/description/) | [C++](./Sliding%20Window/228.%20Summary%20Ranges/main.cpp) | | Easy | 2024/07/04 | [x] | [ ] |
 
 ## Bit Operation
 
