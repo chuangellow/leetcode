@@ -5,33 +5,33 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        vector<vector<int>> result;
-        int numIntervals = intervals.size();
-        result.push_back(intervals[0]);
-        for (int i = 1; i < numIntervals; i++) {
-            vector<int> prevInterval = result.back();
-            vector<int> currentInterval = intervals[i];
-            if (currentInterval[0] <= prevInterval[1]) {
-                result.pop_back();
-                vector<int> newInterval {min(prevInterval[0], currentInterval[0]), max(prevInterval[1], currentInterval[1])};
-                result.push_back(newInterval);
-            }
-            else {
-                result.push_back(currentInterval);
-            }
-        }
-        return result;
+    bool isOverlapped(vector<int>& intervalA, vector<int>& intervalB) {
+        if (intervalA[0] > intervalB[1]) return false;
+        if (intervalA[1] < intervalB[0]) return false;
+        return true;
     }
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
         int numIntervals = intervals.size();
-        int idx = 0;
+        vector<vector<int>> result;
+        int leftVal = newInterval[0], rightVal = newInterval[1];
+        bool push = false;
         for (int i = 0; i < numIntervals; i++) {
-            if (intervals[i][0] < newInterval[0]) idx++;
-            else break;
+            if (isOverlapped(intervals[i], newInterval)) {
+                leftVal = min(leftVal, intervals[i][0]);
+                rightVal = max(rightVal, intervals[i][1]);
+            }
+            else {
+                if (!push && newInterval[1] < intervals[i][0]) {
+                    result.push_back({leftVal, rightVal});
+                    push = true;
+                }
+                result.push_back(intervals[i]);
+            }
         }
-        intervals.insert(intervals.begin() + idx, {newInterval[0], newInterval[1]});
-        return merge(intervals);
+        if (!push) {
+            result.push_back({leftVal, rightVal});
+        }
+        return result;
     }
 };
 
