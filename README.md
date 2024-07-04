@@ -86,8 +86,9 @@ The problems are organized into directories based on the main technique or data 
 | 82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/)| [C](./Linked%20List/82.%20Remove%20Duplicates%20from%20Sorted%20List%20II/main.c) | | Medium | 2024/02/28 | [x] | [ ] |
 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)| [C](./Linked%20List/25.%20Reverse%20Nodes%20in%20k-Group/main.c) | | Hard | 2024/02/29 | [x] | [ ] |
 | 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/description/)| [C++](./Linked%20List/92.%20Reverse%20Linked%20List%20II/main.cpp) | | Medium | 2024/04/03 | [x] | [ ] |
-| 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/)| [C++](./Linked%20List/116.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node/main.cpp) | | Medium | 2024/04/03 | [] | [ ] |
-| 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)| [C](./Linked%20List/23.%20Merge%20k%20Sorted%20Lists/main.c) | | Hard | 2024/03/01 | [ ] | [ ] |
+| 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/)| [C++](./Linked%20List/116.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node/main.cpp) | | Medium | 2024/04/03 | [x] | [ ] |
+| 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)| [C](./Linked%20List/23.%20Merge%20k%20Sorted%20Lists/main.c) | | Hard | 2024/03/01 | [x] | [ ] |
+| 2181 | [Merge Nodes in Between Zeros](https://leetcode.com/problems/merge-nodes-in-between-zeros/) | [C++](./Linked%20List/2181.%20Merge%20Nodes%20in%20Between%20Zeros/main.cpp) | | Medium | 2024/07/04 | [x] | [ ] |
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
