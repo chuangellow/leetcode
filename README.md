@@ -248,6 +248,7 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/description/) | [C++](./Sliding%20Window/228.%20Summary%20Ranges/main.cpp) | | Easy | 2024/07/04 | [x] | [ ] |
+| 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) | [C++](./Sliding%20Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters/main.cpp) | | Medium | 2024/07/05 | [x] | [ ] |
 
 ## Bit Operation
 
