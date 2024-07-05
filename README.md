@@ -96,9 +96,7 @@ The problems are organized into directories based on the main technique or data 
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)| [C](./Linked%20List/23.%20Merge%20k%20Sorted%20Lists/main.c) | | Hard | 2024/03/01 | [x] | [ ] |
 | 2181 | [Merge Nodes in Between Zeros](https://leetcode.com/problems/merge-nodes-in-between-zeros/) | [C++](./Linked%20List/2181.%20Merge%20Nodes%20in%20Between%20Zeros/main.cpp) | | Medium | 2024/07/04 | [x] | [ ] |
 | 2058 | [Find the Minimum and Maximum Number of Nodes Between Critical Points](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | [C++](./Linked%20List/2058.%20Find%20the%20Minimum%20and%20Maximum%20Number%20of%20Nodes%20Between%20Critical%20Points/main.cpp) | | Medium | 2024/07/05 | [x] | [ ] |
-
-| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
-|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++](./Linked%20List/141.%20Linked%20List%20Cycle/main.cpp) | | Easy | 2024/07/05 | [x] | [ ] |
 
 ## Set
 
