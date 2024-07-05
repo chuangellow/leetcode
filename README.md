@@ -95,6 +95,7 @@ The problems are organized into directories based on the main technique or data 
 | 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/)| [C++](./Linked%20List/116.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node/main.cpp) | | Medium | 2024/04/03 | [x] | [ ] |
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)| [C](./Linked%20List/23.%20Merge%20k%20Sorted%20Lists/main.c) | | Hard | 2024/03/01 | [x] | [ ] |
 | 2181 | [Merge Nodes in Between Zeros](https://leetcode.com/problems/merge-nodes-in-between-zeros/) | [C++](./Linked%20List/2181.%20Merge%20Nodes%20in%20Between%20Zeros/main.cpp) | | Medium | 2024/07/04 | [x] | [ ] |
+| 2058 | [Find the Minimum and Maximum Number of Nodes Between Critical Points](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | [C++](./Linked%20List/2058.%20Find%20the%20Minimum%20and%20Maximum%20Number%20of%20Nodes%20Between%20Critical%20Points/main.cpp) | | Medium | 2024/07/05 | [x] | [ ] |
 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
