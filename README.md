@@ -163,6 +163,7 @@ The problems are organized into directories based on the main technique or data 
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/description/) | [C++](./Binary%20Tree/110.%20Balanced%20Binary%20Tree/main.cpp) | | Easy | 2024/03/26 | [x] | [ ] |
 | 222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/description/) | [C++](./Binary%20Tree/222.%20Count%20Complete%20Tree%20Nodes/main.cpp) | | Medium | 2024/03/26 | [x] | [ ] |
 | 99 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/description/) | [C++](./Binary%20Tree/99.%20Recover%20Binary%20Search%20Tree/main.cpp) | | Medium | 2024/03/27 | [x] | [ ] |
+| 100 | [Same Tree](https://leetcode.com/problems/same-tree/description/) | [C++](./Binary%20Tree/100.%20Same%20Tree/main.cpp) | | Easy | 2024/07/06 | [x] | [ ] |
 
 ## Tree
 
