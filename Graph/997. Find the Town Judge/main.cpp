@@ -9,26 +9,14 @@ public:
         vector<vector<bool>> matrix(n, vector<bool>(n, false));
         if (n == 1) return 1;
         if (trust.size() == 0) return -1;
+        vector<int> inDegrees(n, 0);
+        vector<int> outDegrees(n, 0);
         for (auto t: trust) {
-            matrix[t[0]-1][t[1]-1] = true;
+            inDegrees[t[1]-1]++;
+            outDegrees[t[0]-1]++;
         }
         for (int i = 0; i < n; i++) {
-            bool beenTrusted = true;
-            for (int j = 0; j < n; j++) {
-                if (j == i) continue;
-                if (!matrix[j][i]) beenTrusted = false;
-            }
-            if (!beenTrusted) continue;
-            bool trustOthers = false;
-            for (int j = 0; j < n; j++) {
-                if (j == i) continue;
-                if (matrix[i][j]) {
-                    trustOthers = true;
-                    break;
-                }
-            }
-            if (trustOthers) continue;
-            return i+1;
+            if (inDegrees[i] == n-1 && outDegrees[i] == 0) return i;
         }
         return -1;
     }
