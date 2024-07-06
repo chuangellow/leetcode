@@ -31,6 +31,7 @@ The problems are organized into directories based on the main technique or data 
 - [Greedy](#greedy)
 - [Dynamic Programming](#dynamic-programming)
 - [Graph Algorithm](#graph-algorithm)
+- [Math](#math)
 
 # 刷題訓練的四大能力
 
@@ -314,7 +315,8 @@ The problems are organized into directories based on the main technique or data 
 | 1218 | [Longest Arithmetic Subsequence of Given Difference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)| [C++](./Dynamic%20Programming/1218.%20Longest%20Arithmetic%20Subsequence%20of%20Given%20Difference/main.cpp) | | Medium | 2024/01/26 | [x] | [ ] |
 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)| [C++](./Dynamic%20Programming/416.%20Partition%20Equal%20Subset%20Sum/main.cpp) | | Medium | 2024/06/13 | [x] | [ ] |
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/description/)| [C++](./Dynamic%20Programming/55.%20Jump%20Game/main.cpp) | | Medium | 2024/06/29 | [x] | [ ] |
-| 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/description/)| [C++](./Dynamic%20Programming/45.%20Jump%20Game%20II/main.cpp) | | Medium | 2024/07/02 | [ ] | [ ] |
+| 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/description/)| [C++](./Dynamic%20Programming/45.%20Jump%20Game%20II/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
+| 2582 | [Pass the Pillow](https://leetcode.com/problems/pass-the-pillow/) | [C++](./Math/2582.%20Pass%20the%20Pillow/main.cpp) | | Easy | 2024/07/06 | [x] | [ ] |
 
 # Reference：
 
