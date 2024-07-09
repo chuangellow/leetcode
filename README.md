@@ -68,6 +68,7 @@ The problems are organized into directories based on the main technique or data 
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/) | [C++](./Array/56.%20Merge%20Intervals/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/description/) | [C++](./Array/57.%20Insert%20Interval/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/description/) | [C++](./Array/189.%20Rotate%20Array/main.cpp) | | Medium | 2024/07/04 | [x]  | [ ] |
+| 1701 | [Average Waiting Time](https://leetcode.com/problems/average-waiting-time/) | [C++](./Array/1701.%20Average%20Waiting%20Time/main.cpp) | | Medium | 2024/07/09 | [x]  | [ ] |
 
 ## Hash Table
 
