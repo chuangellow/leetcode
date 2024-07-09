@@ -284,6 +284,7 @@ The problems are organized into directories based on the main technique or data 
 | 1129 | [Shortest Path with Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/description/)| [C++](./Graph/1129.%20Shortest%20Path%20with%20Alternating%20Colors/main.cpp) | | Medium | 2024/07/06 | [x]  | [ ] |
 | 997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/description/)| [C++](./Graph/997.%20Find%20the%20Town%20Judge/main.cpp) | | Easy | 2024/07/06 | [x]  | [ ] |
 | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/description/)| [C++](./Graph/200.%20Number%20of%20Islands/main.cpp) | | Medium | 2024/07/09 | [x]  | [ ] |
+| 1926 | [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/)| [C++](./Graph/1926.%20Nearest%20Exit%20from%20Entrance%20in%20Maze/main.cpp) | | Medium | 2024/07/09 | [x]  | [ ] |
 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/description/)| [C++](./Graph/207.%20Course%20Schedule/main.cpp) | | Medium | 2024/06/14 | [ ]  | [ ] |
 
 ## Greedy
