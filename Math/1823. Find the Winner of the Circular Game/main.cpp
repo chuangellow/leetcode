@@ -44,22 +44,9 @@ struct List {
 class Solution {
 public:
     int findTheWinner(int n, int k) {
+        // Follow the recursion definition in https://cp-algorithms.com/others/josephus_problem.html
         if (n == 1 || k == 1) return n;
-        int currentCount = 1;
-        List *people = new List();
-        people->createPeople(n);
-        Node *currentNode = people->head;
-        while (people->n > 1) {
-            currentNode = currentNode->next;
-            currentCount += 1;
-            if (currentCount == k) {
-                Node *nextNode = currentNode->next;
-                people->removeNode(currentNode);
-                currentNode = nextNode;
-                currentCount = 1;
-            }
-        }
-        return currentNode->val;
+        return ((findTheWinner(n-1, k) + k - 1) % n) + 1;
    }
 };
 
