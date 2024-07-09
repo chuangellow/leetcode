@@ -285,6 +285,7 @@ The problems are organized into directories based on the main technique or data 
 | 997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/description/)| [C++](./Graph/997.%20Find%20the%20Town%20Judge/main.cpp) | | Easy | 2024/07/06 | [x]  | [ ] |
 | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/description/)| [C++](./Graph/200.%20Number%20of%20Islands/main.cpp) | | Medium | 2024/07/09 | [x]  | [ ] |
 | 1926 | [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/)| [C++](./Graph/1926.%20Nearest%20Exit%20from%20Entrance%20in%20Maze/main.cpp) | | Medium | 2024/07/09 | [x]  | [ ] |
+| 1557 | [Minimum Number of Vertices to Reach All Nodes](https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/description/)| [C++](./Graph/1557.%20Minimum%20Number%20of%20Vertices%20to%20Reach%20All%20Nodes/main.cpp) | | Medium | 2024/07/09 | [x]  | [ ] |
 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/description/)| [C++](./Graph/207.%20Course%20Schedule/main.cpp) | | Medium | 2024/06/14 | [ ]  | [ ] |
 
 ## Greedy
