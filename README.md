@@ -99,6 +99,7 @@ The problems are organized into directories based on the main technique or data 
 | 2181 | [Merge Nodes in Between Zeros](https://leetcode.com/problems/merge-nodes-in-between-zeros/) | [C++](./Linked%20List/2181.%20Merge%20Nodes%20in%20Between%20Zeros/main.cpp) | | Medium | 2024/07/04 | [x] | [ ] |
 | 2058 | [Find the Minimum and Maximum Number of Nodes Between Critical Points](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | [C++](./Linked%20List/2058.%20Find%20the%20Minimum%20and%20Maximum%20Number%20of%20Nodes%20Between%20Critical%20Points/main.cpp) | | Medium | 2024/07/05 | [x] | [ ] |
 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [C++](./Linked%20List/141.%20Linked%20List%20Cycle/main.cpp) | | Easy | 2024/07/05 | [x] | [ ] |
+| 1836 | [Remove Duplicates From an Unsorted Linked List](https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/) | [C++](./Linked%20List/1836.%20Remove%20Duplicates%20From%20an%20Unsorted%20Linked%20List/main.cpp) | | Medium | 2024/07/09 | [x] | [ ] |
 
 ## Set
 
