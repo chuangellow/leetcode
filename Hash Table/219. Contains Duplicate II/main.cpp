@@ -1,19 +1,21 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        unordered_map<int, int> map;
         int n = nums.size();
-        for (int i = 0; i < n; i++) {
-            if (map.count(nums[i]) != 0) {
-                if (i - map[nums[i]] <= k) return true;
+        vector<pair<int, int>> sortedNums(n);
+        for (int i = 0; i < n; i++) sortedNums[i] = {nums[i], i};
+        sort(sortedNums.begin(), sortedNums.end());
+        pair<int, int> prevNum = sortedNums[0];
+        for (int i = 1; i < n; i++) {
+            if (sortedNums[i].first == prevNum.first && sortedNums[i].second - prevNum.second <= k) {
+                return true;
             }
-            map[nums[i]] = i;
+            prevNum = sortedNums[i];
         }
         return false;
     }
