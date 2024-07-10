@@ -171,6 +171,7 @@ The problems are organized into directories based on the main technique or data 
 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/description/) | [C++](./Binary%20Tree/100.%20Same%20Tree/main.cpp) | | Easy | 2024/07/06 | [x] | [ ] |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/) | [C++](./Binary%20Tree/226.%20Invert%20Binary%20Tree/main.cpp) | | Easy | 2024/07/06 | [x] | [ ] |
 | 129 | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/description/) | [C++](./Binary%20Tree/129.%20Sum%20Root%20to%20Leaf%20Numbers/main.cpp) | | Medium | 2024/07/10 | [x] | [ ] |
+| 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/) | [C++](./Binary%20Tree/124.%20Binary%20Tree%20Maximum%20Path%20Sum/main.cpp) | | Hard | 2024/07/10 | [x] | [ ] |
 
 ## Tree
 
