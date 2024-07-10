@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 #include <queue>
 
 using namespace std;
@@ -42,19 +43,26 @@ void preorderTraversal(TreeNode *root) {
 
 class Solution {
 public:
-    int totalSum = 0;
-    void goToLeaf(TreeNode* root, int currentSum) {
-        if (root == nullptr) return;
-        if (root->left == nullptr && root->right == nullptr) {
-            currentSum = currentSum * 10 + root->val;
-            totalSum += currentSum;
-            return;
-        }
-        goToLeaf(root->left, currentSum * 10 + root->val);
-        goToLeaf(root->right, currentSum * 10 + root->val);
-    }
     int sumNumbers(TreeNode* root) {
-        goToLeaf(root, 0);
+        int totalSum = 0;
+        stack<pair<TreeNode*, int>> s;
+        s.push({root, 0});
+        while (!s.empty()) {
+            TreeNode* currentNode = s.top().first;
+            int currentSum = s.top().second;
+            s.pop();
+            if (currentNode == nullptr) {
+                continue;
+            }
+            if (currentNode->left == nullptr && currentNode->right == nullptr) {
+                currentSum = currentSum * 10 + currentNode->val;
+                totalSum += currentSum;
+            }
+            else {
+                s.push({currentNode->left, currentSum * 10 + currentNode->val});
+                s.push({currentNode->right, currentSum * 10 + currentNode->val});
+            }
+        }
         return totalSum;
     }
 };
