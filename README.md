@@ -82,6 +82,7 @@ The problems are organized into directories based on the main technique or data 
 | 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/description)| [C++](./Hash%20Table/383.%20Ransom%20Note/main.cpp) | | Easy | 2024/07/04 | [x] | [ ] |
 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/) | [C++](./Hash%20Table/128.%20Longest%20Consecutive%20Sequence/main.cpp) | | Medium | 2024/07/04 | [x] | [ ] |
 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/description/) | [C++](./Hash%20Table/290.%20Word%20Pattern/main.cpp) | | Medium | 2024/07/04 | [x] | [ ] |
+| 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) | [C++](./Hash%20Table/219.%20Contains%20Duplicate%20II/main.cpp) | | Easy | 2024/07/10 | [x] | [ ] |
 
 ## Linked List
 
