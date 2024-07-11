@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -43,29 +44,27 @@ void preorderTraversal(TreeNode *root) {
 
 class BSTIterator {
 private:
-    void inorderTraversal(TreeNode* root) {
-        if (root == nullptr) return;
-        inorderTraversal(root->left);
-        inorder.push_back(root->val);
-        inorderTraversal(root->right);
-        n++;
+    void _leftMostTraverse(TreeNode *root) {
+        while (root != nullptr) {
+            this->s.push(root);
+            root = root->left;
+        }
     }
 public:
-    int currentIdx = 0;
-    int n = 0;
-    vector<int> inorder;
+    stack<TreeNode*> s;
     BSTIterator(TreeNode* root) {
-        inorderTraversal(root);
+        _leftMostTraverse(root);
     }
-    
     int next() {
-        int result = inorder[currentIdx];
-        currentIdx++;
-        return result;
+        TreeNode* top = this->s.top();
+        this->s.pop();
+        if (top->right != nullptr) {
+            _leftMostTraverse(top->right);
+        }
+        return top->val;
     }
-    
     bool hasNext() {
-        return (currentIdx < n);
+        return !this->s.empty();
     }
 };
 
