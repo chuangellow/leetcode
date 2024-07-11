@@ -174,6 +174,7 @@ The problems are organized into directories based on the main technique or data 
 | 129 | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/description/) | [C++](./Binary%20Tree/129.%20Sum%20Root%20to%20Leaf%20Numbers/main.cpp) | | Medium | 2024/07/10 | [x] | [ ] |
 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/) | [C++](./Binary%20Tree/124.%20Binary%20Tree%20Maximum%20Path%20Sum/main.cpp) | | Hard | 2024/07/10 | [x] | [ ] |
 | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/description/) | [C++](./Binary%20Tree/173.%20Binary%20Search%20Tree%20Iterator/main.cpp) | | Medium | 2024/07/10 | [x] | [ ] |
+| 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/) | [C++](./Binary%20Tree/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/main.cpp) | | Medium | 2024/07/10 | [x] | [ ] |
 
 ## Tree
 
