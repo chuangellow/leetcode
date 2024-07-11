@@ -12,15 +12,15 @@ public:
         stack<int> st;
         int n = s.length();
         int count = 0;
-        unordered_map<int, int> goTunnel, backTunnel;
+        vector<int> tunnels(n, -1);
         for (int i = 0; i < n; i++) {
             if (s[i] == '(') {
                 st.push(i);
                 count++;
             }
             else if (s[i] == ')') {
-                goTunnel[st.top()] = i;
-                backTunnel[i] = st.top();
+                tunnels[st.top()] = i;
+                tunnels[i] = st.top();
                 st.pop();
                 count++;
             }
@@ -29,12 +29,8 @@ public:
         int currentIdx = 0, direction = 1;
         int currentLen = 0;
         while (currentIdx >= 0 && currentIdx < n && currentLen < (n - count)) {
-            if (goTunnel.count(currentIdx) != 0) {
-                currentIdx = goTunnel[currentIdx];
-                direction *= -1;
-            }
-            else if (backTunnel.count(currentIdx) != 0) {
-                currentIdx = backTunnel[currentIdx];
+            if (tunnels[currentIdx] != -1) {
+                currentIdx = tunnels[currentIdx];
                 direction *= -1;
             }
             else {
