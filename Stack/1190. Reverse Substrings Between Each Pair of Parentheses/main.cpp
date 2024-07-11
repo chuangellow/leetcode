@@ -2,36 +2,46 @@
 #include <vector>
 #include <string>
 #include <stack>
-#include <queue>
+#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
     string reverseParentheses(string s) {
-        stack<char> st;
-        queue<char> q;
-        for (char c: s) {
-            if (c != ')') {
-                st.push(c);
+        stack<int> st;
+        int n = s.length();
+        int count = 0;
+        unordered_map<int, int> goTunnel, backTunnel;
+        for (int i = 0; i < n; i++) {
+            if (s[i] == '(') {
+                st.push(i);
+                count++;
             }
-            else {
-                while (!st.empty() && st.top() != '(') {
-                    q.push(st.top());
-                    st.pop();
-                }
-                st.pop(); // remove '('
-                while (!q.empty()) {
-                    st.push(q.front());
-                    q.pop();
-                }
+            else if (s[i] == ')') {
+                goTunnel[st.top()] = i;
+                backTunnel[i] = st.top();
+                st.pop();
+                count++;
             }
         }
-        int n = st.size();
-        string result(n, '\0');
-        for (int i = n-1; i >= 0; i--) {
-            result[i] = st.top();
-            st.pop();
+        string result;
+        int currentIdx = 0, direction = 1;
+        int currentLen = 0;
+        while (currentIdx >= 0 && currentIdx < n && currentLen < (n - count)) {
+            if (goTunnel.count(currentIdx) != 0) {
+                currentIdx = goTunnel[currentIdx];
+                direction *= -1;
+            }
+            else if (backTunnel.count(currentIdx) != 0) {
+                currentIdx = backTunnel[currentIdx];
+                direction *= -1;
+            }
+            else {
+                result.push_back(s[currentIdx]);
+                currentLen++;
+            }
+            currentIdx += direction;
         }
         return result;
     }
