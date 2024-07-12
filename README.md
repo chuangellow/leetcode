@@ -23,15 +23,38 @@ The problems are organized into directories based on the main technique or data 
 
 ### Algorithm
 
-- [Sorting](#sorting)
-- [Two-Pointers](#two-pointers)
-- [Sliding window](#sliding-window)
-- [Bit operation](#bit-operation)
-- [Recursion](#recursion)
-- [Greedy](#greedy)
-- [Dynamic Programming](#dynamic-programming)
-- [Graph Algorithm](#graph-algorithm)
-- [Math](#math)
+- [LeetCode Practice Record](#leetcode-practice-record)
+  - [Table of Contents](#table-of-contents)
+    - [Data structure](#data-structure)
+    - [Algorithm](#algorithm)
+- [刷題訓練的四大能力](#刷題訓練的四大能力)
+- [刷題方法](#刷題方法)
+- [Data Structure](#data-structure-1)
+  - [Array](#array)
+  - [Hash Table](#hash-table)
+  - [Linked List](#linked-list)
+  - [Set](#set)
+  - [String](#string)
+  - [Stack](#stack)
+  - [Queue](#queue)
+  - [Binary Tree](#binary-tree)
+  - [Tree](#tree)
+  - [Heap](#heap)
+  - [Trie](#trie)
+  - [Monotonic Queue](#monotonic-queue)
+  - [Disjoint Set](#disjoint-set)
+- [演算法策略](#演算法策略)
+  - [Sorting](#sorting)
+  - [Binary Search](#binary-search)
+  - [Two-Pointers](#two-pointers)
+  - [Sliding Window](#sliding-window)
+  - [Bit Operation](#bit-operation)
+  - [Backtracking](#backtracking)
+  - [Recursion](#recursion)
+  - [Graph Algorithm](#graph-algorithm)
+  - [Greedy](#greedy)
+  - [Dynamic Programming](#dynamic-programming)
+- [Reference：](#reference)
 
 # 刷題訓練的四大能力
 
@@ -225,6 +248,7 @@ The problems are organized into directories based on the main technique or data 
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/description/)| [C++](./Sorting/75.%20Sort%20Colors/main.cpp) | | Medium | 2024/06/12 | [x] | [ ] |
 | 274 | [H-Index](https://leetcode.com/problems/h-index/description/)| [C++](./Sorting/274.%20H-Index/main.cpp) | | Medium | 2024/06/29 | [x] | [ ] |
+| 148 | [Sort List](https://leetcode.com/problems/sort-list/description/)| [C++](./Sorting/148.%20Sort%20List/main.cpp) | | Medium | 2024/07/13 | [x] | [ ] |
 
 ## Binary Search
 
@@ -269,6 +293,12 @@ The problems are organized into directories based on the main technique or data 
 | # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
 |---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
 | 1550 | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/description/)| [C++](./Bit%20Operation/1550.%20Three%20Consecutive%20Odds/main.cpp) | | Easy | 2024/07/01 | [ ] | [ ] |
+
+## Backtracking
+
+| # | Title | Solution | Note | Difficulty | Date | Done | Think Again |
+|---| ----- | -------- | -------- | ---------- | ---------- | --- | --- |
+| 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)| [C++](./Backtracking/17.%20Letter%20Combinations%20of%20a%20Phone%20Number/main.cpp) | | Medium | 2024/07/13 | [x] | [ ] |
 
 ## Recursion
 
