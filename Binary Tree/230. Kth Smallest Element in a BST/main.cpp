@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -42,16 +43,22 @@ void preorderTraversal(TreeNode *root) {
 
 class Solution {
 public:
-    vector<int> inorder;
-    void dfs(TreeNode* node) {
-        if (node == nullptr) return;
-        dfs(node->left);
-        inorder.push_back(node->val);
-        dfs(node->right);
-    }
     int kthSmallest(TreeNode* root, int k) {
-        dfs(root);
-        return inorder[k-1];
+        stack<TreeNode*> s;
+        TreeNode *currentNode = root;
+        int count = 1;
+        while (true) {
+            while (currentNode != nullptr) {
+                s.push(currentNode);
+                currentNode = currentNode->left;
+            }
+            currentNode = s.top();
+            s.pop();
+            if (count == k) return currentNode->val;
+            count++;
+            currentNode = currentNode->right;
+        }
+        return -1;
     }
 };
 
