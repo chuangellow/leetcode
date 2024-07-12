@@ -177,6 +177,7 @@ The problems are organized into directories based on the main technique or data 
 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/) | [C++](./Binary%20Tree/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/main.cpp) | | Medium | 2024/07/11 | [x] | [ ] |
 | 530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/) | [C++](./Binary%20Tree/530.%20Minimum%20Absolute%20Difference%20in%20BST/main.cpp) | | Easy | 2024/07/11 | [x] | [ ] |
 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/) | [C++](./Binary%20Tree/230.%20Kth%20Smallest%20Element%20in%20a%20BST/main.cpp) | | Medium | 2024/07/11 | [x] | [ ] |
+| 637 | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/) | [C++](./Binary%20Tree/637.%20Average%20of%20Levels%20in%20Binary%20Tree/main.cpp) | | Easy | 2024/07/12 | [x] | [ ] |
 
 ## Tree
 
