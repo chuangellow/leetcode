@@ -309,6 +309,7 @@ The problems are organized into directories based on the main technique or data 
 | 135 | [Candy](https://leetcode.com/problems/candy/description/)| [C++](./Greedy/135.%20Candy/main.cpp) | | Hard | 2024/07/02 | [x] | [ ] |
 | 1509 | [Minimum Difference Between Largest and Smallest Value in Three Moves](https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/)| [C++](./Greedy/1509.%20Minimum%20Difference%20Between%20Largest%20and%20Smallest%20Value%20in%20Three%20Moves/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
 | 452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/)| [C++](./Greedy/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons/main.cpp) | | Medium | 2024/07/10 | [x] | [ ] |
+| 1717 | [Maximum Split of Positive Even Integers](https://leetcode.com/problems/maximum-split-of-positive-even-integers/description/)| [C++](./Greedy/1717.%20Maximum%20Split%20of%20Positive%20Even%20Integers/main.cpp) | | Medium | 2024/07/12 | [x] | [ ] |
 
 ## Dynamic Programming
 
