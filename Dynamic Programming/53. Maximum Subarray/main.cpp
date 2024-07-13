@@ -8,12 +8,11 @@ public:
     int maxSubArray(vector<int>& nums) {
         int n = nums.size();
         if (n == 1) return nums[0];
-        vector<int> dp(n+1, 0);
-        dp[1] = nums[0];
-        int maxVal = dp[1];
-        for (int i = 2; i <= n; i++) {
-            dp[i] = max(dp[i-1] + nums[i-1], nums[i-1]);
-            maxVal = max(dp[i], maxVal);
+        int prev = nums[0];
+        int maxVal = prev;
+        for (int i = 1; i < n; i++) {
+            prev = max(prev + nums[i], nums[i]);
+            maxVal = max(prev, maxVal);
         }
         return maxVal;
     }
