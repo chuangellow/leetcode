@@ -372,6 +372,7 @@ The problems are organized into directories based on the main technique or data 
 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/description/)| [C++](./Dynamic%20Programming/45.%20Jump%20Game%20II/main.cpp) | | Medium | 2024/07/02 | [x] | [ ] |
 | 2582 | [Pass the Pillow](https://leetcode.com/problems/pass-the-pillow/) | [C++](./Math/2582.%20Pass%20the%20Pillow/main.cpp) | | Easy | 2024/07/07 | [x] | [ ] |
 | 1823 | [Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game/) | [C++](./Math/1823.%20Find%20the%20Winner%20of%20the%20Circular%20Game/main.cpp) | | Medium | 2024/07/08 | [x] | [ ] |
+| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [C++](./Dynamic%20Programming/53.%20Maximum%20Subarray/main.cpp) | | Medium | 2024/07/13 | [x] | [ ] |
 
 # Reference：
 
