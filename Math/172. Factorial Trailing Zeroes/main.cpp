@@ -6,13 +6,14 @@ class Solution {
 public:
     int trailingZeroes(int n) {
         int fiveCount = 0;
-        for (int i = 1; i <= n; i++) {
-            int temp = i;
-            while (temp > 0) {
-                if (temp % 5 == 0) fiveCount++;
-                else break;
+        int current = 5;
+        while (current <= n) {
+            int temp = current;
+            while (temp > 0 && temp % 5 == 0) {
+                fiveCount++;
                 temp /= 5;
             }
+            current += 5;
         }
         return fiveCount;
     }
