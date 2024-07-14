@@ -160,6 +160,7 @@ The problems are organized into directories based on the main technique or data 
 | 155 | [Min Stack](https://leetcode.com/problems/min-stack/description) | [C++](./Stack/155.%20Min%20Stack/main.cpp) | | Hard | 2024/03/25 | [x] | [ ] |
 | 1193 | [Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | [C++](./Stack/1193.%20Reverse%20Substrings%20Between%20Each%20Pair%20of%20Parentheses/main.cpp) | | Medium | 2024/07/11 | [x] | [ ] |
 | 2751 | [Robot Collisions](https://leetcode.com/problems/robot-collisions/) | [C++](./Stack/2751.%20Robot%20Collisions/main.cpp) | | Hard | 2024/07/13 | [x] | [ ] |
+| 726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | [C++](./Stack/726.%20Number%20of%20Atoms/main.cpp) | | Hard | 2024/07/14 | [x] | [ ] |
 | 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator) | [C++](./Stack/224.%20Basic%20Calculator/main.cpp) | | Hard | 2024/03/14 | [ ] | [ ] |
 
 ## Queue
