@@ -283,6 +283,7 @@ The problems are organized into directories based on the main technique or data 
 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)| [C++](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/main.cpp) | [Note](./Two.%20Pointers/11.%20Container$20With%20Most%20Water/Note.pdf) | Medium | 2024/01/07 | [x] | [ ] |
 | 34 | [Next Permutation](https://leetcode.com/problems/next-permutation/)| [C++](./Two.%20Pointers/34.%20Next%20Permutation/main.cpp) | [Note](./Two.%20Pointers/34.%20Next%20Permutation/Note.pdf) | Medium | 2024/01/07 | [x] | [ ] |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [C++](./Two.%20Pointers/125.%20Valid%20Palindrome/main.cpp) | | Easy | 2024/07/03 | [x] | [ ] |
+| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C++](./Two.%20Pointers/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/main.cpp) | | Easy | 2024/07/14 | [x] | [ ] |
 
 ## Sliding Window
 
@@ -392,3 +393,7 @@ The problems are organized into directories based on the main technique or data 
 - [Re: [討論] 軟體工作真的有需要刷題嗎? - 看板 Soft_Job - 批踢踢實業坊 (ptt.cc)](https://www.ptt.cc/bbs/Soft_Job/M.1629026770.A.B4E.html)
 - [思而不學則殆 站在大神的肩膀上](https://ithelp.ithome.com.tw/m/articles/10298003)
 - [coding interview university](https://github.com/chuangellow/coding-interview-university)
+- [Blind 75](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
+- [Grind 169](https://www.techinterviewhandbook.org/grind75?weeks=15&hours=40)
+- [How to practice for 2200+ rating in LC](https://leetcode.com/discuss/study-guide/1965086/How-to-practice-for-2200%2B-rating-in-LC)
+- [從面試官角度來看程式面試：兩大能力與七個階段](https://holyisland.blog/coding-interview-steps/)
