@@ -206,6 +206,7 @@ The problems are organized into directories based on the main technique or data 
 | 637 | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/) | [C++](./Binary%20Tree/637.%20Average%20of%20Levels%20in%20Binary%20Tree/main.cpp) | | Easy | 2024/07/12 | [x] | [ ] |
 | 2196 | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/) | [C++](./Binary%20Tree/2196.%20Create%20Binary%20Tree%20From%20Descriptions/main.cpp) | | Medium | 2024/07/15 | [x] | [ ] |
 | 1740 | [Find Distance in a Binary Tree](https://leetcode.com/problems/find-distance-in-a-binary-tree/) | [C++](./Binary%20Tree/1740.%20Find%20Distance%20in%20a%20Binary%20Tree/main.cpp) | | Medium | 2024/07/15 | [x] | [ ] |
+| 2096 | [Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/) | [C++](./Binary%20Tree/2096.%20Step-By-Step%20Directions%20From%20a%20Binary%20Tree%20Node%20to%20Another/main.cpp) | | Medium | 2024/07/16 | [x] | [ ] |
 
 ## Tree
 
