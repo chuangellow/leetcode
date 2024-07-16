@@ -43,42 +43,37 @@ void preorderTraversal(TreeNode *root) {
 
 class Solution {
 public:
-    TreeNode* getLCA(TreeNode* root, int startValue, int destValue) {
-        if (root == nullptr || root->val == startValue || root->val == destValue) return root;
-        TreeNode* left = getLCA(root->left, startValue, destValue);
-        TreeNode* right = getLCA(root->right, startValue, destValue);
-        if (left != nullptr && right != nullptr) return root;
-        return (left != nullptr)? left: right;
-    }
-    int getLevel(TreeNode* node, int startValue) {
-        if (node == nullptr) return -1;
-        if (node->val == startValue) return 0;
-        int left = getLevel(node->left, startValue);
-        int right = getLevel(node->right, startValue);
-        return (left == -1 && right == -1)? -1: max(left, right) + 1;
-    }
-    void goToDest(TreeNode* node, int destValue, string& temp, string& s) {
+    void dfs(TreeNode* node, int destValue, string& temp, string& s) {
         if (node == nullptr) return;
         if (node->val == destValue) {
             s = s + temp;
             return;
         }
         temp.push_back('L');
-        goToDest(node->left, destValue, temp, s);
+        dfs(node->left, destValue, temp, s);
         temp.pop_back();
         temp.push_back('R');
-        goToDest(node->right, destValue, temp, s);
+        dfs(node->right, destValue, temp, s);
         temp.pop_back();
         return;
     }
     string getDirections(TreeNode* root, int startValue, int destValue) {
-        TreeNode* lca = getLCA(root, startValue, destValue);
-        int level = getLevel(lca, startValue);
-        string s;
-        for (int i = 0; i < level; i++) s.push_back('U');
+        string result, toStartStr, toDestStr;
         string temp;
-        goToDest(lca, destValue, temp, s);
-        return s;
+        dfs(root, startValue, temp, toStartStr);
+        dfs(root, destValue, temp, toDestStr);
+        int minLen = min(toStartStr.size(), toDestStr.size());
+        int commonIdx = 0;
+        while (commonIdx < minLen && toStartStr[commonIdx] == toDestStr[commonIdx]) {
+            commonIdx++;
+        }
+        for (int i = commonIdx; i < toStartStr.size(); i++) {
+            result.push_back('U');
+        }
+        for (int i = commonIdx; i < toDestStr.size(); i++) {
+            result.push_back(toDestStr[i]);
+        }
+        return result;
     }
 };
 
