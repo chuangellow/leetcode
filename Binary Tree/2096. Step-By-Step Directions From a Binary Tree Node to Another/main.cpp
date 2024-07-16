@@ -43,25 +43,25 @@ void preorderTraversal(TreeNode *root) {
 
 class Solution {
 public:
-    void dfs(TreeNode* node, int destValue, string& temp, string& s) {
-        if (node == nullptr) return;
+    bool dfs(TreeNode* node, int destValue, string& s) {
+        if (node == nullptr) return false;
         if (node->val == destValue) {
-            s = s + temp;
-            return;
+            return true;
         }
-        temp.push_back('L');
-        dfs(node->left, destValue, temp, s);
-        temp.pop_back();
-        temp.push_back('R');
-        dfs(node->right, destValue, temp, s);
-        temp.pop_back();
-        return;
+        s.push_back('L');
+        bool left = dfs(node->left, destValue, s);
+        if (left) return true;
+        s.pop_back();
+        s.push_back('R');
+        bool right = dfs(node->right, destValue, s);
+        if (right) return true;
+        s.pop_back();
+        return false;
     }
     string getDirections(TreeNode* root, int startValue, int destValue) {
         string result, toStartStr, toDestStr;
-        string temp;
-        dfs(root, startValue, temp, toStartStr);
-        dfs(root, destValue, temp, toDestStr);
+        dfs(root, startValue, toStartStr);
+        dfs(root, destValue, toDestStr);
         int minLen = min(toStartStr.size(), toDestStr.size());
         int commonIdx = 0;
         while (commonIdx < minLen && toStartStr[commonIdx] == toDestStr[commonIdx]) {
