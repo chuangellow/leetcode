@@ -47,6 +47,7 @@ public:
     vector<TreeNode*> leafs;
     unordered_map<TreeNode*, TreeNode*> parents;
     int count = 0;
+    int numLeafs;
     void dfs(TreeNode* node, TreeNode* parent) {
         if (node == nullptr) return;
         if (node->left == nullptr && node->right == nullptr) {
@@ -58,7 +59,7 @@ public:
         dfs(node->left, node);
         dfs(node->right, node);
     }
-    bool bfs(TreeNode* source, TreeNode* destination, int distance) {
+    void bfs(int i, TreeNode* source, int distance) {
         queue<TreeNode*> q;
         unordered_map<TreeNode*, int> distances;
         distances[source] = 0;
@@ -66,8 +67,7 @@ public:
         while (!q.empty()) {
             TreeNode* current = q.front();
             q.pop();
-            if (current != destination && distances[current] > distance) return false;
-            if (current == destination) return (distances[destination] <= distance);
+            if (distances[current] > distance) break;
             if (current->left != nullptr && distances.count(current->left) == 0) {
                 distances[current->left] = distances[current] + 1;
                 q.push(current->left);
@@ -81,15 +81,18 @@ public:
                 q.push(parents[current]);
             }
         }
-        return (distances[destination] <= distance);
+        for (int j = i + 1; j < numLeafs; j++) {
+            if (distances.count(leafs[j]) == 0) continue;
+            if (distances[leafs[j]] <= distance) count++;
+        }
+        return;
     }
     int countPairs(TreeNode* root, int distance) {
         if (!root) return 0;
         dfs(root, nullptr);
-        for (int i = 0; i < leafs.size(); i++) {
-            for (int j = i + 1; j < leafs.size(); j++) {
-                if (bfs(leafs[i], leafs[j], distance)) count++;
-            }
+        numLeafs = leafs.size();
+        for (int i = 0; i < numLeafs; i++) {
+            bfs(i, leafs[i], distance);
         }
         return count;
     }
